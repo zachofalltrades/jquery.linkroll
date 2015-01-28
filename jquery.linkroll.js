@@ -33,7 +33,7 @@
 		init : function(options) {
 			this.settings = $.extend({}, $.fn.linkroll.defaults, options);
 		},
-		loadJSON : function () {
+		loadJSON : function (node) {
 			$.getJSON( this.settings.json, function(data) {
 				var items = [];
 				$.each(data, function( index, value ) {
@@ -46,7 +46,7 @@
 					});
 					items.push("</ul></div>");
 				});
-				return items.join("");
+				node.html(items.join(""));
 			});
 
 		}
@@ -60,7 +60,7 @@
 		return this.each(function(){
 			var node = $(this);
 			if (roller.settings.json) {
-				node.html(roller.loadJSON());
+				roller.loadJSON(node);
 			}
 //			$("#linkroll").accordion({
 //				collapsible : true
