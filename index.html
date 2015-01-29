@@ -43,7 +43,7 @@
 	</div>
 
 	<div>
-		<button onClick="$('#emptyDiv').linkroll({json: 'sample.json', onSuccess: function(node){node.accordion()}});">load</button>
+		<button onClick="$('#emptyDiv').linkroll({json: 'sample.json', onSuccess: function(node){node.accordion({collapsible: true, animate: 200})}});">load</button>
 		<div id="emptyDiv">click 'load' to fetch json and load linkroll here</div>
 	</div>
 
