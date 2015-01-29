@@ -12,59 +12,66 @@
 *  
 */
 
-(function( $ ) { //begin closure to make internal functions private
+(function( $ ) { //begin closure to make internal functions and variables private
 
 	var regx = /^(((([^:\/#\?]+:)?(?:(\/\/)((?:(([^:@\/#\?]+)(?:\:([^:@\/#\?]+))?)@)?(([^:\/#\?\]\[]+|\[[^\/\]@#?]+\])(?:\:([0-9]+))?))?)?)?((\/?(?:[^\/\?#]+\/+)*)([^\?#]*)))?(\?[^#]+)?)(#.*)?/;
 	var iconAPI = 'http://www.google.com/s2/favicons?domain='; // Google API for favicons 
 	
-	function getSiteIcon ( url ) {
+	function getIconUrl ( url ) {
 		return iconAPI + regx.exec(url)[11];
 	}
 
-	var LinkRoller = function(options) {
-		this.init(options);
+	function getIconImageTag ( anchor ) {
+		var href = $(anchor).attr('href');
+		var url = getIconUrl(href);
+		var img = $('<img />', {src: url});
+		return img;
 	}
-
-	/**
-	 * prototype
-	 */
-	LinkRoller.prototype = {
-		settings : {},
-		init : function(options) {
-			this.settings = $.extend({}, $.fn.linkroll.defaults, options);
-		},
-		loadJSON : function (node) {
-			$.getJSON( this.settings.json, function(data) {
-				var items = [];
-				$.each(data, function( index, value ) {
-					items.push("<h3>" + value.category + "</h3><div><ul>");
-					$.each(value.links, function(index2, site) {
-						items.push("<li style=\"list-style-image: url('"
-								+ getSiteIcon(site.link)
-								+ "');\"><a href='" + site.link + "'>" + site.name
-								+ "</a></li>");
-					});
-					items.push("</ul></div>");
+	
+	function buildFromJson ( url, node, callback ) {
+		$.getJSON( url, function(data) {
+			var items = [];
+			$.each(data, function( index, value ) {
+				items.push("<h3 class='linkroll'>" + value.category + "</h3><div class='linkroll'><ul class='linkroll'>");
+				$.each(value.links, function(index2, site) {
+					items.push("<li class='linkroll' style=\"list-style-image: url('"
+							+ getIconUrl(site.link)
+							+ "');\"><a href='" + site.link + "'>" + site.name
+							+ "</a></li>");
 				});
-				node.html(items.join(""));
+				items.push("</ul></div>");
 			});
-
-		}
-	};//end prototype
-
+			node.html(items.join(""));
+			if ($.isFunction(callback)) {
+				callback(node);
+			}
+		});
+	}
+	
+	
+	
 	/**
 	 * add DOM chaining method to global jQuery object 
 	 */
 	$.fn.linkroll = function(options) {
-		var roller = new LinkRoller(options);
+//		var roller = new LinkRoller(options);
+		var settings = $.extend({}, $.fn.linkroll.defaults, options);
 		return this.each(function(){
 			var node = $(this);
-			if (roller.settings.json) {
-				roller.loadJSON(node);
+			if (settings.json) {
+				buildFromJson(settings.json, node, settings.onSuccess);
+			} else {
+				if (node.is('a')) {
+					node.prepend(getIconImageTag(node));
+				} else {
+					node.find('a').each(function (){
+						this.prepend(getIconImageTag(this));
+					});
+				}
+				if ($.isFunction(settings.onSuccess)) {
+					settings.onSuccess(node);
+				}
 			}
-//			$("#linkroll").accordion({
-//				collapsible : true
-//			});
 		});
 	};
 
@@ -72,8 +79,8 @@
 	 * default configuration is globally accessible
 	 */
 	$.fn.linkroll.defaults = {
-		json  : false
-		
+		json  : false,       //optinal url of json to be loaded
+		onSuccess : false    //optional callback function to apply additional formatting (useful when loading json async)
 	};
 
 }(jQuery)); //end of IIFE (see http://benalman.com/news/2010/11/immediately-invoked-function-expression/ )
