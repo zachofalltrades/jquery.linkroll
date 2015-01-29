@@ -15,7 +15,7 @@
 (function( $ ) { //begin closure to make internal functions and variables private
 
 	var regx = /^(((([^:\/#\?]+:)?(?:(\/\/)((?:(([^:@\/#\?]+)(?:\:([^:@\/#\?]+))?)@)?(([^:\/#\?\]\[]+|\[[^\/\]@#?]+\])(?:\:([0-9]+))?))?)?)?((\/?(?:[^\/\?#]+\/+)*)([^\?#]*)))?(\?[^#]+)?)(#.*)?/;
-	var iconAPI = 'http://www.google.com/s2/favicons?domain='; // Google API for favicons 
+	var iconAPI = '//www.google.com/s2/favicons?domain='; // Google API for favicons 
 	
 	function getIconUrl ( url ) {
 		return iconAPI + regx.exec(url)[11];
@@ -65,7 +65,7 @@
 					node.prepend(getIconImageTag(node));
 				} else {
 					node.find('a').each(function (){
-						this.prepend(getIconImageTag(this));
+						$(this).prepend(getIconImageTag(this));
 					});
 				}
 				if ($.isFunction(settings.onSuccess)) {
