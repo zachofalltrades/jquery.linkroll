@@ -16,19 +16,12 @@
 
 	var regx = /^(((([^:\/#\?]+:)?(?:(\/\/)((?:(([^:@\/#\?]+)(?:\:([^:@\/#\?]+))?)@)?(([^:\/#\?\]\[]+|\[[^\/\]@#?]+\])(?:\:([0-9]+))?))?)?)?((\/?(?:[^\/\?#]+\/+)*)([^\?#]*)))?(\?[^#]+)?)(#.*)?/;
 	var iconAPI = '//www.google.com/s2/favicons?domain='; 
-	var methods = ['append','prepend','before','after','html'];
+	var supportedMethods = ['append','prepend','before','after','html'];
 	
 	function getIconUrl ( url ) {
 		return iconAPI + regx.exec(url)[11];
 	}
 
-	function getIconImageTag ( anchor ) {
-		var href = $(anchor).attr('href');
-		var url = getIconUrl(href);
-		var img = $('<img />', {src: url, class: 'linkroll'});
-		return img;
-	}
-	
 	function buildFromJson ( node, settings ) {
 		var url = settings.json;
 		var callback = settings.onSuccess;
@@ -45,6 +38,7 @@
 				items.push("</ul></div>");
 			});
 			node.html(items.join(""));
+			node.addClass(settings.addClass);
 			if ($.isFunction(callback)) {
 				callback(node);
 			}
@@ -56,9 +50,10 @@
 	/**
 	 * add DOM chaining method to global jQuery object 
 	 */
-	$.fn.linkroll = function(options) {
+	$.fn.linkroll = function ( options ) {
 //		var roller = new LinkRoller(options);
 		var settings = $.extend({}, $.fn.linkroll.defaults, options);
+		settings.method = ($.inArray(settings.method, supportedMethods)) ? settings.method : supportedMethods[0];
 		return this.each(function(){
 			var node = $(this);
 			if (settings.json) {
@@ -68,8 +63,8 @@
 					insertImage(node, settings);
 				} else {
 					node.find('a').each(function (){
-						var link = $(this);
-						insertImage(link, settings);
+						var subNode = $(this);
+						insertImage(subNode, settings);
 					});
 				}
 				if ($.isFunction(settings.onSuccess)) {
@@ -79,34 +74,31 @@
 		});
 	};
 
-	function insertImage(link, settings) {
-		var img = getIconImageTag(link);
-		//var method = getMethod(link, settings.method);
+	function insertImage ( link, settings ) {
+		var href = $(link).attr('href');
+		var url = getIconUrl(href);
+		var img = $('<img />', {src: url});
+		img.addClass(settings.addClass);
+		link.addClass(settings.addClass);
 		var insertionMethod = link[settings.method];
 		insertionMethod.call(link, img);
-	}
-	
-	function getMethod(node, methodName) {
-		return node[methodName];
-		// if (methodName==='prepend') return node.prepend;
-		// if (methodName==='append') return node.append;
-		// if (methodName==='html') return node.html;
-		// if (methodName==='before') return node.before;
-		// if (methodName==='after') return node.after;
-		// return node.prepend;
 	}
 	
 	/**
 	 * default configuration is globally accessible
 	 */
 	$.fn.linkroll.defaults = {
-		method: 'prepend',
-		json  : false,       //optinal url of json to be loaded
-		onSuccess : false    //optional callback function to apply additional formatting (useful when loading json async)
+		addClass: 'linkroll',  //class name to add to all created/modified elements
+		method: 'prepend',     //jQuery node insertion method for img tag
+		json  : false,         //optinal url of json to be loaded
+		onSuccess : false      //optional callback function to apply additional formatting (useful when loading json async)
 	};
 	
+	/**
+	 * return a 'read-only' copy of the supported insertion methods
+	 */
 	$.fn.linkroll.methods = function() {
-		return 	methods.slice();
+		return 	supportedMethods.slice();
 	}
 	
 	function LinkRoll ( opts ) {
