@@ -22,21 +22,44 @@
 		return iconAPI + regx.exec(url)[11];
 	}
 
+	var template = {
+		begin: '',
+		beforeEachCategory: '<h3>',
+		afterEachCategory: '</h3>',
+		beforeLinks: '<div><ul>',
+		afterLinks: '</ul></div>',
+		beforeEachLink: false,
+		eachLink: "<li class='linkroll' style=\"list-style-image: url('##ICONURL##');\"><a href='##SITEURL##'>##SITENAME##</a></li>",
+		afterEachLink: false,
+		end:   '',
+		replaceWithIconUrl: '##ICONURL##',
+		replaceWithSiteUrl: '##SITEURL##',
+		replaceWithSiteName: '##SITENAME##'
+	};
+	
 	function buildFromJson ( node, settings ) {
 		var url = settings.json;
 		var callback = settings.onSuccess;
 		$.getJSON( url, function(data) {
 			var items = [];
+			items.push(template.begin);
 			$.each(data, function( index, value ) {
-				items.push("<h3 class='linkroll'>" + value.category + "</h3><div class='linkroll'><ul class='linkroll'>");
+				items.push( template.beforeEachCategory + value.category + template.afterEachCategory);
+				items.push(template.beforeLinks);
 				$.each(value.links, function(index2, site) {
-					items.push("<li class='linkroll' style=\"list-style-image: url('"
-							+ getIconUrl(site.link)
-							+ "');\"><a href='" + site.link + "'>" + site.name
-							+ "</a></li>");
+					if (template.beforeEachLink) {
+						items.push(formatSite(site, template.beforeEachLink, template));
+					}
+					if (template.eachLink) {
+						items.push(formatSite(site, template.eachLink, template));
+					}
+					if (template.afterEachLink) {
+						items.push(formatSite(site, template.afterEachLink, template));
+					}
 				});
-				items.push("</ul></div>");
+				items.push(template.afterLinks);
 			});
+			items.push(template.end);
 			node.html(items.join(""));
 			node.addClass(settings.addClass);
 			if ($.isFunction(callback)) {
@@ -45,7 +68,12 @@
 		});
 	}
 	
-	
+	function formatSite(site, layout, opts) {
+		var temp = layout.replace(opts.replaceWithIconUrl, getIconUrl(site.link));
+			temp = temp.replace(opts.replaceWithSiteUrl, site.link);
+			temp = temp.replace(opts.replaceWithSiteName, site.name);
+		return temp;
+	}
 	
 	/**
 	 * add DOM chaining method to global jQuery object 
@@ -53,6 +81,7 @@
 	$.fn.linkroll = function ( options ) {
 //		var roller = new LinkRoller(options);
 		var settings = $.extend({}, $.fn.linkroll.defaults, options);
+		//ensure that selected method is supported
 		settings.method = ($.inArray(settings.method, supportedMethods)) ? settings.method : supportedMethods[0];
 		return this.each(function(){
 			var node = $(this);
@@ -108,7 +137,7 @@
 	LinkRoll.prototype = {
 		options: {},
 		init: function(overrides) {
-			this.options = $.extend({}, $.fn.format.defaults, overrides);
+			this.options = $.extend({}, $.fn.linkroll.defaults, overrides);
 		},
 	};
 	
