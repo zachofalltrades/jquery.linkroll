@@ -22,26 +22,12 @@
 		return iconAPI + regx.exec(url)[11];
 	}
 
-	var template = {
-		begin: '',
-		beforeEachCategory: '<h3>',
-		afterEachCategory: '</h3>',
-		beforeLinks: '<div><ul>',
-		afterLinks: '</ul></div>',
-		beforeEachLink: false,
-		eachLink: "<li class='linkroll' style=\"list-style-image: url('##ICONURL##');\"><a href='##SITEURL##'>##SITENAME##</a></li>",
-		afterEachLink: false,
-		end:   '',
-		replaceWithIconUrl: '##ICONURL##',
-		replaceWithSiteUrl: '##SITEURL##',
-		replaceWithSiteName: '##SITENAME##'
-	};
-	
 	function buildFromJson ( node, settings ) {
 		var url = settings.json;
 		var callback = settings.onSuccess;
 		$.getJSON( url, function(data) {
 			var items = [];
+			var template = settings.jsonTemplate;
 			items.push(template.begin);
 			$.each(data, function( index, value ) {
 				items.push( template.beforeEachCategory + value.category + template.afterEachCategory);
@@ -100,6 +86,7 @@
 					settings.onSuccess(node);
 				}
 			}
+			return this;
 		});
 	};
 
@@ -120,7 +107,21 @@
 		addClass: 'linkroll',  //class name to add to all created/modified elements
 		method: 'prepend',     //jQuery node insertion method for img tag
 		json  : false,         //optinal url of json to be loaded
-		onSuccess : false      //optional callback function to apply additional formatting (useful when loading json async)
+		onSuccess : false,     //optional callback function to apply additional formatting (useful when loading json async)
+		jsonTemplate: {
+			begin: '',
+			beforeEachCategory: '<h3>',
+			afterEachCategory: '</h3>',
+			beforeLinks: '<div><ul>',
+			afterLinks: '</ul></div>',
+			beforeEachLink: false,
+			eachLink: "<li class='linkroll' style=\"list-style-image: url('##ICONURL##');\"><a href='##SITEURL##'>##SITENAME##</a></li>",
+			afterEachLink: false,
+			end:   '',
+			replaceWithIconUrl: '##ICONURL##',
+			replaceWithSiteUrl: '##SITEURL##',
+			replaceWithSiteName: '##SITENAME##'
+		}
 	};
 	
 	/**

@@ -39,13 +39,35 @@
 		</div>
 	</div>
 	
-	<div>
-		<button onClick="$('#plainList').linkroll();">apply to child elements</button>
-		<ul id="plainList">
+	<div id="plainList">
+		<button>apply to child elements</button>
+		<ul>
 			<li><a href="http://wikipedia.org">Wikipedia</a></li>
 			<li><a href="http://www.microsoft.com">Microsoft</a></li>
 			<li><a href="http://zachofalltrades.net">Zach Shelton</a></li>
 		</ul>
+	</div>
+
+	<div id="accordionListWrapper">
+		<button>iconize and then make into an accordion</button>
+		<div id="accordionList">
+			<h3>these are cool things</h3>
+			<div>
+				<ul>
+					<li><a href="http://wikipedia.org">Wikipedia</a></li>
+					<li><a href="http://www.microsoft.com">Microsoft</a></li>
+					<li><a href="http://zachofalltrades.net">Zach Shelton</a></li>
+				</ul>
+			</div>
+			<h3>these are more cool things</h3>
+			<div>
+				<ul>
+					<li><a href="http://wikipedia.org">Wikipedia</a></li>
+					<li><a href="http://www.microsoft.com">Microsoft</a></li>
+					<li><a href="http://zachofalltrades.net">Zach Shelton</a></li>
+				</ul>
+			</div>
+		</div>
 	</div>
 
 	<div>
@@ -53,11 +75,51 @@
 		<div id="emptyDiv">click 'load' to fetch json and load linkroll here</div>
 	</div>
 
+	<div id="fromJson">
+		<button>load</button>
+		<div>load from JSON here</div>
+	</div>
+
+	<div id="accordion1">
+		<button>load and apply 'onSuccess'</button>
+		<div>this content will be replaced (hopefully)</div>
+	</div>
+
+	<div id="accordion2">
+		<button>load and apply via chaining</button>
+		<div id="">this content will be replaced (hopefully)</div>
+	</div>
+
 </body>
 <script>
 	$.each($.fn.linkroll.methods(), function (index, value) {
     	$('#method').append($('<option/>', { value: value, text : value }));
 	});   
+	
+	$('#plainList button').click(function(){
+		$('#plainList ul').linkroll();
+	});
+	
+	//jQuery chaining
+	$('#accordionListWrapper button').click(function(){
+		$('#accordionList').linkroll().accordion({collapsible: true, animate: 100});
+	});
+
+	//options
+	$("#fromJson button").click(function(){
+		$("#fromJson div").linkroll({json: 'sample.json'});
+	});
+	
+	//extended options
+	$("#accordion1 button").click(function(){
+		$("#accordion1 div").linkroll({json: 'sample.json', onSuccess: function(node){node.accordion({collapsible: true, animate: 100})}});
+	});
+
+	//options + jQuery chaining
+	$("#accordion2 button").click(function(){
+		$("#accordion2 div").linkroll({json: 'sample.json'}).accordion({collapsible: true, animate: 100});
+	});
+
 
 </script>
 
