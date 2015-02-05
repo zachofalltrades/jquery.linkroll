@@ -49,7 +49,7 @@
 	</div>
 
 	<div id="accordionListWrapper">
-		<button>iconize and then make into an accordion</button>
+		<button>iconize and chain result into an accordion</button>
 		<div id="accordionList">
 			<h3>these are cool things</h3>
 			<div>
@@ -72,22 +72,32 @@
 
 	<div>
 		<button onClick="$('#emptyDiv').linkroll({json: 'sample.json', onSuccess: function(node){node.accordion({collapsible: true, animate: 100})}});">load</button>
-		<div id="emptyDiv">click 'load' to fetch json and load linkroll here</div>
+		<div id="emptyDiv"></div>
 	</div>
 
 	<div id="fromJson">
-		<button>load</button>
-		<div>load from JSON here</div>
+		<button>load from JSON</button>
+		<div></div>
+	</div>
+
+	<div id="fromRemoteJson">
+		<button>load from remote JSON</button>
+		<div></div>
+	</div>
+
+	<div id="fromRemoteJsonP">
+		<button>load from remote JSON (P)</button>
+		<div></div>
 	</div>
 
 	<div id="accordion1">
-		<button>load and apply 'onSuccess'</button>
-		<div>this content will be replaced (hopefully)</div>
+		<button>load JSON and apply accordion using 'onSuccess' callback</button>
+		<div></div>
 	</div>
 
 	<div id="accordion2">
-		<button>load and apply via chaining</button>
-		<div id="">this content will be replaced (hopefully)</div>
+		<button>load JSON and apply accordion via chaining</button>
+		<div id=""></div>
 	</div>
 
 </body>
@@ -110,6 +120,16 @@
 		$("#fromJson div").linkroll({json: 'sample.json'});
 	});
 	
+	//remote
+	$("#fromRemoteJson button").click(function(){
+		$("#fromRemoteJson div").linkroll({json: 'https://zachofalltrades.github.io/jquery.linkroll/sample.json'});
+	});
+
+	//remote JSONP
+	$("#fromRemoteJsonP button").click(function(){
+		$("#fromRemoteJsonP div").linkroll({json: 'https://zachofalltrades.github.io/jquery.linkroll/sample.json?callback=?'});
+	});
+
 	//extended options
 	$("#accordion1 button").click(function(){
 		$("#accordion1 div").linkroll({json: 'sample.json', onSuccess: function(node){node.accordion({collapsible: true, animate: 100})}});
@@ -119,6 +139,7 @@
 	$("#accordion2 button").click(function(){
 		$("#accordion2 div").linkroll({json: 'sample.json'}).accordion({collapsible: true, animate: 100});
 	});
+
 
 
 </script>

@@ -25,7 +25,7 @@
 	function buildFromJson ( node, settings ) {
 		var url = settings.json;
 		var callback = settings.onSuccess;
-		$.getJSON( url, function(data) {
+		$.getJSON( url ).done( function(data) {
 			var items = [];
 			var template = settings.jsonTemplate;
 			items.push(template.begin);
