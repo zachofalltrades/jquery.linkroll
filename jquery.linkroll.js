@@ -14,6 +14,7 @@
 
 (function( $ ) { //begin closure to make internal functions and variables private
 
+	//regex from http://jsperf.com/url-parsing/28
 	var regx = /^(((([^:\/#\?]+:)?(?:(\/\/)((?:(([^:@\/#\?]+)(?:\:([^:@\/#\?]+))?)@)?(([^:\/#\?\]\[]+|\[[^\/\]@#?]+\])(?:\:([0-9]+))?))?)?)?((\/?(?:[^\/\?#]+\/+)*)([^\?#]*)))?(\?[^#]+)?)(#.*)?/;
 	var iconAPI = '//www.google.com/s2/favicons?domain='; 
 	var supportedMethods = ['append','prepend','before','after','html'];
@@ -23,42 +24,49 @@
 		return iconAPI + regx.exec(url)[11];
 	}
 
-	function buildFromJson ( node, settings ) {
-		var url = (settings.useNodeJitsu) ? NodeJitsuJsonP + settings.json : settings.json;
+	function buildFromJson ( jsonData, node, settings ) {
+		var items = [];
+		var template = settings.jsonTemplate;
 		var callback = settings.onSuccess;
-		$.getJSON( url ).done( function(data) {
-			var items = [];
-			var template = settings.jsonTemplate;
-			items.push(template.begin);
-			$.each(data, function( index, value ) {
-				items.push( template.beforeEachCategory + value.category + template.afterEachCategory);
-				items.push(template.beforeLinks);
-				$.each(value.links, function(index2, site) {
-					if (template.beforeEachLink) {
-						items.push(formatSite(site, template.beforeEachLink, template));
-					}
-					if (template.eachLink) {
-						items.push(formatSite(site, template.eachLink, template));
-					}
-					if (template.afterEachLink) {
-						items.push(formatSite(site, template.afterEachLink, template));
-					}
-				});
-				items.push(template.afterLinks);
+		items.push(template.begin);
+		$.each(jsonData, function( index, value ) {
+			items.push( template.beforeEachCategory + value.category + template.afterEachCategory);
+			items.push(template.beforeLinks);
+			$.each(value.links, function(index2, site) {
+				if (template.beforeEachLink) {
+					items.push(formatSite(site, template.beforeEachLink, template));
+				}
+				if (template.eachLink) {
+					items.push(formatSite(site, template.eachLink, template));
+				}
+				if (template.afterEachLink) {
+					items.push(formatSite(site, template.afterEachLink, template));
+				}
 			});
-			items.push(template.end);
-			node.html(items.join(""));
-			node.addClass(settings.addClass);
-			if ($.isFunction(callback)) {
-				callback(node);
-			}
+			items.push(template.afterLinks);
+		});
+		items.push(template.end);
+		node.html(items.join(""));
+		node.addClass(settings.addClass);
+		if ($.isFunction(callback)) {
+			callback(node);
+		}
+	}
+
+	function loadFromJsonUrl (node, settings) {
+		var url = (settings.useNodeJitsu) ? NodeJitsuJsonP + settings.json : settings.json;
+		$.getJSON( url ).done( function(data) {
+			buildFromJson(data, node, settings);
 		});
 	}
+
 	
 	function formatSite(site, layout, opts) {
-		var temp = layout.replace(opts.replaceWithIconUrl, getIconUrl(site.link));
-			temp = temp.replace(opts.replaceWithSiteUrl, site.link);
-			temp = temp.replace(opts.replaceWithSiteName, site.name);
+		var url = (typeof site==='object') ? site.link : site;
+		var name = (typeof site==='object') ? site.name : regx.exec(site)[11];
+		var temp = layout.replace(opts.replaceWithIconUrl, getIconUrl(url));
+			temp = temp.replace(opts.replaceWithSiteUrl, url);
+			temp = temp.replace(opts.replaceWithSiteName, name);
 		return temp;
 	}
 	
@@ -73,7 +81,7 @@
 		return this.each(function(){
 			var node = $(this);
 			if (settings.json) {
-				buildFromJson(node, settings);
+				loadFromJsonUrl(node, settings);
 			} else {
 				if (node.is('a')) {
 					insertImage(node, settings);
@@ -131,11 +139,11 @@
 	 */
 	$.fn.linkroll.methods = function() {
 		return 	supportedMethods.slice();
-	}
+	};
 	
 	function LinkRoll ( opts ) {
 		this.init(opts);
-	};
+	}
 	
 	LinkRoll.prototype = {
 		options: {},
@@ -144,5 +152,35 @@
 		},
 	};
 	
+	var FileObj = null;
+	var JsonObj = null;
+
+	//feature detection to see if all necessary HTML5 File APIs are supported.
+	if (window.File && window.FileReader && window.FileList && window.Blob) {
+		$.fn.linkroll.FileChooser = function (nodeToLoad, options) {
+			var settings = $.extend({}, $.fn.linkroll.defaults, options);
+			var input = $('<input />', {type: 'file', id: 'linkroll.input', name: 'linkroll.files[]'});
+			//based on http://jsfiddle.net/8kUYj/234/
+			input.on('change', function(evt) {
+			    var files = evt.target.files; // FileList object
+			    var f = files[0];
+			    var reader = new FileReader(); //html5 object
+			    reader.onload = (function (theFile) {
+			        return function (e) { 
+			            FileObj = e.target.result
+			            JsonObj = JSON.parse(FileObj);
+			            buildFromJson ( JsonObj, nodeToLoad, settings );
+			        };
+			    })(f);
+			    reader.readAsText(f, 'UTF-8');
+			});
+			return input;
+		};
+	} else {
+		$.fn.linkroll.FileChooser = function() {
+			return false;
+		};
+		console.log('The File APIs are not fully supported in this browser.');
+	}
 
 }(jQuery)); //end of IIFE (see http://benalman.com/news/2010/11/immediately-invoked-function-expression/ )
