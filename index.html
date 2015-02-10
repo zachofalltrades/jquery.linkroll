@@ -1,147 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>jQuery Link Roll</title>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script	src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-<!-- 
-<script	src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.map"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone.js"></script>
--->
-<script src="jquery.linkroll.js"></script>
-<style>
-</style>
+	<title>jQuery Link Roll</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script	src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+	<style>
+	</style>
 </head>
 <body>
-	
-	<div>
-		<select id="method" ></select>
-		<button onClick="$('#inlineLinks').linkroll({method:  $('#method').val()});">iconize inline links</button>
-		<div id="inlineLinks">
-			 Pommy ipsum big light curry sauce cornish pasty air one's dirty linen 
-			 'ar kid bog off, bloody mary squirrel scatterbrained chuffed tallywhacker 
-			<a href="http://wikipedia.org">Wikipedia</a>
-			 a tad. Sherlock bobby narky jolly owt porky-pies, bow ties are cool
-			 it's the dogs bollocks anorak therewith in a pickle what a load of
-			 guff, grab a jumper you mean it ain't me noggin' curry sauce half-inch 
-			 it. Knee high to a grasshopper i'll be a monkey's uncle air one's
-			 	<a href="http://www.microsoft.com">Microsoft</a>
-			 dirty linen Queen Elizabeth trouble and strife scatterbrained Union 
-			 Jack god save the queen old chap the black death, what a load of 
-			 guff blimey houlligan you 'avin a laugh sod's law leisurely.
-			<a href="http://zachofalltrades.net">Zach Shelton</a>
-			A bottle of plonk any road, best be off full English breakast 
-			shepherd's pie, fake tan. 
-			
-			
-		</div>
-	</div>
-	
-	<div id="plainList">
-		<button>apply to child elements</button>
-		<ul>
-			<li><a href="http://wikipedia.org">Wikipedia</a></li>
-			<li><a href="http://www.microsoft.com">Microsoft</a></li>
-			<li><a href="http://zachofalltrades.net">Zach Shelton</a></li>
-		</ul>
-	</div>
-
-	<div id="accordionListWrapper">
-		<button>iconize and chain result into an accordion</button>
-		<div id="accordionList">
-			<h3>these are cool things</h3>
-			<div>
-				<ul>
-					<li><a href="http://wikipedia.org">Wikipedia</a></li>
-					<li><a href="http://www.microsoft.com">Microsoft</a></li>
-					<li><a href="http://zachofalltrades.net">Zach Shelton</a></li>
-				</ul>
-			</div>
-			<h3>these are more cool things</h3>
-			<div>
-				<ul>
-					<li><a href="http://wikipedia.org">Wikipedia</a></li>
-					<li><a href="http://www.microsoft.com">Microsoft</a></li>
-					<li><a href="http://zachofalltrades.net">Zach Shelton</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-
-	<div>
-		<button onClick="$('#emptyDiv').linkroll({json: 'sample.json', onSuccess: function(node){node.accordion({collapsible: true, animate: 100})}});">load</button>
-		<div id="emptyDiv"></div>
-	</div>
-
-	<div id="fromJson">
-		<button>load from JSON</button>
-		<div></div>
-	</div>
-
-	<div id="fromRemoteJson">
-		<button>load from remote JSON</button>
-		<div></div>
-	</div>
-
-	<div id="fromRemoteJsonP">
-		<button>load from remote JSON (P)</button>
-		<div></div>
-	</div>
-
-	<div id="accordion1">
-		<button>load JSON and apply accordion using 'onSuccess' callback</button>
-		<div></div>
-	</div>
-
-	<div id="accordion2">
-		<button>load JSON and apply accordion via chaining</button>
-		<div id=""></div>
-	</div>
-
+<div id="buttons"></div>
+<iframe id="demo" src="" height="800" width="700px"/></iframe>
 </body>
 <script>
-	$.each($.fn.linkroll.methods(), function (index, value) {
-    	$('#method').append($('<option/>', { value: value, text : value }));
-	});   
-	
-	$('#plainList button').click(function(){
-		$('#plainList ul').linkroll();
-	});
-	
-	//jQuery chaining
-	$('#accordionListWrapper button').click(function(){
-		$('#accordionList').linkroll().accordion({collapsible: true, animate: 100});
-	});
-
-	//options
-	$("#fromJson button").click(function(){
-		$("#fromJson div").linkroll({json: 'sample.json'});
-	});
-	
-	//remote
-	$("#fromRemoteJson button").click(function(){
-		$("#fromRemoteJson div").linkroll({json: 'https://zachofalltrades.github.io/jquery.linkroll/sample.json'});
-	});
-
-	//remote JSONP
-	$("#fromRemoteJsonP button").click(function(){
-		$("#fromRemoteJsonP div").linkroll({json: 'https://zachofalltrades.github.io/jquery.linkroll/sample.json?callback=?'});
-	});
-
-	//extended options
-	$("#accordion1 button").click(function(){
-		$("#accordion1 div").linkroll({json: 'sample.json', onSuccess: function(node){node.accordion({collapsible: true, animate: 100})}});
-	});
-
-	//options + jQuery chaining
-	$("#accordion2 button").click(function(){
-		$("#accordion2 div").linkroll({json: 'sample.json'}).accordion({collapsible: true, animate: 100});
-	});
-
-
-
+	function resizeIframe(obj) {
+    	obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  	}
+	function addDemo(fileName, buttonText) {
+		var caption = (buttonText) ? buttonText : fileName;
+		$('#buttons').append($("<button/>").html(caption).click(function(){$('#demo').attr('src', 'demos/'+fileName+'.html')}));
+	}
+	addDemo('inline');
+	addDemo('options-method');
+	addDemo('chaining');
+	addDemo('options-json');
+	addDemo('options-json-chaining');
+	addDemo('options-callback');
+	addDemo('options-json-callback');
+	addDemo('options-json-remote');
 </script>
-
 </html>

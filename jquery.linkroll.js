@@ -17,13 +17,14 @@
 	var regx = /^(((([^:\/#\?]+:)?(?:(\/\/)((?:(([^:@\/#\?]+)(?:\:([^:@\/#\?]+))?)@)?(([^:\/#\?\]\[]+|\[[^\/\]@#?]+\])(?:\:([0-9]+))?))?)?)?((\/?(?:[^\/\?#]+\/+)*)([^\?#]*)))?(\?[^#]+)?)(#.*)?/;
 	var iconAPI = '//www.google.com/s2/favicons?domain='; 
 	var supportedMethods = ['append','prepend','before','after','html'];
+	var NodeJitsuJsonP = 'https://jsonp.nodejitsu.com/?callback=?&url=';
 	
 	function getIconUrl ( url ) {
 		return iconAPI + regx.exec(url)[11];
 	}
 
 	function buildFromJson ( node, settings ) {
-		var url = settings.json;
+		var url = (settings.useNodeJitsu) ? NodeJitsuJsonP + settings.json : settings.json;
 		var callback = settings.onSuccess;
 		$.getJSON( url ).done( function(data) {
 			var items = [];
@@ -107,6 +108,7 @@
 		addClass: 'linkroll',  //class name to add to all created/modified elements
 		method: 'prepend',     //jQuery node insertion method for img tag
 		json  : false,         //optinal url of json to be loaded
+		useNodeJitsu: false,   //set true if json url is (trusted) remote host that does not enable CORS or JSONP
 		onSuccess : false,     //optional callback function to apply additional formatting (useful when loading json async)
 		jsonTemplate: {
 			begin: '',
