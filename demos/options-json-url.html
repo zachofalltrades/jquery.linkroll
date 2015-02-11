@@ -15,11 +15,23 @@
 
 </body>
 <script>
+	$('#wrapper').prepend($('<input/>', {id: 'url'}));
+
+	$('#wrapper').prepend(
+		$("<button/>").html("load from URL").click( function() {
+			var url = $('#url').val();
+			$("#wrapper div").linkroll({json: url});
+		})
+	);
+
+	$('#wrapper').append(
+		$("<button/>").html("clear").click( function() {
+			$("#wrapper div").empty();
+		})
+	);
 
 	$('#wrapper').append($("<div/>"));
-	$('#wrapper').append($.fn.linkroll.ImportButton($('#wrapper div')));
-	$('#wrapper').append($.fn.linkroll.ExportButton());
-	$('#wrapper').append($.fn.linkroll.EditButton());
+
 
 </script>
 

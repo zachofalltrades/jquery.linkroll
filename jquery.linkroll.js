@@ -14,7 +14,7 @@
 
 (function( $ ) { //begin closure to make internal functions and variables private
 
-	//regex from http://jsperf.com/url-parsing/28
+	//see http://jsfiddle.net/zachofalltrades/tcgwkns8
 	var regx = /^(((([^:\/#\?]+:)?(?:(\/\/)((?:(([^:@\/#\?]+)(?:\:([^:@\/#\?]+))?)@)?(([^:\/#\?\]\[]+|\[[^\/\]@#?]+\])(?:\:([0-9]+))?))?)?)?((\/?(?:[^\/\?#]+\/+)*)([^\?#]*)))?(\?[^#]+)?)(#.*)?/;
 	var iconAPI = '//www.google.com/s2/favicons?domain='; 
 	var supportedMethods = ['append','prepend','before','after','html'];
@@ -157,17 +157,17 @@
 
 	//feature detection to see if all necessary HTML5 File APIs are supported.
 	if (window.File && window.FileReader && window.FileList) {
-		$.fn.linkroll.FileChooser = function (nodeToLoad, options) {
+		$.fn.linkroll.ImportButton = function (nodeToLoad, options) {
 			var settings = $.extend({}, $.fn.linkroll.defaults, options);
 			var input = $('<input />', {type: 'file', id: 'linkroll.input', name: 'linkroll.files[]'});
 			//based on http://jsfiddle.net/8kUYj/234/
 			input.on('change', function(evt) {
-			    var files = evt.target.files; // FileList object
-			    var f = files[0];
-			    var reader = new FileReader(); //html5 object
+			    var files = evt.target.files;  // HTML5 FileList
+			    var f = files[0];              // HTML5 File
+			    var reader = new FileReader(); // HTML5 FileReader
 			    reader.onload = (function (theFile) {
 			        return function (e) { 
-			            FileObj = e.target.result
+			            FileObj = e.target.result;
 			            JsonObj = JSON.parse(FileObj);
 			            buildFromJson ( JsonObj, nodeToLoad, settings );
 			        };
@@ -177,9 +177,76 @@
 			return input;
 		};
 	} else {
-		$.fn.linkroll.FileChooser = function() {
+		$.fn.linkroll.ImportButton = function() {
 			return false;
 		};
+		console.log('The File APIs are not fully supported in this browser.');
+	}
+
+	var jsonEditorEndpoint = 'https://jsonblob.com';
+	var jsonEditorApi = '/api/jsonBlob';
+	if (true) {
+		$.fn.linkroll.EditButton = function (link, options) {
+			var btn = $('<button/>',{type: 'submit', formmethod: 'GET', formtarget: '_blank'});
+			btn.html('edit');
+			btn.click(function() {
+				var jsonData = JsonObj;
+				var jsonTxt = JSON.stringify(jsonData);
+				$.ajax({
+					url: jsonEditorEndpoint + jsonEditorApi,
+					contentType: 'application/json; charset=utf-8',
+					type: 'POST',
+					//dataType: 'json',
+					data: jsonTxt,
+					error: function (xhr, status) {
+						alert(status);
+					},
+					success: function (data, status, xhr) {
+						console.log(data);
+						console.log(status);
+						console.log(xhr);
+						var location = xhr.getResponseHeader("location");
+						alert(location);
+						var editor = location.replace(jsonEditorApi, '');
+						window.open(editor);
+					}
+				});
+				// var tmp = $('<form/>', {
+				// 	method: 'POST', 
+				// 	target: "_blank",
+				// 	action: 'https://jsonblob.com/api/jsonBlob'
+				// });
+				// $("body").append(tmp);
+				// tmp.submit();
+				// tmp.remove();
+			});
+			return btn;
+		};
+	} else {
+		console.log('The File APIs are not fully supported in this browser.');
+	}
+
+	if (true) {
+	$.fn.linkroll.ExportButton = function (link, options) {
+		var btn = $('<button/>',{type: 'submit', formmethod: 'GET', formtarget: '_blank'});
+		btn.html('export');
+		btn.click(function() {
+			var data = JsonObj;
+			var jsonTxt = JSON.stringify(data);
+			var blob = new Blob([jsonTxt], {type: "application/json"});
+			//btn.formaction = URL.createObjectURL(blob);
+			var tmp = $('<form/>', {
+				method: 'GET', 
+				target: "_blank",
+				action: URL.createObjectURL(blob)
+			});
+			$("body").append(tmp);
+			tmp.submit();
+			tmp.remove();
+		});
+		return btn;
+		}
+	} else {
 		console.log('The File APIs are not fully supported in this browser.');
 	}
 
