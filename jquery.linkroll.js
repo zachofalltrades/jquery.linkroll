@@ -19,6 +19,7 @@
 	var iconAPI = '//www.google.com/s2/favicons?domain='; 
 	var supportedMethods = ['append','prepend','before','after','html'];
 	var NodeJitsuJsonP = 'https://jsonp.nodejitsu.com/?callback=?&url=';
+	var JsonObj = null; //hold reference to most recently loaded json object
 	
 	function getIconUrl ( url ) {
 		return iconAPI + regx.exec(url)[11];
@@ -28,6 +29,7 @@
 		var items = [];
 		var template = settings.jsonTemplate;
 		var callback = settings.onSuccess;
+		JsonObj = jsonData;
 		items.push(template.begin);
 		$.each(jsonData, function( index, value ) {
 			items.push( template.beforeEachCategory + value.category + template.afterEachCategory);
@@ -152,9 +154,6 @@
 		},
 	};
 	
-	var FileObj = null;
-	var JsonObj = null;
-
 	//feature detection to see if all necessary HTML5 File APIs are supported.
 	if (window.File && window.FileReader && window.FileList) {
 		$.fn.linkroll.ImportButton = function (nodeToLoad, options) {
@@ -167,9 +166,9 @@
 			    var reader = new FileReader(); // HTML5 FileReader
 			    reader.onload = (function (theFile) {
 			        return function (e) { 
-			            FileObj = e.target.result;
-			            JsonObj = JSON.parse(FileObj);
-			            buildFromJson ( JsonObj, nodeToLoad, settings );
+			            var fileObj = e.target.result;
+			            var json = JSON.parse(fileObj);
+			            buildFromJson ( json, nodeToLoad, settings );
 			        };
 			    })(f);
 			    reader.readAsText(f, 'UTF-8');
