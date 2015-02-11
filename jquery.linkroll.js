@@ -156,7 +156,7 @@
 	var JsonObj = null;
 
 	//feature detection to see if all necessary HTML5 File APIs are supported.
-	if (window.File && window.FileReader && window.FileList && window.Blob) {
+	if (window.File && window.FileReader && window.FileList) {
 		$.fn.linkroll.FileChooser = function (nodeToLoad, options) {
 			var settings = $.extend({}, $.fn.linkroll.defaults, options);
 			var input = $('<input />', {type: 'file', id: 'linkroll.input', name: 'linkroll.files[]'});
