@@ -1,0 +1,25 @@
+[
+  {
+    "category": "search",
+    "links": [
+      "http://google.com",
+      "http://ask.com",
+      "http://bing.com"
+    ]
+  },
+  {
+    "category": "languages",
+    "links": [
+      "http://php.net",
+      "http://cpan.org",
+      "http://java.com"
+    ]
+  },
+  {
+    "category": "tools",
+    "links": [
+      "http://scootersoftware.com",
+      "http://editplus.com"
+    ]
+  }
+]
