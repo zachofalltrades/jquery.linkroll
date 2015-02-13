@@ -17,8 +17,8 @@
 </body>
 <script>
 	$('#wrapper').append(
-		$("<button/>").html("load from json and use callback for jQuery accordion").click( function() {
-			$("#wrapper div").linkroll({json: 'sample.json', onSuccess: function(node){node.accordion({collapsible: true, animate: 100});}});
+		$("<button/>").html("load from json (on relative url) and use callback for jQuery accordion").click( function() {
+			$("#wrapper div").linkroll({jsonUrl: 'sample.json', onSuccess: function(node){node.accordion({collapsible: true, animate: 100});}});
 		})
 	);
 	$('#wrapper').append($("<div/>"));

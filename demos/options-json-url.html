@@ -20,7 +20,7 @@
 	$('#wrapper').prepend(
 		$("<button/>").html("load from URL").click( function() {
 			var url = $('#url').val();
-			$("#wrapper div").linkroll({json: url});
+			$("#wrapper div").linkroll({jsonUrl: url});
 		})
 	);
 

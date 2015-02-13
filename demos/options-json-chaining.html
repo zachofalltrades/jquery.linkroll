@@ -19,8 +19,8 @@
 <script>
 
 	$('#wrapper').append(
-		$("<button/>").html("option - JSON file, then chain to accordion").click( function() {
-			$("#wrapper div").linkroll({json: 'sample.json'}).linkroll().accordion({collapsible: true, animate: 100});;
+		$("<button/>").html("load from json (on relative url), then chain to accordion").click( function() {
+			$("#wrapper div").linkroll({jsonUrl: 'sample.json'}).accordion({collapsible: true, animate: 100});;
 		})
 	);
 

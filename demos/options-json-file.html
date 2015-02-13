@@ -17,9 +17,9 @@
 <script>
 
 	$('#wrapper').append($("<div/>"));
-	$('#wrapper').append($.fn.linkroll.ImportButton($('#wrapper div')));
-	$('#wrapper').append($.fn.linkroll.ExportButton());
-	$('#wrapper').append($.fn.linkroll.EditButton());
+	$('#wrapper div').linkroll({buttons: {loadFromFile: true}});
+//	$('#wrapper').append($.fn.linkroll.ExportButton());
+//	$('#wrapper').append($.fn.linkroll.EditButton());
 
 </script>
 

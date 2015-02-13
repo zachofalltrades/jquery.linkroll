@@ -18,25 +18,25 @@
 
 	$('#wrapper').append(
 		$("<button/>").html("remote JSON").click( function() {
-			$("#wrapper div").linkroll({json: 'https://zachofalltrades.github.io/jquery.linkroll/sample.json'});
+			$("#wrapper div").linkroll({jsonUrl: 'https://zachofalltrades.github.io/jquery.linkroll/sample.json'});
 		})
 	);
 
 	$('#wrapper').append(
 		$("<button/>").html("remote with JSONP support").click( function() {
-			$("#wrapper div").linkroll({json: 'https://zachofalltrades.github.io/jquery.linkroll/sample.json?callback=?'});
+			$("#wrapper div").linkroll({jsonUrl: 'https://zachofalltrades.github.io/jquery.linkroll/sample.json?callback=?'});
 		})
 	);
 
 	$('#wrapper').append(
 		$("<button/>").html("remote with NodeJitsu").click( function() {
-			$("#wrapper div").linkroll({json: 'https://jsonp.nodejitsu.com/?url=https://zachofalltrades.github.io/jquery.linkroll/sample.json&callback=?'});
+			$("#wrapper div").linkroll({jsonUrl: 'https://jsonp.nodejitsu.com/?url=https://zachofalltrades.github.io/jquery.linkroll/sample.json&callback=?'});
 		})
 	);
 
 	$('#wrapper').append(
 		$("<button/>").html("remote with NodeJitsu as option").click( function() {
-			$("#wrapper div").linkroll({json: 'https://zachofalltrades.github.io/jquery.linkroll/sample.json', useNodeJitsu: true});
+			$("#wrapper div").linkroll({jsonUrl: 'https://zachofalltrades.github.io/jquery.linkroll/sample.json', useProxy: true});
 		})
 	);
 
