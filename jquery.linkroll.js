@@ -250,25 +250,28 @@ LinkRoll.prototype = {
 		return widget;
 	},
 	
-	popup: function ( url ) {
+	popup: function ( url, title ) {
 		if ( DialogApi ) {
-			var iframe = $('<iframe height="100%" width="100%" frameborder="0" marginwidth="0" marginheight="0" src="' + url + '" />');
-			var diag = $('<div/>');
+			var t = (title) ? title : "LinkRoller";
+			var h = window.innerHeight - 10;
+			var w = window.innerWidth - 10;
+			var iframe = $('<iframe height="'+(h-100)+'" width="'+(w-100)+'" frameborder="0" marginwidth="0" marginheight="0" src="' + url + '" />');
+			var diag = $('<div id="mydialog" />');
 			diag.append(iframe);
 			var that = $(this.myWidget);
 			that.append(diag);
 			diag.dialog( { 
+				title: t,
 				modal: true,
 				resizable: true,
-				width: "95%",
-				height: "95%",
+				height: 'auto',
+				width: w,
 				close: function () {
-					iframe.attr("src", "");
-					that.remove(diag);
+					$('#mydialog').remove();
 				}
 			} );
 		} else {
-			var win = window.open( url, 'linkRollerPopups' );
+			var win = window.open( url, t );
 			win.focus();
 		}
 	},
@@ -323,8 +326,7 @@ LinkRoll.prototype = {
 		var span = $('<span/>');
 		if ( FileApiSupported ) {
 			var that = this;
-			var editorTarget = 'JsonEditor';
-			var btn = $('<button/>',{type: 'submit', formmethod: 'GET', formtarget: editorTarget});
+			var btn = $('<button/>', {type: 'button'} );
 			btn.html('edit');
 			btn.click(function() {
 				var reEdit = ( that.sourceUrl && that.sourceUrl.indexOf( jsonEditorEndpoint ) > -1 ) ? true : false;
@@ -362,21 +364,13 @@ LinkRoll.prototype = {
 		var span = $('<span/>');
 		if (FileApiSupported) {
 			var that = this;
-			var btn = $('<button/>',{type: 'submit', formmethod: 'GET', formtarget: '_blank'});
+			var btn = $('<button/>',{type: 'button'});
 			btn.html('export');
 			btn.click( function() {
 				var data = that.jsonModel;
-				var jsonTxt = JSON.stringify(data);
+				var jsonTxt = JSON.stringify(data, null, ' ');
 				var blob = new Blob ( [ jsonTxt ], { type: "application/json" } );
-				//btn.formaction = URL.createObjectURL(blob);
-				var tmp = $('<form/>', {
-					method: 'GET', 
-					target: "_blank",
-					action: URL.createObjectURL(blob)
-				});
-				$('body').append( tmp );
-				tmp.submit();
-				tmp.remove();
+				that.popup(URL.createObjectURL(blob));
 			});
 			span.append( btn );
 		} else {
@@ -398,72 +392,39 @@ LinkRoll.prototype = {
 }; //end prototype
 
 	
-// if (true) {
-// 	$.fn.linkroll.EditButton = function (link, options) {
-// 		var btn = $('<button/>',{type: 'submit', formmethod: 'GET', formtarget: '_blank'});
-// 		btn.html('edit');
-// 		btn.click(function() {
-// 			var jsonData = JsonObj;
-// 			var jsonTxt = JSON.stringify(jsonData);
-// 			$.ajax({
-// 				url: jsonEditorEndpoint + jsonEditorApi,
-// 				contentType: 'application/json; charset=utf-8',
-// 				type: 'POST',
-// 				data: jsonTxt,
-// 				error: function (xhr, status) {
-// 					alert(status);
-// 				},
-// 				success: function (data, status, xhr) {
-// 					console.log(data);
-// 					console.log(status);
-// 					console.log(xhr);
-// 					var location = xhr.getResponseHeader("location"); //
-// 					var editor = location.replace(jsonEditorApi, '');
-// 					window.open(editor);
-// 					btn.after(reloadButton(location));
-// 				}
-// 			});
-// 		});
-// 		return btn;
-// 	};
-// } else {
-// 	console.log('The File APIs are not fully supported in this browser.');
-// }
 
 /**
- * get a button to reload content from the given url
+ * TODO import from mozill bookmark json format 
+ * 
+ * Object {
+ * 	type: text/x-moz-place-container,
+ * 	title: '',
+ * 	children: Array [ container / place ]
+ *  root: ''
+ * }
+ * 
+ * Object {
+ 	type: text/x-moz-place
+ 	title: ''
+ 	uri: url
+ 	iconuri: url
+ 	}
+ * 
+ * both object types: 
+ * 	id
+ * 	guid
+ * 	index
+ * 	dateAdded
+ * 	lastModified
+ * 	
+ * 
  */
-// function reloadButton ( url ) {
-// 	var btn = $('<button/>');
-// 	btn.html('reload');
-// 	btn.click( function () {
-// 		alert(url)
-// 	});
-// 	return btn;
-// }
+function mozillaImport(data) {
+	
+	
+}
 
-// if (true) {
-// $.fn.linkroll.ExportButton = function (link, options) {
-// 	var btn = $('<button/>',{type: 'submit', formmethod: 'GET', formtarget: '_blank'});
-// 	btn.html('export');
-// 	btn.click(function() {
-// 		var data = JsonObj;
-// 		var jsonTxt = JSON.stringify(data);
-// 		var blob = new Blob([jsonTxt], {type: "application/json"});
-// 		//btn.formaction = URL.createObjectURL(blob);
-// 		var tmp = $('<form/>', {
-// 			method: 'GET', 
-// 			target: "_blank",
-// 			action: URL.createObjectURL(blob)
-// 		});
-// 		$("body").append(tmp);
-// 		tmp.submit();
-// 		tmp.remove();
-// 	});
-// 	return btn;
-// 	}
-// } else {
-// 	console.log('The File APIs are not fully supported in this browser.');
-// }
 
 }(jQuery)); //end of IIFE (see http://benalman.com/news/2010/11/immediately-invoked-function-expression/ )
+
+
