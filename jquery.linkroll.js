@@ -107,10 +107,10 @@ function getIconUrl ( url ) {
 	return iconForHost + urlPartsRegX.exec(url)[11];
 }
 
-function formatSite ( site, layout, opts ) {
+function formatSite ( bookmark, layout, opts ) {
 	//allow for multiple json structures...
-	var url = (typeof site.link==='string') ? site.link : site;
-	var name = (typeof site.name==='string') ? site.name : (typeof site.link==='string') ? 	urlPartsRegX.exec(site.link)[11] : 	urlPartsRegX.exec(site)[11];
+	var url = (typeof bookmark.uri==='string') ? bookmark.uri : bookmark;
+	var name = (typeof bookmark.name==='string') ? bookmark.name : urlPartsRegX.exec(url)[11];
 	
 	var temp = layout.replace(opts.replaceWithIconUrl, getIconUrl(url));
 		temp = temp.replace(opts.replaceWithSiteUrl, url);
@@ -127,6 +127,9 @@ function LinkRoll ( opts) {
 }
 
 LinkRoll.prototype = {
+	//watch for changes...
+	//https://gist.github.com/eligrey/384583 
+	//https://api.jquery.com/category/events/event-object/
 	options: {},
 	targetNode: null, 
 	sourceUrl: null, 
@@ -180,26 +183,32 @@ LinkRoll.prototype = {
 	buildFromJson: function( jsonData ) {
 		var template = this.options.jsonTemplate;
 		var callback = this.options.onSuccess;
-		this.jsonModel = jsonData;  //save json object to internal model
+		this.jsonModel = normalizeData(jsonData);  //save json object to internal model
 		var content = [];           //temp array to build a string
-		content.push( template.begin );
-		$.each(jsonData, function( index, value ) {
-			content.push( template.beforeEachCategory + value.category + template.afterEachCategory );
-			content.push( template.beforeLinks );
-			$.each( value.links, function( index2, site ) {
-				if ( template.beforeEachLink ) {
-					content.push( formatSite( site, template.beforeEachLink, template ) );
-				}
-				if ( template.eachLink ) {
-					content.push( formatSite( site, template.eachLink, template ) );
-				}
-				if ( template.afterEachLink ) {
-					content.push( formatSite( site, template.afterEachLink, template ) );
-				}
-			});
-			content.push( template.afterLinks );
-		});
-		content.push( template.end );
+		if (template.begin) {
+			content.push( template.begin );
+		}
+		recurseBookmarks(content, template, this.jsonModel);
+		if (template.end) {
+			content.push( template.end );
+		}
+		// $.each(this.jsonModel, function( index, value ) {
+		// 	console.log(index);
+		// 	content.push( template.beforeEachCategory + value.category + template.afterEachCategory );
+		// 	content.push( template.beforeLinks );
+		// 	$.each( value.links, function( index2, site ) {
+		// 		if ( template.beforeEachLink ) {
+		// 			content.push( formatSite( site, template.beforeEachLink, template ) );
+		// 		}
+		// 		if ( template.eachLink ) {
+		// 			content.push( formatSite( site, template.eachLink, template ) );
+		// 		}
+		// 		if ( template.afterEachLink ) {
+		// 			content.push( formatSite( site, template.afterEachLink, template ) );
+		// 		}
+		// 	});
+		// 	content.push( template.afterLinks );
+		// });
 		this.targetNode.html( content.join("") );
 		if ( this.options.addClass ) {
 			this.targetNode.addClass( this.options.addClass );
@@ -391,39 +400,129 @@ LinkRoll.prototype = {
 	
 }; //end prototype
 
+
+function recurseBookmarks(content, template, folder) {
+	if (Array.isArray(folder.children)) {
+		for (var i in folder.children) {
+			var child = folder.children[i];
+			if (Array.isArray(child.children)) {
+				content.push( template.beforeEachCategory + child.name + template.afterEachCategory );
+				content.push( template.beforeLinks );
+				recurseBookmarks(content, template, child);
+				content.push( template.afterLinks );
+			} else if (typeof child.uri==='string') {
+				if ( template.beforeEachLink ) {
+					content.push( formatSite( child, template.beforeEachLink, template ) );
+				}
+				if ( template.eachLink ) {
+					content.push( formatSite( child, template.eachLink, template ) );
+				}
+				if ( template.afterEachLink ) {
+					content.push( formatSite( child, template.afterEachLink, template ) );
+				}
+			} else {
+				console.log("!!!!!! UNEXPECTED OBJECT !!!!!!");
+				console.log(child);
+			}
+		}
+	} else {
+		console.log("!!!!!!!!!!  NOT A FOLDER   !!!!!!!!");
+		console.log(folder);
+	}
+			// $.each(this.jsonModel, function( index, value ) {
+		// 	console.log(index);
+		// 	content.push( template.beforeEachCategory + value.category + template.afterEachCategory );
+		// 	content.push( template.beforeLinks );
+		// 	$.each( value.links, function( index2, site ) {
+		// 		if ( template.beforeEachLink ) {
+		// 			content.push( formatSite( site, template.beforeEachLink, template ) );
+		// 		}
+		// 		if ( template.eachLink ) {
+		// 			content.push( formatSite( site, template.eachLink, template ) );
+		// 		}
+		// 		if ( template.afterEachLink ) {
+		// 			content.push( formatSite( site, template.afterEachLink, template ) );
+		// 		}
+		// 	});
+		// 	content.push( template.afterLinks );
+		// });
+
+	
+}
 	
 
 /**
- * TODO import from mozill bookmark json format 
+ * linkroll tree structure:
+ * root object must be a 'folder'
  * 
- * Object {
- * 	type: text/x-moz-place-container,
- * 	title: '',
- * 	children: Array [ container / place ]
- *  root: ''
- * }
+ * Object (bookmark)
+ * 		name		String
+ * 		uri:		String
  * 
- * Object {
- 	type: text/x-moz-place
- 	title: ''
- 	uri: url
- 	iconuri: url
- 	}
- * 
- * both object types: 
- * 	id
- * 	guid
- * 	index
- * 	dateAdded
- * 	lastModified
- * 	
+ * Object (folder)
+ * 		name		String
+ * 		children	Array [] -- objects in array may be bookmarks or folders
  * 
  */
-function mozillaImport(data) {
-	
-	
+function normalizeData(data) {
+	if (data.type==='text/x-moz-place-container') {
+		var mozTree = recurseMozilla(data);
+		var mozData = {name: 'Mozilla Bookmarks', children: mozTree};
+		return mozData;
+	} else if (typeof data.roots==='object' && typeof data.roots.other==='object') {
+		var crmTree = recurseChrome(data.roots.other);
+		var crmData = {name: 'Chrome Bookmarks', children: crmTree};
+		console.log(crmData);
+		return crmData;
+	} else if (typeof data.name === 'string' && Array.isArray(data.children)) {
+		//root object has property 'children' that is an array (good)
+		console.log(data.name);
+		return data;
+	} 
+	console.log("!!!!!!!   UNEXPECTED FORMAT   !!!!!!!!!!!!!");
+	console.log(data);
+	return data;
 }
 
+
+function recurseChrome(parent) {
+	var myChildren = [];
+	if ( Array.isArray( parent.children ) ) {
+		for (var i in parent.children) {
+			var child = parent.children[i];
+			if ( child.type==='folder' && Array.isArray(child.children) && child.children.length > 0) {
+				var grandchildren = recurseChrome(child);
+				var folder = {name: child.name, children: grandchildren};
+				myChildren.push(folder);
+			} else if (child.type==='url') {
+				var bookmark = {name: child.name, uri: child.url};
+				myChildren.push(bookmark);
+			}
+		}
+	}
+	return myChildren;
+}
+
+/**
+ * return an array of objects
+ */
+function recurseMozilla (container) {
+	var myChildren = [];
+	if ( Array.isArray( container.children ) ) {
+		for (var i in container.children) {
+			var child = container.children[i];
+			if ( child.type==='text/x-moz-place-container' && Array.isArray(child.children) && child.children.length > 0) {
+				var grandchildren = recurseMozilla(child);
+				var folder = {name: child.title, children: grandchildren};
+				myChildren.push(folder);
+			} else if (child.type==='text/x-moz-place') {
+				var bookmark = {name: child.title, uri: child.uri};
+				myChildren.push(bookmark);
+			}
+		}
+	}
+	return myChildren;
+}
 
 }(jQuery)); //end of IIFE (see http://benalman.com/news/2010/11/immediately-invoked-function-expression/ )
 

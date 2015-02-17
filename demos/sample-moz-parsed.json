@@ -1,0 +1,3832 @@
+{
+    "name": "Mozilla Bookmarks",
+    "children": [{
+        "name": "Collaborative",
+        "children": [{
+            "name": "Collaborative Consulting",
+            "uri": "http://www.collaborative.com/"
+        }, {
+            "name": "ADP Self Service Portal",
+            "uri": "https://portal.adp.com/public/index.htm"
+        }, {
+            "name": "Portal / Intranet (SharePoint)",
+            "uri": "https://portal.collaborative.com/Pages/Default.aspx"
+        }, {
+            "name": "Outlook Web App",
+            "uri": "https://webmail.collaborative.com/owa/"
+        }, {
+            "name": "EAP Employee Assistance Program - ESI Employee Assistance Group",
+            "uri": "http://www.theeap.com/"
+        }, {
+            "name": "OpenAir",
+            "uri": "https://www.openair.com/index.pl"
+        }, {
+            "name": "Confluence",
+            "uri": "https://collaborative.atlassian.net/wiki/dashboard.action"
+        }, {
+            "name": "JIRA",
+            "uri": "https://collaborative.atlassian.net/secure/RapidStart.jspa"
+        }, {
+            "name": "Bitbucket",
+            "uri": "https://bitbucket.org/dashboard/overview"
+        }, {
+            "name": "VisualStudioOnline",
+            "uri": "https://zshelton-cdsc.visualstudio.com/"
+        }, {
+            "name": "Zach on App Arch",
+            "uri": "http://zachonapparch.com/"
+        }]
+    }, {
+        "name": "Places",
+        "children": [{
+            "name": "StevensPoint",
+            "children": [{
+                "name": "Stevens Point, Wisconsin - Wikipedia, th...",
+                "uri": "http://en.wikipedia.org/wiki/Stevens_Point,_Wisconsin"
+            }, {
+                "name": "Stevens Point Public Schools, staff emai...",
+                "uri": "http://www.wisp.k12.wi.us/education/district/district.php?sectionid=1"
+            }, {
+                "name": "SPJ - Local, Sports, Entertainment, Lifestyle",
+                "uri": "http://stevenspointjournal.com/apps/pbcs.dll/frontpage"
+            }, {
+                "name": "Democratic Fundraising",
+                "uri": "http://www.progressivetalkstevenspoint.com/"
+            }, {
+                "name": "Leisure Central",
+                "uri": "http://www.spacvb.com/"
+            }, {
+                "name": "Stevens Point, Wisconsin detailed profile",
+                "uri": "http://www.city-data.com/city/Stevens-Point-Wisconsin.html"
+            }, {
+                "name": "Stevens Point Catholic Schools",
+                "uri": "http://www.spacs.k12.wi.us/"
+            }, {
+                "name": "wwsp 90fm your only alternative radio st...",
+                "uri": "http://www.uwsp.edu/stuorg/wwsp/"
+            }, {
+                "name": "University of Wisconsin Stevens Point",
+                "uri": "http://www.uwsp.edu/"
+            }, {
+                "name": "UCLCC Homepage",
+                "uri": "http://www.uwsp.edu/childcare/"
+            }, {
+                "name": "The Portage County Gazette",
+                "uri": "http://www.pcgazette.com/"
+            }, {
+                "name": "Dance Education Center - Stevens Point, WI",
+                "uri": "http://www.danceeducationcenter.com/"
+            }, {
+                "name": "YMCA - Stevens Point, Wisconsin",
+                "uri": "http://www.spymca.org/"
+            }, {
+                "name": "Forthcoming Danspace -- Class List",
+                "uri": "http://www.forthcomingdanspace.com/classes.asp"
+            }, {
+                "name": "7-Day Forecast",
+                "uri": "http://forecast.weather.gov/MapClick.php?CityName=Stevens+Point&state=WI&site=GRB&textField1=44.5277&textField2=-89.5605&e=0"
+            }, {
+                "name": "Classifieds & Want Ads around Stevens Po...",
+                "uri": "http://stevenspoint-wi.ziply.com/"
+            }, {
+                "name": "City of Stevens Point, Wisconsin, Offici...",
+                "uri": "http://stevenspoint.com/"
+            }, {
+                "name": "Educational Services Home - Summer School 2013",
+                "uri": "http://www.pointschools.net/education/components/scrapbook/default.php?sectiondetailid=27254&"
+            }]
+        }, {
+            "name": "mobile",
+            "children": [{
+                "name": "Netvibes",
+                "uri": "http://mobile.netvibes.com/#!/tabs"
+            }, {
+                "name": "Web Branch Mobile - UW Credit Union",
+                "uri": "https://webbranch.uwcu.org/m/Main/Login"
+            }, {
+                "name": "Picasa",
+                "uri": "http://picasaweb.google.com/m/viewer?source=androidclient"
+            }, {
+                "name": "linkedIn",
+                "uri": "http://touch.www.linkedin.com/#home"
+            }, {
+                "name": "ringmark",
+                "uri": "http://www.rng.io/"
+            }, {
+                "name": "OpenAppMkt",
+                "uri": "http://www.openappmkt.com/"
+            }]
+        }, {
+            "name": "GEO",
+            "children": [{
+                "name": "Breathing Earth",
+                "uri": "http://www.breathingearth.net/"
+            }, {
+                "name": "Encyclopedia of Life",
+                "uri": "http://www.eol.org/home.html"
+            }, {
+                "name": "http://www.earthwatch.org/site/pp.asp?c=dsJSK6PFJnH&b=386443",
+                "uri": "http://www.earthwatch.org/site/pp.asp?c=dsJSK6PFJnH&b=386443"
+            }, {
+                "name": "OpenAerialMap",
+                "uri": "http://openaerialmap.org/map/"
+            }, {
+                "name": "SEOmoz __ AJAX Powered IP Location Lookup",
+                "uri": "http://www.seomoz.org/ip2loc/ip2loc.php?start"
+            }, {
+                "name": "The Gapminder World 2006, beta",
+                "uri": "http://tools.google.com/gapminder/index.html#ssn=4$majorMode=chart$ds;path=data;type=swf$is;shi=t;lb=f;il=t;fs=11;al=30;stl=t;st=t;nsl=t;se=t$ts;sp=6;ti=1976$inc_c;gid=1004;by=grp$inc_s;iid=SP.POP.TOTL;by=ind$inc_x;iid=NY.GDP.PCAP.PP.KD;by=ind$inc_y;iid=S"
+            }, {
+                "name": "OpenGeo : Home",
+                "uri": "http://opengeo.org/"
+            }]
+        }, {
+            "name": "space",
+            "children": [{
+                "name": "NASA World Wind",
+                "uri": "http://worldwind.arc.nasa.gov/index.html"
+            }, {
+                "name": "SKY-MAP.ORG",
+                "uri": "http://www.sky-map.org/"
+            }, {
+                "name": "Stellarium",
+                "uri": "http://www.stellarium.org/"
+            }, {
+                "name": "WIKISKY.ORG",
+                "uri": "http://www.wikisky.org/"
+            }, {
+                "name": "The Gateway to Astronaut Photography of ...",
+                "uri": "http://eol.jsc.nasa.gov/"
+            }, {
+                "name": "SpaceTime TV",
+                "uri": "http://www.spacetime.us/tv/"
+            }]
+        }]
+    }, {
+        "name": "Services",
+        "children": [{
+            "name": "Aggregators",
+            "children": [{
+                "name": "Totally.Me",
+                "uri": "http://www.totally.me/"
+            }, {
+                "name": "Good Noows",
+                "uri": "http://goodnoows.com/"
+            }, {
+                "name": "Spundge",
+                "uri": "http://www.spundge.com/"
+            }, {
+                "name": "Taptu",
+                "uri": "https://www.taptu.com/"
+            }, {
+                "name": "Reader2000",
+                "uri": "http://www.reader2000.com/"
+            }, {
+                "name": "Hive | The place to read the internet on the internet.",
+                "uri": "http://hivereader.com/"
+            }, {
+                "name": "SwarmIQ",
+                "uri": "http://www.swarmiq.com/register/GOOGLEREADERISDEAD"
+            }, {
+                "name": "Pulse",
+                "uri": "http://www.pulse.me/zachofalltrades/news"
+            }, {
+                "name": "NewsBlur",
+                "uri": "https://www.newsblur.com/"
+            }, {
+                "name": "Flipboard",
+                "uri": "http://flipboard.com/"
+            }, {
+                "name": "uStart.org (91) - Your customisable start page!",
+                "uri": "http://www.ustart.org/"
+            }, {
+                "name": "Click here to title your page!",
+                "uri": "http://protopage.com/"
+            }, {
+                "name": "Feedly",
+                "uri": "http://cloud.feedly.com/#my"
+            }, {
+                "name": "News.me Daily Digest for zachofalltrades",
+                "uri": "http://www.news.me/zachofalltrades"
+            }, {
+                "name": "Zachofalltrades on Wibki! Discover, Bookmark & Share Your Web",
+                "uri": "http://www.wibki.com/zachofalltrades"
+            }, {
+                "name": "InoReader ? Light and Fast RSS Reader",
+                "uri": "https://www.inoreader.com/"
+            }]
+        }, {
+            "name": "Google",
+            "children": [{
+                "name": "Google",
+                "uri": "http://www.google.com/"
+            }, {
+                "name": "GMail",
+                "uri": "https://mail.google.com/"
+            }, {
+                "name": "Music",
+                "uri": "https://music.google.com/music/listen?u=0#start_pl"
+            }, {
+                "name": "Contacts",
+                "uri": "http://www.google.com/contacts"
+            }, {
+                "name": "Accounts",
+                "uri": "https://www.google.com/accounts/"
+            }, {
+                "name": "Dashboard",
+                "uri": "https://www.google.com/dashboard/"
+            }, {
+                "name": "Calendar",
+                "uri": "http://www.google.com/calendar/render"
+            }, {
+                "name": "News",
+                "uri": "http://news.google.com/"
+            }, {
+                "name": "Voice",
+                "uri": "https://www.google.com/voice#inbox"
+            }, {
+                "name": "Apps - ZachOfAllTrades.net",
+                "uri": "https://www.google.com/a/zachofalltrades.net/ServiceLogin?service=CPanel&passive=1209600&continue=https://www.google.com/a/cpanel/zachofalltrades.net/Dashboard&followup=https://www.google.com/a/cpanel/zachofalltrades.net/Dashboard"
+            }, {
+                "name": "Store",
+                "uri": "https://play.google.com/store"
+            }, {
+                "name": "Maps",
+                "uri": "http://maps.google.com/"
+            }, {
+                "name": "Drive",
+                "uri": "https://drive.google.com/#my-drive"
+            }, {
+                "name": "Explore the world of Google Developer Tools ? Google Developers",
+                "uri": "https://developers.google.com/products/"
+            }, {
+                "name": "Google Map Maker",
+                "uri": "http://www.google.ca/mapmaker"
+            }, {
+                "name": "Chrome Web Store",
+                "uri": "https://chrome.google.com/webstore/category/apps"
+            }, {
+                "name": "Admin Console (zachofalltrades.net GApps)",
+                "uri": "https://admin.google.com/zachofalltrades.net/AdminHome"
+            }, {
+                "name": "Ads Settings",
+                "uri": "https://www.google.com/settings/u/0/ads?hl=en&sig=ACi0TCgdIV8gQ1ZsTgXNNIIsErwPKOgCmzYWt4WREQrp41C8oJ3A1MonYT0eEq93MOMFgIt2bzao1vAcLVU-cO31Nc2EytRlig"
+            }, {
+                "name": "Dashboard - Account Settings",
+                "uri": "https://www.google.com/settings/dashboard"
+            }]
+        }, {
+            "name": "MyProfiles",
+            "children": [{
+                "name": "Twitter (zachof33trades)",
+                "uri": "https://twitter.com/zachof33trades"
+            }, {
+                "name": "User ZachOfAllTrades - English Language and Usage",
+                "uri": "http://english.stackexchange.com/users/37248/zachofalltrades"
+            }, {
+                "name": "zachofalltrades.net",
+                "uri": "http://zachofalltrades.net/"
+            }, {
+                "name": "Facebook (zach.shelton)",
+                "uri": "https://www.facebook.com/zach.shelton"
+            }, {
+                "name": "Flavors.me (zachofalltrades)",
+                "uri": "http://flavors.me/zachofalltrades"
+            }, {
+                "name": "RebelMouse (zachofalltrades)",
+                "uri": "https://www.rebelmouse.com/zachofalltrades/"
+            }, {
+                "name": "GitHub (zachofalltrades)",
+                "uri": "https://github.com/zachofalltrades"
+            }, {
+                "name": "Google+(Zach.Shelton)",
+                "uri": "https://plus.google.com/109259889801625937827"
+            }, {
+                "name": "about.me - (zachofalltrades)",
+                "uri": "http://about.me/zachofalltrades"
+            }, {
+                "name": "Stack Overflow (zachofalltrades)",
+                "uri": "http://stackoverflow.com/users/1904450/zachofalltrades"
+            }, {
+                "name": "StackExchange.Programmers (zachofalltrades)",
+                "uri": "http://programmers.stackexchange.com/users/80616/zachofalltrades"
+            }, {
+                "name": "Gravatar (zachof33trades)",
+                "uri": "https://secure.gravatar.com/zachof33trades"
+            }, {
+                "name": "pen.io",
+                "uri": "http://zachofalltrades.pen.io/"
+            }, {
+                "name": "Xmarks (zachofalltrades)",
+                "uri": "https://www.xmarks.com/profile/zachofalltrades"
+            }, {
+                "name": "OSRC (zachofalltredes)",
+                "uri": "http://osrc.dfm.io/zachofalltrades/"
+            }, {
+                "name": "GitLab (zacchofalltrades)",
+                "uri": "https://gitlab.com/u/zachofalltrades"
+            }, {
+                "name": "tumblr (zshelton33)",
+                "uri": "http://zshelton33.tumblr.com/"
+            }, {
+                "name": "Springpad (zachofalltrades)",
+                "uri": "http://springpad.com/springpad/#!/zachofalltrades"
+            }, {
+                "name": "SourceForge (zachofalltrades)",
+                "uri": "http://zachofalltrades.users.sourceforge.net/"
+            }, {
+                "name": "SourceForge.net (zachofalltrades)",
+                "uri": "http://sourceforge.net/users/zachofalltrades"
+            }, {
+                "name": "SourceForge/u (zachofalltrades)",
+                "uri": "https://sourceforge.net/u/zachofalltrades/profile/"
+            }, {
+                "name": "LinkedIn (zachofalltrades)",
+                "uri": "http://www.linkedin.com/in/zachofalltrades"
+            }, {
+                "name": "peekyou zachofalltrades Username | Find zachofalltrades or Search for Availability",
+                "uri": "http://www.peekyou.com/username=zachofalltrades"
+            }, {
+                "name": "enthuse.me (zachofalltrades)",
+                "uri": "http://www.enthuse.me/zachofalltrades"
+            }, {
+                "name": "Spundge (zachofalltrades)",
+                "uri": "http://www.spundge.com/profiles/zachofalltrades/"
+            }, {
+                "name": "coderwall (zachofalltrades)",
+                "uri": "https://coderwall.com/zachofalltrades"
+            }, {
+                "name": "Kickstarter (zachofalltrades)",
+                "uri": "http://www.kickstarter.com/profile/zachofalltrades"
+            }, {
+                "name": "Flattr (zachofalltrades)",
+                "uri": "https://flattr.com/profile/zachofalltrades"
+            }, {
+                "name": "arkOS (zachofalltrades)",
+                "uri": "https://bbs.arkos.io/users/zachofalltrades/activity"
+            }, {
+                "name": "Stack Overflow Careers 2.0",
+                "uri": "https://careers.stackoverflow.com/cv/edit/194140"
+            }, {
+                "name": "Steam Community (zshelton33)",
+                "uri": "http://steamcommunity.com/id/zshelton33"
+            }]
+        }, {
+            "name": "Search_Portal",
+            "children": [{
+                "name": "Ask.com Search Engine - Better Web Search",
+                "uri": "http://www.ask.com/?o=333"
+            }, {
+                "name": "Box.net - Free Online File Storage, Inte...",
+                "uri": "http://www.box.net/"
+            }, {
+                "name": "Clusty the clustering search engine",
+                "uri": "http://clusty.com/"
+            }, {
+                "name": "Digg API iPhone Interface",
+                "uri": "http://davidcann.com/digg/"
+            }, {
+                "name": "Kartoo Metasearch",
+                "uri": "http://www.kartoo.com/en/kartoo.html"
+            }, {
+                "name": "KartOO visual meta search engine",
+                "uri": "http://www.kartoo.com/flash04.php3?langue=en"
+            }, {
+                "name": "ProtoPage",
+                "uri": "http://protopage.com/untitled-20j0yvz3us189pq9n4bdzi5bnanrs2aakl63uu5u"
+            }, {
+                "name": "public.resource.org",
+                "uri": "http://public.resource.org/"
+            }, {
+                "name": "Techmeme",
+                "uri": "http://techmeme.com/"
+            }, {
+                "name": "Wikia - Wikis from Wikia - Join the best...",
+                "uri": "http://www.wikia.com/wiki/Wikia"
+            }, {
+                "name": "newsmap",
+                "uri": "http://marumushi.com/apps/newsmap/newsmap.cfm"
+            }, {
+                "name": "O'Reilly Open Books Project",
+                "uri": "http://openbooks.oreilly.com/"
+            }, {
+                "name": "OnlineBookmarkManager",
+                "uri": "http://www.onlinebookmarkmanager.com/"
+            }, {
+                "name": "Open Source Directory",
+                "uri": "http://www.ohloh.net/"
+            }, {
+                "name": "SearchGeek Home - zachofalltrades",
+                "uri": "http://www.searchgeek.com/?selectcountry=us&countryset=y&homerset=y&username=zachofalltrades&lfont=glike"
+            }, {
+                "name": "DuckDuckGo",
+                "uri": "http://duckduckgo.com/"
+            }, {
+                "name": "Disconnect Search: Search privately using your favorite search engine",
+                "uri": "https://search.disconnect.me/"
+            }, {
+                "name": "Ixquick Metasearch",
+                "uri": "http://www.ixquick.com/"
+            }, {
+                "name": "KoolTorch",
+                "uri": "http://www.kooltorch.com/"
+            }, {
+                "name": "Mahalo.com Human-powered Search",
+                "uri": "http://www.mahalo.com/Main_Page"
+            }, {
+                "name": "Ms. Dewey",
+                "uri": "http://www.msdewey.com/"
+            }, {
+                "name": "Martindale's \"The Reference Desk\" - Business, Math, Science, Engineering, Technology, Language, Medical, Veterinary, Livestock, Gardening, Photography, Music, Recipes, etc.",
+                "uri": "http://www.martindalecenter.com/"
+            }]
+        }, {
+            "name": "Backups",
+            "children": [{
+                "name": "Space Monkey | The Future of Data Storage | Home",
+                "uri": "http://www.spacemonkey.com/"
+            }, {
+                "name": "MozyHome",
+                "uri": "https://mozy.com/home/pricing/"
+            }, {
+                "name": "CrashPlan Backup Software",
+                "uri": "http://www.crashplan.com/"
+            }]
+        }, {
+            "name": "Tools",
+            "children": [{
+                "name": "Alien Camel __ Welcome",
+                "uri": "http://aliencamel.com/"
+            }, {
+                "name": "ccrypt",
+                "uri": "http://ccrypt.sourceforge.net/"
+            }, {
+                "name": "Evrsoft - Cool Software for Web Builders",
+                "uri": "http://www.evrsoft.com/"
+            }, {
+                "name": "Extending EditPlus _ Making a Better PHP...",
+                "uri": "http://www.cgi-interactive-uk.com/editplus_better_php_ide.html"
+            }, {
+                "name": "FastSubmit - Submit your website to sear...",
+                "uri": "http://www.evrsoft.com/fastsubmit/"
+            }, {
+                "name": "G E E K T O O L S",
+                "uri": "http://www.geektools.com/index.php"
+            }, {
+                "name": "Martindale's 'The Reference Desk': Downl...",
+                "uri": "http://www.martindalecenter.com/AATimeCalc.html"
+            }, {
+                "name": "PBwiki lets you quickly set up your own ...",
+                "uri": "http://pbwiki.com/"
+            }, {
+                "name": "Site24x7 - Website Monitoring Service",
+                "uri": "http://site24x7.com/index.html"
+            }, {
+                "name": "SSNBreach.org",
+                "uri": "https://ssnbreach.org/"
+            }, {
+                "name": "User Tools - EditPlus Wiki",
+                "uri": "http://editplus.info/wiki/User_Tools#PHP:_syntax_checker"
+            }, {
+                "name": "VanDyke Software Secure Shell Solutions ...",
+                "uri": "http://vandyke.com/"
+            }, {
+                "name": "Web site and server monitoring service: ...",
+                "uri": "http://alertra.com/"
+            }, {
+                "name": "NearlyFreeSpeech.NET Web Hosting",
+                "uri": "https://www.nearlyfreespeech.net/"
+            }, {
+                "name": "Bookmarks",
+                "uri": "chrome://browser/content/places/places.xul"
+            }, {
+                "name": "PWN! YouTube - How to download videos from YouTube for fair rights use",
+                "uri": "http://pwnyoutube.com/"
+            }, {
+                "name": "Web Content Management, Content Management System, PHP Application Framework, Content Management Platform, and More? | MODX",
+                "uri": "http://modx.com/"
+            }]
+        }, {
+            "name": "JobSearch",
+            "children": [{
+                "name": "Companies",
+                "children": [{
+                    "name": "Church Mutual Insurance Company",
+                    "uri": "http://www.churchmutual.com/"
+                }, {
+                    "name": "Careers | RedFusion Studios",
+                    "uri": "http://www.redfusionstudios.com/view/careers/"
+                }]
+            }, {
+                "name": "Wisconsin Unemployment Insurance Benefit Services Menu",
+                "uri": "https://ucclaim-wi.org/InternetInitialClaims/default.asp"
+            }, {
+                "name": "Job Search",
+                "uri": "https://docs.google.com/spreadsheet/ccc?key=0Aq-Vd5fvy3X-dExrMjRRVVFCVGZPaVh0TngxMEdkSXc#gid=0"
+            }, {
+                "name": "LinkedIn",
+                "uri": "http://www.linkedin.com/"
+            }, {
+                "name": "Job Search Made Simple | Simply Hired",
+                "uri": "http://www.simplyhired.com/"
+            }, {
+                "name": "Programmer Analyst Software Engineer Web - Jobs in Stevens Point, WI - Information Technology Jobs",
+                "uri": "http://www.techcareers.com/job.asp?id=54793966"
+            }, {
+                "name": "Job Description - Systems Engineer (Stevens Point) (1211621)",
+                "uri": "https://assocbank.taleo.net/careersection/prof/jobdetail.ftl?job=1211621&lang=en&src=JB-10160"
+            }, {
+                "name": "Associated Bank Systems Engineer",
+                "uri": "https://assocbank.taleo.net/careersection/prof/mysubmissions.ftl"
+            }, {
+                "name": "assoc bank - My Submissions",
+                "uri": "https://assocbank.taleo.net/careersection/prof/mysubmissions.ftl?lang=en"
+            }, {
+                "name": "Recruiting Firm: Professional Staffing & Executive Job Search ? CyberCoders",
+                "uri": "http://www.cybercoders.com/"
+            }, {
+                "name": "AwayFind - Mobile notifications for priority messages. The email management solution for Gmail and Exchange.",
+                "uri": "http://www.awayfind.com/index.php"
+            }, {
+                "name": "Saved Jobs | Simply Hired",
+                "uri": "http://www.simplyhired.com/a/my-jobs/saved"
+            }, {
+                "name": "Thingamajob.com",
+                "uri": "http://www.thingamajob.com/"
+            }, {
+                "name": "My Jobs | Indeed.com",
+                "uri": "http://www.indeed.com/my/myjobs"
+            }, {
+                "name": "Collaborative Consulting | Collaborative Consulting",
+                "uri": "http://collaborative.com/"
+            }, {
+                "name": "Ematic FunTab Pro with WiFi 7\" Touchscreen Kids Tablet PC Featuring Android 4.0 (Ice Cream Sandwich) Operating System with Kid Safe Mode: Computers : Walmart.com",
+                "uri": "http://www.walmart.com/ip/Ematic-FunTab-Pro-with-WiFi-7-Touchscreen-Kids-Tablet-PC-Featuring-Android-4.0-Ice-Cream-Sandwich-Operating-System-with-Kid-Safe-Mode/21635123"
+            }, {
+                "name": "Zinncorp - Minnesota based IT solutions and staffing company",
+                "uri": "http://www.zinncorp.com/"
+            }, {
+                "name": "Comparison of UPnP AV media servers - Wikipedia, the free encyclopedia",
+                "uri": "https://en.wikipedia.org/wiki/Comparison_of_UPnP_AV_media_servers"
+            }, {
+                "name": "CuBox-i Forums ? View topic - plexmediaserver port for armv7h?",
+                "uri": "http://imx.solid-run.com/forums/viewtopic.php?f=13&t=544&sid=c7007a42d14dea470b55ed6c2987ae82#p3567"
+            }, {
+                "name": "JibberJobber :: Login",
+                "uri": "http://www.jibberjobber.com/login.php"
+            }, {
+                "name": "Job Hunting Career Management Solutions to Find a Job",
+                "uri": "http://careershift.com/"
+            }, {
+                "name": "Huntsy",
+                "uri": "https://huntsy.com/"
+            }, {
+                "name": "Home | StartWire",
+                "uri": "http://www.startwire.com/home"
+            }, {
+                "name": "Social CRM for Small Business | Batchbook",
+                "uri": "http://batchbook.com/"
+            }, {
+                "name": "Plaxo - your address book for life.",
+                "uri": "http://www.plaxo.com/"
+            }, {
+                "name": "WorkFu + Find work opportunities. Discover talent. The opportunity network.",
+                "uri": "https://workfu.com/"
+            }, {
+                "name": "Create Job Alert | Jobfox",
+                "uri": "http://www.jobfox.com/"
+            }, {
+                "name": "JobsMiner",
+                "uri": "http://jobsminer.com/"
+            }, {
+                "name": "Glassdoor ? an inside look at jobs & companies",
+                "uri": "http://www.glassdoor.com/index.htm"
+            }, {
+                "name": "JobKatch",
+                "uri": "http://jobkatch.com/"
+            }]
+        }, {
+            "name": "ScheduleWorld - Contacts",
+            "uri": "http://www.scheduleworld.com/encv1/web20.html"
+        }, {
+            "name": "NetVibes",
+            "uri": "http://www.netvibes.com/"
+        }, {
+            "name": "CloudArray Product Tour: Cloud Integrated Storage | TwinStrata",
+            "uri": "http://www.twinstrata.com/cloudarray-product-tour/"
+        }, {
+            "name": "Otixo: All your cloud files from a single login",
+            "uri": "http://otixo.com/"
+        }, {
+            "name": "WhoSampled - Listen to Music Samples, Cover Songs and Remixes |",
+            "uri": "http://www.whosampled.com/"
+        }, {
+            "name": "Pushbullet - Send files, links, and more to your phone and back, fast!",
+            "uri": "https://www.pushbullet.com/"
+        }, {
+            "name": "Lumoid.com - Rent and buy amazing cameras, lenses and accessories for iPhone, Canon, Nikon and more.",
+            "uri": "https://lumoid.com/"
+        }, {
+            "name": "API Directory | ProgrammableWeb",
+            "uri": "http://www.programmableweb.com/apis/directory"
+        }, {
+            "name": "eBay",
+            "uri": "http://www.ebay.com/"
+        }, {
+            "name": "craigslist: wausau classifieds for jobs, apartments, personals, for sale, services, community, and events",
+            "uri": "http://wausau.craigslist.org/"
+        }, {
+            "name": "Wikipedia",
+            "uri": "http://www.wikipedia.org/"
+        }, {
+            "name": "Facebook",
+            "uri": "http://www.facebook.com/home.php"
+        }, {
+            "name": "LastPass Password Manager, Form Filler - The Last Password You'll Have To Remember",
+            "uri": "https://lastpass.com/?ac=1"
+        }, {
+            "name": "Wolfram|Alpha?Computational Knowledge Engine",
+            "uri": "http://www.wolframalpha.com/"
+        }, {
+            "name": "The free website monitoring service that...",
+            "uri": "http://montastic.com/"
+        }, {
+            "name": "ThinkFree Online",
+            "uri": "http://member.thinkfree.com/member/goAboutService.action"
+        }, {
+            "name": "Weebly - Create a free website and a free blog",
+            "uri": "http://www.weebly.com/"
+        }, {
+            "name": "EverNote",
+            "uri": "http://www.evernote.com/Home.action?login=true"
+        }, {
+            "name": "reQall",
+            "uri": "http://www.reqall.com/web/usercollection"
+        }, {
+            "name": "Remember The Milk - Zach's Tasks",
+            "uri": "http://www.rememberthemilk.com/home/zachofalltrades/#section.overview"
+        }, {
+            "name": "ScheduleWorld",
+            "uri": "http://scheduleworld.com/sw2/swapp.html"
+        }, {
+            "name": "ScheduleWorld - Settings",
+            "uri": "http://www.scheduleworld.com/tg/cal/preferences.jsp"
+        }, {
+            "name": "ScheduleWorld - wiki",
+            "uri": "http://wiki.scheduleworld.com/wiki/Main_Page"
+        }, {
+            "name": "Webware Cool Web apps for everyone",
+            "uri": "http://www.webware.com/"
+        }, {
+            "name": "Geni is the fast, free, fun way to creat...",
+            "uri": "http://www.geni.com/home"
+        }, {
+            "name": "YomoMedia Reader",
+            "uri": "http://yomomedia.com/reader.php"
+        }, {
+            "name": "SquareSpace",
+            "uri": "http://www.squarespace.com/"
+        }, {
+            "name": "MemoToo",
+            "uri": "https://memotoo.com/"
+        }, {
+            "name": "Sprint",
+            "uri": "http://sprint.com/powerdeck/"
+        }, {
+            "name": "CNN",
+            "uri": "http://www.cnn.com/"
+        }, {
+            "name": "AwayFind - Mobile notifications for priority messages. The email management solution for Gmail and Exchange.",
+            "uri": "http://www.awayfind.com/"
+        }, {
+            "name": "Web Hosting, Shared Web Hosting, Virtual Private Server, Dedicated Servers by DreamHost",
+            "uri": "http://dreamhost.com/"
+        }, {
+            "name": "Access anywhere. Share with anyone. Stay safe. | Tresorit",
+            "uri": "https://tresorit.com/"
+        }, {
+            "name": "Free Wireless Internet | Free Internet | 4G Wireless Internet - FreedomPop",
+            "uri": "http://www.freedompop.com/"
+        }, {
+            "name": "Khan Academy",
+            "uri": "http://www.khanacademy.org/"
+        }, {
+            "name": "Integrated Inbox for Gmail & Google Apps Plans ? Integrated Inbox for Gmail & Google Apps",
+            "uri": "http://integratedinbox.com/plans/"
+        }, {
+            "name": "Lawyers, Legal Forms, Law Books & Software, Free Legal Information - Nolo.com",
+            "uri": "http://www.nolo.com/"
+        }, {
+            "name": "Free Online YouTube to MP3 - youtube videos mp3 - youtube converter video free",
+            "uri": "http://www.ixconverter.net/"
+        }]
+    }, {
+        "name": "ComputingMisc",
+        "children": [{
+            "name": "privacy",
+            "children": [{
+                "name": "Protect your Privacy with Abine",
+                "uri": "http://abine.com/products.php"
+            }, {
+                "name": "HTTPS Everywhere | Electronic Frontier Foundation",
+                "uri": "https://www.eff.org/https-everywhere/"
+            }, {
+                "name": "DuckDuckGo",
+                "uri": "https://duckduckgo.com/"
+            }, {
+                "name": "Data Privacy Day | Stay Safe Online",
+                "uri": "http://www.staysafeonline.org/dpd"
+            }, {
+                "name": "User Data Manifesto",
+                "uri": "http://userdatamanifesto.org/"
+            }]
+        }, {
+            "name": "Software",
+            "children": [{
+                "name": "7-Zip",
+                "uri": "http://www.7-zip.org/"
+            }, {
+                "name": "Internet",
+                "children": [{
+                    "name": "Google Chrome Browser",
+                    "uri": "https://www.google.com/chrome/browser/"
+                }, {
+                    "name": "Mozilla Firefox Browser",
+                    "uri": "https://www.mozilla.org/en-US/firefox/all/"
+                }, {
+                    "name": "Opera Browser",
+                    "uri": "http://www.opera.com/"
+                }, {
+                    "name": "FileZilla - FTP",
+                    "uri": "https://filezilla-project.org/"
+                }, {
+                    "name": "WinSCP :: SFTP / FTP",
+                    "uri": "http://winscp.net/eng/index.php"
+                }, {
+                    "name": "PuTTY: telnet/ssh",
+                    "uri": "http://www.chiark.greenend.org.uk/~sgtatham/putty/"
+                }, {
+                    "name": "Wireshark ? Go Deep.",
+                    "uri": "https://www.wireshark.org/"
+                }, {
+                    "name": "Fiddler free web debugging proxy",
+                    "uri": "http://www.telerik.com/fiddler"
+                }, {
+                    "name": "Swish - Easy SFTP for Windows",
+                    "uri": "http://www.swish-sftp.org/"
+                }, {
+                    "name": "NcFTP Client",
+                    "uri": "http://www.ncftp.com/ncftp/"
+                }]
+            }, {
+                "name": "Media",
+                "children": [{
+                    "name": "Greenshot - FOS screenshot tool",
+                    "uri": "http://getgreenshot.org/"
+                }, {
+                    "name": "Draw Freely. | Inkscape",
+                    "uri": "http://www.inkscape.org/en/"
+                }, {
+                    "name": "GIMP - The GNU Image Manipulation Program",
+                    "uri": "http://www.gimp.org/"
+                }, {
+                    "name": "VideoLAN - VLC: Free multimedia solutions for all OS!",
+                    "uri": "https://www.videolan.org/"
+                }, {
+                    "name": "MediaInfo",
+                    "uri": "http://mediaarea.net/en/MediaInfo"
+                }]
+            }, {
+                "name": "Windows Utilities",
+                "children": [{
+                    "name": "FileHippo Update Checker",
+                    "uri": "http://filehippo.com/updatechecker"
+                }, {
+                    "name": "CCleaner - PC Optimization and Cleaning",
+                    "uri": "http://www.piriform.com/ccleaner"
+                }, {
+                    "name": "Microsoft Security Essentials",
+                    "uri": "http://windows.microsoft.com/en-us/windows/security-essentials-download"
+                }, {
+                    "name": "Windows Sysinternals",
+                    "uri": "http://technet.microsoft.com/en-us/sysinternals"
+                }, {
+                    "name": "Dual Monitor Taskbar | SourceForge.net",
+                    "uri": "http://sourceforge.net/projects/dualmonitortb/"
+                }, {
+                    "name": "Download ? HashTools ? Binary Fortress Software",
+                    "uri": "http://www.binaryfortress.com/HashTools/Download/"
+                }]
+            }, {
+                "name": "Developer Tools",
+                "children": [{
+                    "name": "Java (JDK)",
+                    "uri": "http://www.oracle.com/technetwork/java/javase/downloads/index.html"
+                }, {
+                    "name": "TOAD (SQL client for multiple RDBMS)",
+                    "uri": "https://www.toadworld.com/?Redirected=true"
+                }, {
+                    "name": "unxutils - native Win32 ports of GNU utils",
+                    "uri": "http://unxutils.sourceforge.net/"
+                }, {
+                    "name": "Cygwin",
+                    "uri": "http://www.cygwin.com/"
+                }, {
+                    "name": "Beyond Compare",
+                    "uri": "http://www.scootersoftware.com/"
+                }, {
+                    "name": "SQuirreL SQL Client Home Page",
+                    "uri": "http://squirrel-sql.sourceforge.net/"
+                }, {
+                    "name": "Binary Fortress Software: Apps to Make Life Easier!",
+                    "uri": "http://www.binaryfortress.com/"
+                }]
+            }, {
+                "name": "Adobe Flash Player",
+                "uri": "https://get.adobe.com/flashplayer/otherversions/"
+            }, {
+                "name": "Java JRE",
+                "uri": "https://www.java.com/en/download/manual.jsp"
+            }, {
+                "name": "Notepad++",
+                "uri": "http://notepad-plus-plus.org/"
+            }, {
+                "name": "LibreOffice (FOS spreadsheet, document, and presentation tools)",
+                "uri": "https://www.libreoffice.org/"
+            }, {
+                "name": "PDF",
+                "children": [{
+                    "name": "CutePDF Writer (Printer Driver)",
+                    "uri": "http://www.cutepdf.com/Products/CutePDF/writer.asp"
+                }, {
+                    "name": "Sumatra PDF",
+                    "uri": "http://blog.kowalczyk.info/software/sumatrapdf/free-pdf-reader.html"
+                }, {
+                    "name": "pdfforge | PDF Creator - The FREE PDF Converter Tool, ease to use pdf printer, pdf writer, pdf download",
+                    "uri": "http://www.pdfforge.org/pdfcreator"
+                }, {
+                    "name": "PDF Converter ? #1 Free PDF Creator | PrimoPDF",
+                    "uri": "http://www.primopdf.com/"
+                }, {
+                    "name": "Foxit Software: PDF Converter, PDF Creator, PDF Reader & Editor",
+                    "uri": "http://www.foxitsoftware.com/"
+                }, {
+                    "name": "Adobe (PDF) Reader",
+                    "uri": "https://get.adobe.com/reader/"
+                }]
+            }, {
+                "name": "Surveillance Self-Defense | Tips, Tools and How-tos for Safer Online Communications",
+                "uri": "https://ssd.eff.org/"
+            }, {
+                "name": "Xming X Server for Windows - Official Website",
+                "uri": "http://www.straightrunning.com/XmingNotes/"
+            }, {
+                "name": "ciXwin - X Server for Windows | itefix.net",
+                "uri": "https://www.itefix.net/cixwin"
+            }, {
+                "name": "VcXsrv Windows X Server | SourceForge.net",
+                "uri": "http://sourceforge.net/projects/vcxsrv/"
+            }]
+        }, {
+            "name": "Servers",
+            "children": [{
+                "name": "MediaGoblin",
+                "uri": "http://mediagoblin.org/"
+            }, {
+                "name": "Trovebox Community Edition",
+                "uri": "https://github.com/photo"
+            }, {
+                "name": "The OpenPhoto Project",
+                "uri": "http://theopenphotoproject.org/"
+            }, {
+                "name": "Known",
+                "uri": "http://withknown.com/"
+            }, {
+                "name": "selfoss - the open source web based rss reader and multi source mashup aggregator",
+                "uri": "http://selfoss.aditu.de/"
+            }, {
+                "name": "Go together. - Wagn",
+                "uri": "http://wagn.org/"
+            }, {
+                "name": "Mailpile: Let's take e-mail back!",
+                "uri": "https://www.mailpile.is/"
+            }, {
+                "name": "Pagekite - The fast, reliable localhost tunneling solution",
+                "uri": "https://pagekite.net/"
+            }, {
+                "name": "Cozy, a personal cloud you can hack, host and delete",
+                "uri": "http://cozy.io/"
+            }, {
+                "name": "pump.io",
+                "uri": "http://pump.io/"
+            }, {
+                "name": "node.js",
+                "uri": "http://nodejs.org/"
+            }, {
+                "name": "Home | Dropwizard",
+                "uri": "https://dropwizard.github.io/dropwizard/"
+            }]
+        }, {
+            "name": "Networking",
+            "children": [{
+                "name": "OpenDNS is a better DNS service. We make...",
+                "uri": "http://www.opendns.com/"
+            }, {
+                "name": "zachofalltrades.net - goDaddy",
+                "uri": "https://dcc.godaddy.com/DomainDetails.aspx?identifier=q6BMeyEEqsOvA1AJSTb6cP3BhPb%2fjaSCnkOYn1kirLrUAn2zat6TUsbb5Rgf9ht89L9XWGKcmCM%3d&activeview=1&filtertype=1"
+            }, {
+                "name": "myip.dnsomatic.com",
+                "uri": "http://myip.dnsomatic.com/"
+            }, {
+                "name": "EC2 Management Console",
+                "uri": "https://console.aws.amazon.com/ec2/v2/home?region=us-west-2"
+            }]
+        }, {
+            "name": "Minecraft",
+            "children": [{
+                "name": "MCServer",
+                "children": [{
+                    "name": "MCServer - A Custom Minecraft Server",
+                    "uri": "http://mc-server.org/"
+                }, {
+                    "name": "MCServer Wiki ? MCServer Wiki",
+                    "uri": "http://wiki.mc-server.org/doku.php"
+                }, {
+                    "name": "MCServer Forum",
+                    "uri": "http://forum.mc-server.org/index.php"
+                }, {
+                    "name": "mc-server/MCServer ? GitHub",
+                    "uri": "https://github.com/mc-server/MCServer"
+                }]
+            }, {
+                "name": "MCForge",
+                "children": [{
+                    "name": "Minecraft Forge Downloads",
+                    "uri": "http://files.minecraftforge.net/"
+                }, {
+                    "name": "Minecraft Forge (wiki)",
+                    "uri": "http://www.minecraftforge.net/wiki/"
+                }, {
+                    "name": "Minecraft Modding: List of Topics",
+                    "uri": "http://greyminecraftcoder.blogspot.com.au/p/list-of-topics.html"
+                }, {
+                    "name": "Minecraft Forge Forums - Index",
+                    "uri": "http://www.minecraftforge.net/forum/"
+                }]
+            }, {
+                "name": "hosting",
+                "children": [{
+                    "name": "Running minecraft in a screen session. - Minecraft Forum",
+                    "uri": "http://www.minecraftforum.net/topic/33616-running-minecraft-in-a-screen-session/"
+                }, {
+                    "name": "Amazon EC2 Server Setup Guide - Minecraft Forum",
+                    "uri": "http://www.minecraftforum.net/topic/209252-amazon-ec2-server-setup-guide/"
+                }, {
+                    "name": "Starting Pricing and Features For Minecraft Hosts | Best Minecraft Hosts",
+                    "uri": "http://www.bestminecrafthosts.com/category/compare/starting/"
+                }, {
+                    "name": "AllGamer - Minecraft Server Hosting",
+                    "uri": "https://allgamer.net/minecraft"
+                }]
+            }, {
+                "name": "Custom servers - Minecraft Wiki",
+                "uri": "http://minecraft.gamepedia.com/Custom_servers"
+            }, {
+                "name": "BizarreCake/hCraft ? GitHub",
+                "uri": "https://github.com/BizarreCake/hCraft"
+            }, {
+                "name": "BukkitWiki",
+                "uri": "http://wiki.bukkit.org/Main_Page"
+            }, {
+                "name": "Minecraft Wiki - The ultimate resource for all things Minecraft",
+                "uri": "http://minecraft.gamepedia.com/Minecraft_Wiki"
+            }, {
+                "name": "MultiMC",
+                "uri": "http://multimc.org/"
+            }, {
+                "name": "MC-COAL",
+                "children": [{
+                    "name": "MC COAL ? MC COAL documentation",
+                    "uri": "http://docs.mc-coal.org/en/latest/"
+                }, {
+                    "name": "Minecraft Community Online Activity Log",
+                    "uri": "http://www.mc-coal.org/"
+                }, {
+                    "name": "mc-coal/mc-coal ? GitHub",
+                    "uri": "https://github.com/mc-coal/mc-coal"
+                }]
+            }, {
+                "name": "server.properties - Minecraft Wiki",
+                "uri": "http://www.minecraftwiki.net/wiki/Server.properties"
+            }, {
+                "name": "Can't Keep Up - Improving Minecraft Server Performance",
+                "uri": "http://minecraftserverhq.com/blog/can%27t-keep-up/"
+            }]
+        }, {
+            "name": "SoftwareSources",
+            "children": [{
+                "name": "Vendors",
+                "children": [{
+                    "name": "PDF conversion and OCR software for offi...",
+                    "uri": "http://www.adlibsoftware.com/Customers_4x_Download.aspx"
+                }, {
+                    "name": "Document Conversion & OCR by Adlib Software",
+                    "uri": "http://adlibsoftware.com/"
+                }, {
+                    "name": "Kofax Capture: Overview: Data Capture, Data Solutions, Document Capture, Electronic Data Capture",
+                    "uri": "http://www.kofax.com/capture/"
+                }, {
+                    "name": "IBM - Content Manager OnDemand for Multiplatforms - Software",
+                    "uri": "http://www-01.ibm.com/software/data/ondemand/mp/"
+                }, {
+                    "name": "IBM - Content Manager Enterprise Edition - Software",
+                    "uri": "http://www-01.ibm.com/software/data/cm/cmgr/mp/edition-enterprise.html"
+                }, {
+                    "name": "DB2 Universal Database",
+                    "uri": "http://publib.boulder.ibm.com/infocenter/db2luw/v8/index.jsp?topic=/com.ibm.db2.udb.doc/core/rsql0900.htm"
+                }, {
+                    "name": "FTP Listing of -software- at service.software.ibm.com",
+                    "uri": "ftp://service.software.ibm.com/software/"
+                }, {
+                    "name": "IBM DB2 Content Management - type 4 driver",
+                    "uri": "http://publib.boulder.ibm.com/infocenter/cmgmt/v8r4m0/index.jsp?topic=/com.ibm.programmingcm.doc/dcmcm123.htm"
+                }, {
+                    "name": "IBM DB2 Content Management Information Center",
+                    "uri": "http://publib.boulder.ibm.com/infocenter/cmgmt/v8r4m0/index.jsp?topic=/com.ibm.systemtables.doc/rmconfiguration.htm"
+                }, {
+                    "name": "IBM - Upgrading to DB2 Content Manager V8.4.2 Enterprise Edition if you are using DB2 V8.2",
+                    "uri": "http://www-01.ibm.com/support/docview.wss?uid=swg27016292"
+                }, {
+                    "name": "IBM - How to migrate the database from DB2 Version 8 Fix Pack 15 to DB2 Version 9.1 Fix Pack 3 and from DB2 Version 8 Fix Pack 15 to DB2 Version 9.5 with DB2 Content Manager Version 8.4 on Windows",
+                    "uri": "http://www-01.ibm.com/support/docview.wss?uid=swg21289946"
+                }, {
+                    "name": "IBM DB2 Content Management Information Center",
+                    "uri": "http://publib.boulder.ibm.com/infocenter/cmgmt/v8r4m0/index.jsp"
+                }, {
+                    "name": "IBM DB2 Content Management Information Center",
+                    "uri": "http://publib.boulder.ibm.com/infocenter/cmgmt/v8r4m0/index.jsp?topic=/com.ibm.installingcm.doc/dcmup101.htm"
+                }, {
+                    "name": "IBM DB2 Content Management Information Center",
+                    "uri": "http://publib.boulder.ibm.com/infocenter/cmgmt/v8r4m0/index.jsp?topic=/com.ibm.cmgmt.doc/csoa_84.htm"
+                }]
+            }, {
+                "name": "DistroWatch.com_ Put the fun back into c...",
+                "uri": "http://distrowatch.com/dwres.php?resource=independence"
+            }, {
+                "name": "Find Software",
+                "uri": "http://www.cnr.com/index.seam"
+            }, {
+                "name": "FrozenTech's LiveCD List",
+                "uri": "http://www.frozentech.com/content/livecd.php"
+            }, {
+                "name": "FSF - The Free Software Foundation",
+                "uri": "http://www.fsf.org/"
+            }, {
+                "name": "FSF_UNESCO Free Software Directory",
+                "uri": "http://directory.fsf.org/"
+            }, {
+                "name": "Linux4kids_ Educational Linux Software",
+                "uri": "http://www.filegate.net/linux4kids/"
+            }, {
+                "name": "Mirrors - Ubuntu Wiki",
+                "uri": "https://wiki.ubuntu.com/Mirrors#head-1d6db9ed5523047949bffab0d0a627d6acb9d44a"
+            }, {
+                "name": "NOVELL_ Cool Solutions_ Cool Tools Home",
+                "uri": "http://www.novell.com/coolsolutions/tools/index.html"
+            }, {
+                "name": "OSDir.com __ Open Source, Linux News & S...",
+                "uri": "http://osdir.com/Downloads.phtml"
+            }, {
+                "name": "osswin.sourceforge.net",
+                "uri": "http://osswin.sourceforge.net/"
+            }, {
+                "name": "Portal:Free software - Wikipedia, the fr...",
+                "uri": "http://en.wikipedia.org/wiki/Portal:Free_software"
+            }, {
+                "name": "Softpedia",
+                "uri": "http://www.softpedia.com/"
+            }, {
+                "name": "?SoftwareArchives.com - Free Software Do...",
+                "uri": "http://www.softwarearchives.com/index.cfm"
+            }, {
+                "name": "Freeware Pharmacy | Prescribing only the best free and open source software",
+                "uri": "http://freewarepharmacy.com/"
+            }, {
+                "name": "FREEWARE GUIDE - Utilities - PDF",
+                "uri": "http://www.freeware-guide.com/dir/util/pdf.html"
+            }]
+        }, {
+            "name": "OperatingSystems",
+            "children": [{
+                "name": "Android",
+                "children": [{
+                    "name": "Optimus-S",
+                    "children": [{
+                        "name": "LG Optimus S | Android Phone Fans",
+                        "uri": "http://phandroid.com/lg-optimus-s/"
+                    }, {
+                        "name": "LG Optimus S | Android Central",
+                        "uri": "http://www.androidcentral.com/lg-optimus-s"
+                    }, {
+                        "name": "LG Optimus S LS670 Charcoal Cell Phones & Mobile Phones - LG Electronics US",
+                        "uri": "http://www.lg.com/us/mobile-phones/LG-LS670-Gray.jsp"
+                    }, {
+                        "name": "LG Optimus S - Android Forums",
+                        "uri": "http://androidforums.com/lg-optimus-s/"
+                    }, {
+                        "name": "LG Optimus S - Android Forums",
+                        "uri": "http://forum.androidcentral.com/lg-optimus-s/"
+                    }, {
+                        "name": "[ROM] ThundeROM V1.6 1/20/2011 - Android Forums",
+                        "uri": "http://forum.androidcentral.com/lg-optimus-s-rooting-roms-hacks/45401-rom-thunderom-v1-6-1-20-2011-a.html"
+                    }, {
+                        "name": "[How-To] Root LG Optimus S - Android Forums",
+                        "uri": "http://forum.androidcentral.com/lg-optimus-s-rooting-roms-hacks/43108-how-root-lg-optimus-s.html"
+                    }, {
+                        "name": "Sprint Optimus S - Android Forums",
+                        "uri": "http://forums.androidcentral.com/sprint-optimus-s/"
+                    }]
+                }, {
+                    "name": "Apps",
+                    "children": [{
+                        "name": "AppBrain Best Android Apps",
+                        "uri": "http://www.appbrain.com/"
+                    }, {
+                        "name": "Tasker for Android",
+                        "uri": "http://tasker.dinglisch.net/"
+                    }, {
+                        "name": "Locale for Android",
+                        "uri": "http://www.twofortyfouram.com/"
+                    }, {
+                        "name": "Dlna applications - Android",
+                        "uri": "http://www.androidzoom.com/android_applications/dlna"
+                    }, {
+                        "name": "AndroidZoom - Download thousands of Android apps from the Android Market",
+                        "uri": "http://www.androidzoom.com/"
+                    }, {
+                        "name": "Android Dlna Player | Download Android Dlna Player software for free at SourceForge.net",
+                        "uri": "http://sourceforge.net/projects/droiddlnaplayer/"
+                    }, {
+                        "name": "PlugPlayer - Android",
+                        "uri": "http://www.androidzoom.com/android_applications/multimedia/plugplayer_oazu.html"
+                    }]
+                }, {
+                    "name": "Sprint",
+                    "children": [{
+                        "name": "McGuire?s Law ? Blog Archive ? Finally - A Solution",
+                        "uri": "http://mcguireslaw.com/2010/11/09/finally-a-solution/"
+                    }, {
+                        "name": "Sprint SERO Premium Plan Details Available ? My Money Blog",
+                        "uri": "http://www.mymoneyblog.com/sprint-sero-premium-plan-details-available.html"
+                    }, {
+                        "name": "NOW OFFICIAL changes to SERO allowing \"restricted\" devices to be activated. - SprintUsers.com",
+                        "uri": "http://www.sprintusers.com/forum/showthread.php?t=211596"
+                    }, {
+                        "name": "Sprint | Everything Plus(SM) Referral Program",
+                        "uri": "http://delivery.sprint.com/m/p/nxt/epc/epclanding.asp"
+                    }, {
+                        "name": "Plans:New options for SERO plan customers",
+                        "uri": "http://community.sprint.com/baw/thread/42978;jsessionid=51B0A56523E6D25AE6FF9833DB2FC3E0.app1jive1"
+                    }, {
+                        "name": "Sprint | Already an Everything Plus or SERO customer?",
+                        "uri": "http://delivery.sprint.com/m/p/nxt/epc/EPRP2-modal.asp?vanity=false&popup=true#1"
+                    }]
+                }, {
+                    "name": "Tablets",
+                    "children": [{
+                        "name": "Android Tablets",
+                        "uri": "http://www.andro-tablets.org/"
+                    }, {
+                        "name": "Android Tablet Forum",
+                        "uri": "http://www.androidtablets.net/"
+                    }, {
+                        "name": "Amazon.com: Tablets - Store",
+                        "uri": "http://www.amazon.com/b/ref=amb_link_354662122_3?ie=UTF8&node=1232597011&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=hero-quick-promo&pf_rd_r=0DEN2VF4YZ9JP2RK6TJ1&pf_rd_t=201&pf_rd_p=1282222402&pf_rd_i=B004CFF6ZI"
+                    }, {
+                        "name": "Amazon.com: Android tablet - list",
+                        "uri": "http://www.amazon.com/Android-tablet-computers/lm/RZBMABHTMNRSK/ref=cm_lmt_dtpa_f_2_rdssss1?pf_rd_p=496996751&pf_rd_s=listmania-center&pf_rd_t=201&pf_rd_i=B004CFF6ZI&pf_rd_m=ATVPDKIKX0DER&pf_rd_r=159W1PNWP8Z3PAB5A9QS"
+                    }, {
+                        "name": "A Non-Authoritative Android Tablet Buying List: What to Get, What to Avoid",
+                        "uri": "http://www.androidtablets.net/forum/android-tablet-discussions/2507-non-authoritative-android-tablet-buying-list-what-get-what-avoid.html"
+                    }, {
+                        "name": "Android Tablet Charts | Home",
+                        "uri": "http://apadchart.chislonchow.com/"
+                    }, {
+                        "name": "Alibaba.com ? = Android Tablet Gps Wifi Cortex Paypal-Android Tablet Gps Wifi Cortex Paypal",
+                        "uri": "http://www.alibaba.com/trade/search?SearchText=android+tablet+gps+wifi+cortex+paypal&Country=&CatId=0&IndexArea=product_en&fsb=y&viewAllCategory="
+                    }, {
+                        "name": "Euogo.com",
+                        "uri": "http://www.euogo.com/Wholesale-1-tablet-pc-google-android-os_c779"
+                    }, {
+                        "name": "The Android Tablets FAQ - Everything you want to know to get started is here!",
+                        "uri": "http://www.androidtablets.net/forum/android-tablet-q/480-android-tablets-faq-everything-you-want-know-get-started-here.html"
+                    }]
+                }, {
+                    "name": "HTC Evo 4G",
+                    "children": [{
+                        "name": "CyanogenMod Wiki",
+                        "uri": "http://wiki.cyanogenmod.com/wiki/HTC_Evo_4G:_Full_Update_Guide"
+                    }, {
+                        "name": "CyanogenMod Forum",
+                        "uri": "http://forum.cyanogenmod.com/forum/43-htc-evo-4g/"
+                    }, {
+                        "name": "CyanogenMod",
+                        "uri": "http://www.cyanogenmod.com/devices/htc-evo"
+                    }]
+                }, {
+                    "name": "[recheck]",
+                    "children": [{
+                        "name": "best android utilities - Google Search",
+                        "uri": "https://encrypted.google.com/search?q=best+android+utilities&hl=en&client=firefox-a&tbo=1&rls=org.mozilla:en-US:official&biw=1914&bih=1001&output=search&source=lnt&tbs=rltm:1&sa=X&ei=6284TYPMGNPogAeRsL2GCQ&ved=0CAQQpwUoAQ"
+                    }, {
+                        "name": "SmartBar Combines the Best Android Utilities into One Menu Bar App",
+                        "uri": "http://lifehacker.com/5606510/smartbar-puts-quick-access-utilities-in-androids-menu-bar-is-like-multiple-apps-in-one"
+                    }, {
+                        "name": "Top 10 Android Apps",
+                        "uri": "http://lifehacker.com/5481607/top-10-android-apps"
+                    }, {
+                        "name": "Our Biggest Android Annoyances and How to Fix Them",
+                        "uri": "http://lifehacker.com/5738881/our-biggest-android-annoyances-and-how-to-fix-them?skyline=true&s=i"
+                    }, {
+                        "name": "Android Phone Survival Scrutiny",
+                        "uri": "http://www.articlesinventory.com/android-phone-survival-scrutiny.htm"
+                    }, {
+                        "name": "Google",
+                        "uri": "https://encrypted.google.com/"
+                    }]
+                }, {
+                    "name": "LS670_ROMs",
+                    "children": [{
+                        "name": "[Ref] Optimus S Recoveries, ROMs, Kernels, and Themes - Android Forums",
+                        "uri": "http://forums.androidcentral.com/lg-optimus-s-rooting-roms-hacks/62212-ref-optimus-s-recoveries-roms-kernels-themes.html"
+                    }, {
+                        "name": "[ROM] Reborn ROM v2.2.4 - 7/24/11 - Android Forums",
+                        "uri": "http://forums.androidcentral.com/lg-optimus-s-rooting-roms-hacks/78229-rom-reborn-rom-v2-2-4-7-24-11-a.html"
+                    }, {
+                        "name": "Drew's CM7 builds (stable: 08/09/2011 | experimental: 08/08/2011) - Android Forums",
+                        "uri": "http://forums.androidcentral.com/lg-optimus-s-rooting-roms-hacks/106518-drews-cm7-builds-stable-08-09-2011-experimental-08-08-2011-a.html"
+                    }, {
+                        "name": "[ROM] Shell ROM v2.2 (Google/Froyo experience) 7/24/11 - Android Forums",
+                        "uri": "http://forums.androidcentral.com/lg-optimus-s-rooting-roms-hacks/82995-rom-shell-rom-v2-2-google-froyo-experience-7-24-11-a.html"
+                    }, {
+                        "name": "[ROM] CleanROM 2.1 - 7/26 - Overclocked, Ad Blocked and Hotspot! - Android Forums",
+                        "uri": "http://forums.androidcentral.com/lg-optimus-s-rooting-roms-hacks/95418-rom-cleanrom-2-1-7-26-overclocked-ad-blocked-hotspot.html"
+                    }, {
+                        "name": "[ROM][WIP] Unofficial CM7 (Gingerbread) - 8/19/2011 - Android Forums",
+                        "uri": "http://forums.androidcentral.com/lg-optimus-s-rooting-roms-hacks/99950-rom-wip-unofficial-cm7-gingerbread-8-19-2011-a.html"
+                    }, {
+                        "name": "[ROM] aospCMod | AOSP 2.3.3 / CM7 (Gingerbread) - Android Forums",
+                        "uri": "http://forums.androidcentral.com/lg-optimus-s-rooting-roms-hacks/72492-rom-aospcmod-aosp-2-3-3-cm7-gingerbread.html"
+                    }, {
+                        "name": "[ROM] - sROM 1.0 - 7/29/2011 - Speed, Style and Functionality! - Android Forums",
+                        "uri": "http://forums.androidcentral.com/lg-optimus-s-rooting-roms-hacks/107253-rom-srom-1-0-7-29-2011-speed-style-functionality.html"
+                    }]
+                }, {
+                    "name": "Touchpad",
+                    "children": [{
+                        "name": "HP Touchpad | CyanogenMod",
+                        "uri": "http://www.cyanogenmod.com/devices/hp-touchpad"
+                    }]
+                }, {
+                    "name": "Photon",
+                    "children": [{
+                        "name": "Motorola Photon 4G - xda-developers",
+                        "uri": "http://forum.xda-developers.com/forumdisplay.php?f=1220"
+                    }, {
+                        "name": "[Ics] cm9 beta with camera CDMA/GSM/UMTS/HSDPA/WCDMA/roaming 3/10/12 - xda-developers",
+                        "uri": "http://forum.xda-developers.com/showthread.php?t=1413349"
+                    }, {
+                        "name": "Home ? photon-dev-team/sunfire Wiki",
+                        "uri": "https://github.com/photon-dev-team/sunfire/wiki"
+                    }, {
+                        "name": "Photon 4G - Browse /PHOTON-4G/4.5.1A-1_SUN-154 at SourceForge.net",
+                        "uri": "http://sourceforge.net/projects/photon4g.motorola/files/PHOTON-4G/4.5.1A-1_SUN-154/"
+                    }, {
+                        "name": "Nebtop - Android Development",
+                        "uri": "https://sites.google.com/site/androidnothize/nebtop"
+                    }, {
+                        "name": "MOTOROLA PHOTON? 4G | Motorola Owners' Forum | Motorola Mobility Inc.",
+                        "uri": "https://forums.motorola.com/hives/c36b49d63e/summary"
+                    }, {
+                        "name": "Motorola Photon 4G",
+                        "uri": "http://forums.miui.us/forumdisplay.php?129"
+                    }]
+                }, {
+                    "name": "Apps - Android Market",
+                    "uri": "https://market.android.com/"
+                }, {
+                    "name": "ES File Explorer ~ Android Application v1.4.8.6 By EStrongs Inc. | Tools",
+                    "uri": "http://www.androlib.com/android.application.com-estrongs-android-pop-znE.aspx"
+                }, {
+                    "name": "Android News, Reviews, Apps, Games, Phones, Devices, Tips, Mods, Videos, Tutorials - Android Police",
+                    "uri": "http://www.androidpolice.com/"
+                }, {
+                    "name": "Android Developers",
+                    "uri": "http://developer.android.com/index.html"
+                }, {
+                    "name": "Android.com",
+                    "uri": "http://www.android.com/index.html"
+                }, {
+                    "name": "Android @ MoDaCo",
+                    "uri": "http://android.modaco.com/forum.html"
+                }, {
+                    "name": "Index of /zefie/files/cell/LGLS670 - Persona Files",
+                    "uri": "http://files.persona.cc/zefie/files/cell/LGLS670/"
+                }, {
+                    "name": "HcH'z TechKnow [www.HcH.net.tc] - View topic - Universal Uberoid WM8650 1.5.2 HoneyCombMOD v8",
+                    "uri": "http://techknow.freeforums.org/universal-uberoid-wm8650-1-5-2-honeycombmod-v8-t1012.html"
+                }, {
+                    "name": "HcH'z TechKnow [www.HcH.net.tc] - View topic - Universal Uberoid WM8650 1.5.5 HoneyCombMOD v9.1.2",
+                    "uri": "http://techknow.freeforums.org/universal-uberoid-wm8650-1-5-5-honeycombmod-v9-1-2-t1188.html"
+                }]
+            }, {
+                "name": "ArchLinuxARM",
+                "children": [{
+                    "name": "Platforms | Arch Linux ARM",
+                    "uri": "http://archlinuxarm.org/platforms"
+                }]
+            }, {
+                "name": "PalmOS",
+                "children": [{
+                    "name": "PlkrDocs",
+                    "children": [{
+                        "name": "Completely free e-books formatted for vi...",
+                        "uri": "http://www.pluckerbooks.com/"
+                    }, {
+                        "name": "The Bandersnatch Unpress",
+                        "uri": "http://unpress.bandersnatch.org/"
+                    }, {
+                        "name": "Thousands of Free Ebook and PDA Document...",
+                        "uri": "http://www.memoware.com/"
+                    }]
+                }, {
+                    "name": "1src - The One Source for all things Pal...",
+                    "uri": "http://www.1src.com/"
+                }, {
+                    "name": "Best PALM Software - Main page",
+                    "uri": "http://www.bestpalmsoftware.com/"
+                }, {
+                    "name": "Freeware for Palm phone and pda, PalmOS ...",
+                    "uri": "http://www.freeware-palm.com/"
+                }, {
+                    "name": "Freeware Palm.com",
+                    "uri": "http://www.freewarepalm.com/"
+                }, {
+                    "name": "Hobbyist Software",
+                    "uri": "http://www.hobbyistsoftware.com/downloads.php"
+                }, {
+                    "name": "Hobbyist Software Downloads for Initiate, Genius!, Mother, Phone Technician, Butler and More",
+                    "uri": "http://hobbyistsoftware.com/downloads.php"
+                }, {
+                    "name": "Must Have Treo Freeware Applications",
+                    "uri": "http://www.palminfocenter.com/news/8436/must-have-treo-freeware-applications/"
+                }, {
+                    "name": "Palm Quick Answers -- Main",
+                    "uri": "http://www.metacon.ca/bcs/index.php"
+                }, {
+                    "name": "Palm to Google Calendar Converter",
+                    "uri": "https://gregstoll.dyndns.org/secure/palmtogooglecalendar/"
+                }, {
+                    "name": "Palm Treo Treo 700p Holster (Black) + Ca...",
+                    "uri": "http://www.igonemobile.com/products/html/53613375.html"
+                }]
+            }, {
+                "name": "Ubuntu",
+                "children": [{
+                    "name": "A 2 MegaPixel Rant?",
+                    "uri": "http://alokshenoy.blogrunn.com/ubuntu/setting-up-your-gutsy-x64/"
+                }, {
+                    "name": "For the discussion of Ubuntu on the AMD ...",
+                    "uri": "http://ubuntuforums.org/forumdisplay.php?f=134"
+                }, {
+                    "name": "New Amd64 repository (unofficial) x86 64...",
+                    "uri": "http://ubuntuforums.org/showthread.php?t=196093&page=1"
+                }, {
+                    "name": "Ubuntu",
+                    "uri": "http://www.ubuntulinux.org/"
+                }, {
+                    "name": "Ubuntu Support Home",
+                    "uri": "http://www.ubuntu.com/support"
+                }, {
+                    "name": "Ubuntu Wiki",
+                    "uri": "http://www.ubuntulinux.org/wiki/FrontPage"
+                }, {
+                    "name": "Make a Support Request to the Ubuntu Community",
+                    "uri": "https://launchpad.net/distros/ubuntu/+addticket"
+                }, {
+                    "name": "Debian",
+                    "uri": "http://www.debian.org/"
+                }, {
+                    "name": "HOWTO: Read UPnP Media Server with another computer using djmount - Ubuntu Forums",
+                    "uri": "http://ubuntu-utah.ubuntuforums.org/showthread.php?t=780702"
+                }, {
+                    "name": "HOW-TO install XBMC for Linux on Ubuntu, a Step-by-Step Guide - XBMC",
+                    "uri": "http://wiki.xbmc.org/?title=HOW-TO_install_XBMC_for_Linux_on_Ubuntu_with_a_minimal_installation_step-by-step"
+                }, {
+                    "name": "UbuntuLTSP - Community Ubuntu Documentation",
+                    "uri": "https://help.ubuntu.com/community/UbuntuLTSP"
+                }]
+            }, {
+                "name": "iPhone",
+                "children": [{
+                    "name": "iPhone Application List",
+                    "uri": "http://iphoneapplicationlist.com/"
+                }]
+            }, {
+                "name": "Virtualization",
+                "children": [{
+                    "name": "Desktop On Demand - Your Private Online Desktop",
+                    "uri": "https://desktopondemand.com/index.html"
+                }, {
+                    "name": "NoMachine NX - Desktop Virtualization and Remote Access Management Software",
+                    "uri": "http://www.nomachine.com/index.php"
+                }, {
+                    "name": "Welcome ! - Ulteo - My digital life made simple",
+                    "uri": "http://www.ulteo.com/home/en/home?autolang=en"
+                }]
+            }, {
+                "name": "AIX",
+                "children": [{
+                    "name": "AIX: Crib Sheet",
+                    "uri": "http://www.unixguide.net/ibm/ibmcribsheet.shtml"
+                }, {
+                    "name": "AIX commands you should not leave home w...",
+                    "uri": "http://www-128.ibm.com/developerworks/aix/library/au-dutta_cmds.html"
+                }, {
+                    "name": "AIX UNIX for the Web & Applications Support",
+                    "uri": "http://www.csusm.edu/garrett/electures/UnixForWAS.html"
+                }, {
+                    "name": "Unix Commands for AIX",
+                    "uri": "http://bigcalm.tripod.com/aix/handycommands.htm"
+                }]
+            }, {
+                "name": "WinMo",
+                "children": [{
+                    "name": "down",
+                    "children": [{
+                        "name": "SDConfigCE.zip",
+                        "uri": "http://forum.xda-developers.com/attachment.php?attachmentid=183111&d=1241621119"
+                    }, {
+                        "name": "Infinity_0.2.8.cab",
+                        "uri": "http://forum.ageye.de/download/file.php?id=1611&sid=59363b7cd4d0f3dfe192e2ec83ec8f69"
+                    }, {
+                        "name": "galarm_2.6.cab",
+                        "uri": "http://forum.ageye.de/download/file.php?id=1602"
+                    }, {
+                        "name": "launchpad",
+                        "uri": "http://www.panoramicsoft.com/mobileapps/launchpad/LaunchPad.php#"
+                    }, {
+                        "name": "Florian Heidenreich - Total Commander Plugins - pdfview and anytag",
+                        "uri": "http://www.mp3tag.de/en/tc.html"
+                    }, {
+                        "name": "uZard",
+                        "uri": "http://www.uzard.com/en/down/download.asp"
+                    }, {
+                        "name": "SenseTasks_v1.0.1.CAB",
+                        "uri": "http://forum.xda-developers.com/attachment.php?attachmentid=345210&d=1276842507"
+                    }, {
+                        "name": "HD2_connections_V4.CAB",
+                        "uri": "http://forum.xda-developers.com/attachment.php?attachmentid=331496&d=1274722464"
+                    }, {
+                        "name": "Gaz Touch Tools - PR1.4_WM6.5.cab",
+                        "uri": "http://forum.xda-developers.com/attachment.php?attachmentid=338678&d=1275864929"
+                    }, {
+                        "name": "VjVolubilis",
+                        "uri": "http://www.vijay555.com/vj/releases/vjvolubilis/vjvolubilis.cab"
+                    }, {
+                        "name": "cLaunch",
+                        "uri": "http://www.pocketpcfreeware.com/en/index.php?download=808"
+                    }, {
+                        "name": "Droplets",
+                        "uri": "http://marketplace.windowsphone.com/search.aspx?keywords=droplets"
+                    }, {
+                        "name": "s2u2",
+                        "uri": "http://67.43.3.117/~acs2co/S2U2-download-2.30-VGA.html"
+                    }, {
+                        "name": "s2p .8",
+                        "uri": "http://67.43.3.117/~acs2co/S2P-download-0.80beta-VGA.html"
+                    }, {
+                        "name": "Dorothy Browser",
+                        "uri": "http://www.dorothybrowser.com/?page_id=106"
+                    }, {
+                        "name": "7z911-arm.cab",
+                        "uri": "http://forum.ppcgeeks.com/attachment.php?s=71c7bf4e4cf579feafc506be834ca853&attachmentid=63050&d=1268766596"
+                    }, {
+                        "name": "Download Quakk",
+                        "uri": "http://blog.anthonyburns.co.uk/Download/QuakkSetup.cab"
+                    }, {
+                        "name": "SpeedReader115",
+                        "uri": "http://emuneee.com/eeenno/SpeeedReader/download/SpeeedReader_115.CAB"
+                    }, {
+                        "name": "zeno usb host",
+                        "uri": "http://web.comhem.se/~u38880870/=%20Zeno%20USB%20Host%20Drivers%20v6.0a.rar"
+                    }]
+                }, {
+                    "name": "WinMobile",
+                    "children": [{
+                        "name": "Sprint - NewBie Guide To Flashing ROM On CDMA - Sprint PCS Network - & Recommended SW",
+                        "uri": "http://forum.ppcgeeks.com/showthread.php?t=47686&goto=newpost"
+                    }, {
+                        "name": "Total Commander - PocketPC",
+                        "uri": "http://www.ghisler.com/pocketpc.htm"
+                    }, {
+                        "name": "Freeware for Pocket PC. Free Windows Mobile Pocket PC / PPC Downloads for WM5 or WM6 PocketPC.",
+                        "uri": "http://www.freewarepocketpc.net/"
+                    }, {
+                        "name": "PocketPCFreeware",
+                        "uri": "http://www.pocketpcfreeware.com/en/index.php"
+                    }, {
+                        "name": "My Brain Hurts: Klaxon",
+                        "uri": "http://www.koushikdutta.com/search/label/Klaxon"
+                    }, {
+                        "name": "LoFFactory - Products",
+                        "uri": "http://loffactory.webs.com/products.htm"
+                    }]
+                }, {
+                    "name": "NRG",
+                    "children": [{
+                        "name": "EnergyROM Addons/Fixes",
+                        "uri": "http://www.energyroms.com/Addons/"
+                    }, {
+                        "name": "Energy (NRGZ28) on Twitter",
+                        "uri": "http://twitter.com/NRGZ28"
+                    }, {
+                        "name": "Hotfile.com: Cookie",
+                        "uri": "http://hotfile.com/list/829198/9158c03"
+                    }, {
+                        "name": "Hotfile.com: Standard",
+                        "uri": "http://hotfile.com/list/829197/71b7e41"
+                    }, {
+                        "name": "Hotfile.com: standard21",
+                        "uri": "http://hotfile.com/list/829202/7443a63"
+                    }]
+                }, {
+                    "name": "RootROM",
+                    "children": [{
+                        "name": "root-downloads",
+                        "uri": "http://rootlinux.kaos-incorporated.com/ROMs.html"
+                    }, {
+                        "name": "root-ppcgeeks",
+                        "uri": "http://forum.ppcgeeks.com/showthread.php?t=100407"
+                    }]
+                }, {
+                    "name": "WatchedSoftware",
+                    "children": [{
+                        "name": "SBSH Forums -> PocketBreeze",
+                        "uri": "http://forums.sbsh.net/index.php?/forum/7-pocketbreeze/?s=23b3bae0a6153c423d1ebe77fb944105"
+                    }, {
+                        "name": "Ageye - Infinity",
+                        "uri": "http://forum.ageye.de/viewtopic.php?f=57&t=1369&sid=351b46d4bd3d3dc1ca7f221d33f3c552"
+                    }, {
+                        "name": "Inesoft Phone",
+                        "uri": "http://www.inesoft.com/eng/index.php?in=download.html"
+                    }, {
+                        "name": "Iconsoft Phone Extension - PhonEx - Download",
+                        "uri": "http://www.iconsoft.com/?language=en&menu=02e337e32ce44c26"
+                    }, {
+                        "name": "m.opera.com",
+                        "uri": "http://m.opera.com/"
+                    }, {
+                        "name": "A_C S2 Applications for Windows Mobile",
+                        "uri": "http://www.ac-s2.com/"
+                    }, {
+                        "name": "Contact Manager - Resco Forums",
+                        "uri": "http://www.resco.net/forums/ShowForum.aspx?ForumID=82"
+                    }]
+                }, {
+                    "name": "roms",
+                    "children": [{
+                        "name": "NRG",
+                        "uri": "http://forum.ppcgeeks.com/showthread.php?t=69545"
+                    }, {
+                        "name": "ski-ppcgeeks",
+                        "uri": "http://forum.ppcgeeks.com/showthread.php?t=102644"
+                    }, {
+                        "name": "ski-downloads",
+                        "uri": "http://hotfile.com/list/223480/b508371"
+                    }, {
+                        "name": "NRG Sense 2.5",
+                        "uri": "http://hotfile.com/list/456751/c05aabd"
+                    }, {
+                        "name": "'Energy' ROM/XDA_UC - User to user tips and tricks! - Page 3 - xda-developers",
+                        "uri": "http://forum.xda-developers.com/showthread.php?t=671163&page=3"
+                    }]
+                }, {
+                    "name": "Vijay555 - VJTaskKiller",
+                    "uri": "http://www.vijay555.com/?Releases:VJTaskKiller"
+                }, {
+                    "name": "[Mortscript] Source Compendium - xda-developers",
+                    "uri": "http://forum.xda-developers.com/showthread.php?t=595483"
+                }, {
+                    "name": "Chi-Tai, Research, Software and Music ? HomeScreen PlusPlus UI ? Customization Manual ? formerly BatteryStatus",
+                    "uri": "http://www.chi-tai.info/cs_batterystatus_xda_neo_wm5_ext_cust_im_cs.htm"
+                }]
+            }, {
+                "name": "Windows",
+                "children": [{
+                    "name": "Microsoft PowerToys for Windows XP",
+                    "uri": "http://www.microsoft.com/windowsxp/downloads/powertoys/xppowertoys.mspx"
+                }, {
+                    "name": "Shell Dos Gui - ReGet Shell Extension al...",
+                    "uri": "http://www.fileflash.com/allfiles/shell_dos_gui/"
+                }, {
+                    "name": "The Microsoft&#174; Windows&#174; Server...",
+                    "uri": "http://www.microsoft.com/downloads/details.aspx?familyid=9d467a69-57ff-4ae7-96ee-b18c4790cffd&displaylang=en"
+                }, {
+                    "name": "Services",
+                    "uri": "http://rozanski.org.uk/services"
+                }, {
+                    "name": "Keyboard shortcuts for Windows",
+                    "uri": "http://support.microsoft.com/kb/126449"
+                }, {
+                    "name": "NirSoft - freeware utilities: password recovery, system utilities, desktop utilities",
+                    "uri": "http://www.nirsoft.net/"
+                }, {
+                    "name": "Context Menu Editors: Add, Remove, Edit Windows Context Menu items",
+                    "uri": "http://www.thewindowsclub.com/remove-click-context-menu-items-editors"
+                }]
+            }, {
+                "name": "Run Mobile Apps on Windows PC or Mac with BlueStacks | Android App Player",
+                "uri": "http://www.bluestacks.com/index.html"
+            }]
+        }, {
+            "name": "MediaClients",
+            "children": [{
+                "name": "Media Streamers - ProductWiki unbiased product reviews",
+                "uri": "http://www.productwiki.com/media-streamers/"
+            }, {
+                "name": "Media Streamers | Gadget Horizon",
+                "uri": "http://gadgethorizon.com/category/mediastreamers/"
+            }, {
+                "name": "XBMC",
+                "uri": "http://xbmc.org/"
+            }, {
+                "name": "MediaServers ? Linn Open Source Software",
+                "uri": "http://oss.linn.co.uk/trac/wiki/MediaServers"
+            }, {
+                "name": "WikiDLXTV",
+                "uri": "http://wiki.wdlxtv.com/Main_Page"
+            }, {
+                "name": "B-RAD ? WDLXTV-PLUS for wdtv live plus",
+                "uri": "http://b-rad.cc/1295/wdlxtv-plus-for-wdtv-live-plus/"
+            }, {
+                "name": "Amazon.com: ASUS O!Play Air - Wireless N TV HD Media Player: Electronics",
+                "uri": "http://www.amazon.com/ASUS-Play-Air-Wireless-Player/dp/B002YK1FFI/ref=pd_sim_e_3"
+            }, {
+                "name": "Amazon.com: Western Digital WD TV Live Plus HD Media Player WDBABX0000NBK-NESN: Electronics",
+                "uri": "http://www.amazon.com/Western-Digital-Media-Player-WDBABX0000NBK-NESN/dp/B003MVZ60I/ref=pd_cp_e_2"
+            }, {
+                "name": "Amazon.com: Viewsonic NexTV VMP75 1080p Network Media Player - Stream Netflix, Internet radios/videos & access to Twitter, Facebook w/free HDMI cable: Electronics",
+                "uri": "http://www.amazon.com/Viewsonic-NexTV-VMP75-Network-Player/dp/B003JQLI9O/ref=sr_1_1?ie=UTF8&qid=1285937519&sr=8-1"
+            }, {
+                "name": "Amazon.com: Seagate FreeAgent GoFlex TV STAJ100: Electronics: Reviews, Prices & more",
+                "uri": "http://www.amazon.com/dp/B003IT6YFK"
+            }, {
+                "name": "Amazon.com: Patriot Box Office 1080p High-Definition Media Player PCMPBO25 (Black): Electronics",
+                "uri": "http://www.amazon.com/Patriot-Office-High-Definition-Player-PCMPBO25/dp/B002Q4U9PY"
+            }, {
+                "name": "HDX Networked Media Tank",
+                "uri": "http://www.hdx1080.com/products"
+            }, {
+                "name": "Softsqueeze 3.8",
+                "uri": "http://softsqueeze.sourceforge.net/"
+            }, {
+                "name": "Amazon.com: Micca MPLAY-HD 1080p Full-HD Digital Media Player: Electronics",
+                "uri": "http://www.amazon.com/Micca-MPLAY-HD-Full-HD-Digital-Player/dp/B002XVBAKI/ref=dp_cp_ob_e_title_2"
+            }, {
+                "name": "Amazon.com: Hornettek Phantom MP-2020 1080P HDMI 2.5-Inch HDD Media Player: Electronics: Reviews, Prices & more",
+                "uri": "http://www.amazon.com/Hornettek-Phantom-MP-2020-2-5-Inch-Player/dp/B002YTGBKI/ref=pd_sim_e_4"
+            }, {
+                "name": "Amazon.com: New Arrival! brite-View BV-5005HD Mini \"CinemaGo\" 3-in-1 1080p Full HD Networking Multimedia Player/Streamer/Torrent Downloader, WiFi Package , Black (USB WiFi dongle and HDMI cable INCLUDED): Electronics",
+                "uri": "http://www.amazon.com/brite-View-BV-5005HD-Mini-Networking-Multimedia/dp/B003TUB2VE/ref=pd_sim_e_15"
+            }, {
+                "name": "Amazon.com: Satechi Cyclone Micro HDMI 1080p Upscaling Portable Media (DivX, AVI)Player Adapter with SD/SDHC Memory, USB Slot and Remote Control: Electronics",
+                "uri": "http://www.amazon.com/Satechi-Cyclone-Upscaling-Portable-Adapter/dp/B003U7MSLE/ref=pd_sim_e_17"
+            }, {
+                "name": "Amazon.com: Micca Slim Portable Digital Media Player with HDMI and 2.5-Inch HDD Bay - Plays MPEG1/2/4, DivX, Xvid, RMVB, AVI, MOV, MP3, MP4: Electronics: Reviews, Prices & more",
+                "uri": "http://www.amazon.com/Micca-Slim-Portable-Digital-2-5-Inch/dp/B002ABX29I/ref=pd_sim_e_3"
+            }, {
+                "name": "Amazon.com: Micca MPLAY-HD Net 1080p Full-HD Digital Media Player and Network Streamer With UPnP Client and Internet Radio: Electronics",
+                "uri": "http://www.amazon.com/Micca-MPLAY-HD-Net-Streamer-Internet/dp/B0042J9BQE/ref=sr_1_16?s=electronics&ie=UTF8&qid=1289151338&sr=1-16"
+            }, {
+                "name": "Roku Player Products | Roku HD Player, Roku XD Player and Roku XDS Player",
+                "uri": "http://www.roku.com/roku-products#2"
+            }, {
+                "name": "WD TV Overview",
+                "uri": "http://www.wdc.com/en/products/index.asp?cat=30"
+            }, {
+                "name": "Best Blu-ray players - CNET Reviews",
+                "uri": "http://reviews.cnet.com/best-blu-ray-players/"
+            }, {
+                "name": "Home ? MPC-HC",
+                "uri": "http://mpc-hc.org/"
+            }, {
+                "name": "MediaInfo",
+                "uri": "http://mediainfo.sourceforge.net/en"
+            }]
+        }, {
+            "name": "hardware",
+            "children": [{
+                "name": "MyBookWE",
+                "children": [{
+                    "name": "Hacking WD MyBook World Ed: Welcome to the new home for all things WD MyBook WE",
+                    "uri": "http://mybookworld.wikidot.com/start"
+                }, {
+                    "name": "my.box project: automated installations on WD MyBook NAS linuxbox",
+                    "uri": "http://www.myboxproject.net/index.html"
+                }, {
+                    "name": "http://martin.hinner.info/mybook/disable_mionet.php",
+                    "uri": "http://martin.hinner.info/mybook/disable_mionet.php"
+                }, {
+                    "name": "http://martin.hinner.info/mybook/internals.php",
+                    "uri": "http://martin.hinner.info/mybook/internals.php"
+                }, {
+                    "name": "Hacking WD MyBook World Ed: Welcome to the new home for all things WD MyBook WE",
+                    "uri": "http://mybookworld.wikidot.com/"
+                }, {
+                    "name": "aws - simple access to Amazon EC2 and S3",
+                    "uri": "http://www.timkay.com/aws/"
+                }, {
+                    "name": "Hacking WD MyBook World Ed: Transmission",
+                    "uri": "http://mybookworld.wikidot.com/transmission"
+                }, {
+                    "name": "Universal USB Installer ? Easy as 1 2 3 | USB Pen Drive Linux",
+                    "uri": "http://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/"
+                }, {
+                    "name": "Service Functions (Windows)",
+                    "uri": "http://msdn.microsoft.com/en-us/library/ms685942(v=VS.85).aspx"
+                }]
+            }, {
+                "name": "TonidoPlug",
+                "children": [{
+                    "name": "Downloads ? SqueezePlug",
+                    "uri": "http://squeezeplug.de/?page_id=2&did=42"
+                }, {
+                    "name": "TonidoPlug - Tiny, Low Power, Low Cost, Linux Home Server | Access your files, music and media from anywhere",
+                    "uri": "http://www.tonidoplug.com/"
+                }, {
+                    "name": "What is TonidoPlug Home Server?",
+                    "uri": "http://www.tonidoplug.com/tonido_plug.html"
+                }, {
+                    "name": "TonidoPlug_Flash",
+                    "uri": "http://www.tonido.com/support/TonidoPlug_Flash_LinuxOS"
+                }, {
+                    "name": "Tonido User Wiki [TonidoUser]",
+                    "uri": "http://tonidouser.com/doku.php"
+                }, {
+                    "name": "Tonido Support Forum ? Index page",
+                    "uri": "http://www.tonido.com/forum/"
+                }, {
+                    "name": "Tonido & TonidoPlug Documentation",
+                    "uri": "http://www.tonido.com/help/"
+                }, {
+                    "name": "Arch Linux ARM ? View topic - Unable to ssh to TonidoPlug with latest ArchLinuxARM",
+                    "uri": "http://archlinuxarm.org/forum/viewtopic.php?f=53&t=4861&start=40"
+                }, {
+                    "name": "Arch Linux ARM ? View topic - Installing ALARM to TonidoPlug NAND?",
+                    "uri": "http://archlinuxarm.org/forum/viewtopic.php?f=20&t=5747"
+                }]
+            }, {
+                "name": "HP-Touchpad",
+                "children": [{
+                    "name": "HP TouchPad - xda-developers",
+                    "uri": "http://forum.xda-developers.com/forumdisplay.php?f=1245"
+                }, {
+                    "name": "**Sticky Thread / HP TouchPad Index / Read This First** - xda-developers",
+                    "uri": "http://forum.xda-developers.com/showthread.php?t=1438158"
+                }, {
+                    "name": "HP Touchpad - XDA-Developers",
+                    "uri": "http://forum.xda-developers.com/wiki/HP_Touchpad"
+                }, {
+                    "name": "[RECOVERY] JCSullins' Touchpad CWM6 v6.0.1.9 [2012-12-15] Edit: 1-31-13 - HP Touchpad - RootzWiki",
+                    "uri": "http://rootzwiki.com/topic/38577-recovery-jcsullins-touchpad-cwm6-v6019-2012-12-15-edit-1-31-13/"
+                }, {
+                    "name": "Guide For Installing Cm9 And 10, Plus How To Install Cm10 Over Cm9. - HP Touchpad Nighty/Experimental - CyanogenMod Forum",
+                    "uri": "http://forum.cyanogenmod.com/topic/72177-guide-for-installing-cm9-and-10-plus-how-to-install-cm10-over-cm9/"
+                }, {
+                    "name": "Touchpad Toolkit - Android automated installer. - HP Touchpad - RootzWiki",
+                    "uri": "http://rootzwiki.com/topic/39264-touchpad-toolkit-android-automated-installer/"
+                }]
+            }, {
+                "name": "NAS",
+                "children": [{
+                    "name": "foonas",
+                    "uri": "http://www.foonas.org/index.php/Main_Page"
+                }, {
+                    "name": "Welcome to NAS-Central",
+                    "uri": "http://www.nas-central.org/"
+                }, {
+                    "name": "Synology Inc. - NEW NAS Experience -",
+                    "uri": "http://www.synology.com/enu/"
+                }, {
+                    "name": "QNAP Systems, Inc. (Products)- NAS stora...",
+                    "uri": "http://www.qnap.com/product-index.asp"
+                }, {
+                    "name": "NAS 2.0 Adapter from Addonics",
+                    "uri": "http://www.addonics.com/products/nas/NAS2XU2.asp"
+                }]
+            }, {
+                "name": "Dockstar",
+                "children": [{
+                    "name": "Install Debian Linux on your Dockstar",
+                    "uri": "http://jeff.doozan.com/debian/"
+                }, {
+                    "name": "Installing OpenWrt on Seagate DockStar HOWTO",
+                    "uri": "http://www.cs.cmu.edu/~ecc/dockstar-howto.html"
+                }, {
+                    "name": "FreeAgent DockStar - Device server",
+                    "uri": "http://www.google.com/products/catalog?q=FreeAgent+DockStar&oe=utf-8&rls=org.mozilla:en-US:official&client=firefox-a&um=1&ie=UTF-8&cid=10561850481304471025&ei=hxFGTPuQDsOFngecl7SOAQ&sa=X&oi=product_catalog_result&ct=result&resnum=3&ved=0CCsQ8wIwAg"
+                }]
+            }, {
+                "name": "RT-N16",
+                "children": [{
+                    "name": "Tomato (firmware)/Installation and Configuration - Wikibooks, collection of open-content textbooks",
+                    "uri": "http://en.wikibooks.org/wiki/Tomato_(firmware)/Installation_and_Configuration"
+                }, {
+                    "name": "Addon: Add Blocking - LinksysInfo - Community Forums for Linksys Devices",
+                    "uri": "http://www.linksysinfo.org/forums/showthread.php?t=57556"
+                }, {
+                    "name": "Tomato at XtremeCoders",
+                    "uri": "http://www.xtremecoders.org/forums/f78/"
+                }, {
+                    "name": "TomatoUSB",
+                    "uri": "http://tomatousb.org/"
+                }, {
+                    "name": "NSLU2-Linux - Info / HomePage browse",
+                    "uri": "http://www.nslu2-linux.org/wiki/Info/HomePage"
+                }, {
+                    "name": "rt-n16 ? Just another blog ?",
+                    "uri": "http://www.shcherbyna.com/?cat=24"
+                }, {
+                    "name": "tomato.multics.mooo.com : /",
+                    "uri": "http://tomato.multics.mooo.com/"
+                }, {
+                    "name": "Shibby Builds (TomatoUSB)",
+                    "uri": "http://tomato.groov.pl/K26/?C=M;O=A"
+                }, {
+                    "name": "dd-wrt.v24-13491 NEWD-2 K2.6 mini RT-N16.trx",
+                    "uri": "http://www.dd-wrt.com/dd-wrtv2/downloads/others/eko/V24-K26/svn13491-snow/Asus/RT-N16/dd-wrt.v24-13491_NEWD-2_K2.6_mini_RT-N16.trx"
+                }, {
+                    "name": "The latest eko BIG build",
+                    "uri": "http://www.dd-wrt.com/dd-wrtv2/downloads/others/eko/V24-K26/svn13575/dd-wrt.v24-13575_NEWD-2_K2.6_big.bin"
+                }, {
+                    "name": "Asus RT-N16 - DD-WRT Wiki",
+                    "uri": "http://www.dd-wrt.com/wiki/index.php/Asus_RT-N16"
+                }, {
+                    "name": "Asus RT-N16 - OpenWrt Wiki",
+                    "uri": "http://wiki.openwrt.org/inbox/asusrt-n16#dokuwiki__top"
+                }, {
+                    "name": "DD-WRT Forum :: View topic - Asus RT-N16 now supported",
+                    "uri": "http://www.dd-wrt.com/phpBB2/viewtopic.php?t=61570"
+                }, {
+                    "name": "ASUS RT-N16 Multi-functional Gigabit SuperSpeedN Router Reviewed",
+                    "uri": "http://www.smallnetbuilder.com/wireless/wireless-reviews/31058-asus-rt-n16-gigabit-n-router-reviewed"
+                }, {
+                    "name": "ASUSTeK Computer Inc.-Forum- RT-N16",
+                    "uri": "http://vip.asus.com/forum/topic.aspx?board_id=11&model=RT-N16&SLanguage=en-us"
+                }, {
+                    "name": "ASUSTeK Computer Inc.-Support- Downloads",
+                    "uri": "http://support.asus.com/download/download.aspx?SLanguage=en-us"
+                }, {
+                    "name": "Router Database | www.dd-wrt.com",
+                    "uri": "http://www.dd-wrt.com/site/support/router-database"
+                }, {
+                    "name": "How to - Format and Partition External Storage Device - DD-WRT Wiki",
+                    "uri": "http://www.dd-wrt.com/wiki/index.php/How_to_-_Format_and_Partition_External_Storage_Device"
+                }, {
+                    "name": "Optware, the Right Way - DD-WRT Wiki",
+                    "uri": "http://www.dd-wrt.com/wiki/index.php/Optware%2C_the_Right_Way"
+                }, {
+                    "name": "Tomato ND USB Mod - LinksysInfo - Community Forums for Linksys Devices",
+                    "uri": "http://www.linksysinfo.org/forums/showthread.php?t=60185"
+                }, {
+                    "name": "Tomato FAQ | polarcloud.com",
+                    "uri": "http://www.polarcloud.com/tomatofaq"
+                }, {
+                    "name": "Tomato Firmware - LinksysInfo - Community Forums for Linksys Devices",
+                    "uri": "http://www.linksysinfo.org/forums/forumdisplay.php?f=160"
+                }, {
+                    "name": "QOS",
+                    "uri": "http://www.linksysinfo.org/forums/showpost.php?p=357556&postcount=135"
+                }, {
+                    "name": "xtremecoders.org ? View topic - Full Optware Package For Tomato ND USD firmware...",
+                    "uri": "http://www.xtremecoders.org/forum/viewtopic.php?f=25&t=4"
+                }, {
+                    "name": "12",
+                    "uri": "http://www.linksysinfo.org/forums/showpost.php?p=360211&postcount=12"
+                }, {
+                    "name": "NSLU2-Linux - Optware / Packages browse",
+                    "uri": "http://www.nslu2-linux.org/wiki/Optware/Packages?from=Unslung.Packages"
+                }, {
+                    "name": "Hacking Western Digital MyBook World Edition",
+                    "uri": "http://martin.hinner.info/mybook/"
+                }, {
+                    "name": "ASUS Wireless Router RT-N16 - Network Map",
+                    "uri": "http://192.168.1.1/"
+                }, {
+                    "name": "Index of /feeds/optware/ddwrt/cross/stable",
+                    "uri": "http://ipkg.nslu2-linux.org/feeds/optware/ddwrt/cross/stable/"
+                }, {
+                    "name": "Tomato Builds (Shibby)",
+                    "uri": "http://tomato.groov.pl/K26/"
+                }, {
+                    "name": "Network Error",
+                    "uri": "http://plug.zachofalltrades.net/"
+                }]
+            }, {
+                "name": "RaspberryPi",
+                "children": [{
+                    "name": "Raspberry Pi Model B Review | Mini Computer Review",
+                    "uri": "http://www.laptopmag.com/review/laptops/raspberrypimodelb.aspx"
+                }, {
+                    "name": "Raspberry Pi Accessories | Newark",
+                    "uri": "http://www.newark.com/jsp/bespoke/bespoke7.jsp?bespokepage=newark/en_US/landing/raspberry-pi/rasp-pi-accessories.jsp&CMP=KNC-G-SUPP-RASPBERRYPI&mckv=sxLFVF1XJ|pcrid|19206012381|plid|"
+                }, {
+                    "name": "Raspberry Pi : Adafruit Industries, Unique & fun DIY electronics and kits",
+                    "uri": "http://www.adafruit.com/category/105"
+                }, {
+                    "name": "MCM Electronics | Raspberry Pi at MCM Electronics",
+                    "uri": "http://www.mcmelectronics.com/content/en-US/raspberry-pi"
+                }, {
+                    "name": "RPi Hub - eLinux.org",
+                    "uri": "http://elinux.org/R-Pi_Hub"
+                }, {
+                    "name": "Raspberry Pi | An ARM GNU/Linux box for $25. Take a byte!",
+                    "uri": "http://www.raspberrypi.org/"
+                }, {
+                    "name": "Home - RasPlex",
+                    "uri": "http://rasplex.com/"
+                }, {
+                    "name": "RaspberryPi Comparison - eLinux.org",
+                    "uri": "http://elinux.org/RaspberryPi_Comparison"
+                }]
+            }, {
+                "name": "PlugHardware",
+                "children": [{
+                    "name": "Globalscale - Sheeva Plug",
+                    "uri": "http://www.globalscaletechnologies.com/p-22-sheevaplug-dev-kit.aspx"
+                }, {
+                    "name": "Create your own Cloud! - Ionics Plug",
+                    "uri": "http://www.ionicsplug.com/products.html"
+                }, {
+                    "name": "Wix.com - Website built by quadaxis based on Urban Trader",
+                    "uri": "http://www.quadaxis.com/"
+                }, {
+                    "name": "ctera - Managed cloud-based storage & data protection for SMBs | CTERA Networks",
+                    "uri": "http://www.ctera.com/home/"
+                }, {
+                    "name": "Welcome to NewIT",
+                    "uri": "http://www.newit.co.uk/"
+                }, {
+                    "name": "Excito | Small and silent server",
+                    "uri": "https://www.excito.com/"
+                }, {
+                    "name": "GlobalScale Technologies - GuruPlugs",
+                    "uri": "http://www.globalscaletechnologies.com/c-4-guruplugs.aspx"
+                }, {
+                    "name": "http://pandaboard.org/",
+                    "uri": "http://pandaboard.org/"
+                }]
+            }, {
+                "name": "cubox-i",
+                "children": [{
+                    "name": "Arch Linux ARM ? View topic - Cubox-i: Setup Guide (needs another Arch system)",
+                    "uri": "http://archlinuxarm.org/forum/viewtopic.php?f=45&t=6748#p37348"
+                }, {
+                    "name": "The CuBox i From SolidRun | The Little Computer that can",
+                    "uri": "http://cubox-i.com/"
+                }, {
+                    "name": "CuBox-i Wiki Pages",
+                    "uri": "http://imx.solid-run.com/wiki/index.php?title=Main_Page"
+                }, {
+                    "name": "CuBox-i Forums",
+                    "uri": "http://imx.solid-run.com/forums/"
+                }]
+            }, {
+                "name": "Arduino - HomePage",
+                "uri": "http://www.arduino.cc/"
+            }, {
+                "name": "AV8 Overview - ABIT USA",
+                "uri": "http://www.abit-usa.com/products/mb/products.php?categories=1&model=175"
+            }, {
+                "name": "Chip PC thin clients are the most featur...",
+                "uri": "http://www.chippc.com/index.asp"
+            }, {
+                "name": "chumby",
+                "uri": "http://www.chumby.com/"
+            }, {
+                "name": "Classmate PC",
+                "uri": "http://www.classmatepc.com/"
+            }, {
+                "name": "Click your way around picture to find ou...",
+                "uri": "http://news.bbc.co.uk/2/hi/technology/6679431.stm"
+            }, {
+                "name": "Cosmos Engineering Company -- Welcome Ca...",
+                "uri": "http://cosmoseng.com/cgi-bin/cosmos/index.html?bread_reset=1"
+            }, {
+                "name": "Data Robotics, Inc. | DroboShare",
+                "uri": "http://www.drobo.com/products_droboshare.aspx"
+            }, {
+                "name": "gOS - Discover a good OS.",
+                "uri": "http://www.thinkgos.com/index.html"
+            }, {
+                "name": "http://www.revogear.com/ProductDetails.asp?ProductCode=KURO-BOX%2FPRO",
+                "uri": "http://www.revogear.com/ProductDetails.asp?ProductCode=KURO-BOX%2FPRO"
+            }, {
+                "name": "Information about cell phones for the U....",
+                "uri": "http://www.phonescoop.com/"
+            }, {
+                "name": "Linutop, Plug & Surf",
+                "uri": "http://www.linutop.com/"
+            }, {
+                "name": "Linux, Laptops, Notebooks, Desktops, Ser...",
+                "uri": "http://system76.com/"
+            }, {
+                "name": "News, views, and articles on using Linux...",
+                "uri": "http://www.desktoplinux.com/news/NS4091104225.html"
+            }, {
+                "name": "One Laptop per Child (OLPC) is a new, no...",
+                "uri": "http://www.laptop.org/"
+            }, {
+                "name": "One Laptop per Child (OLPC), a $100 lapt...",
+                "uri": "http://www.laptop.org/index.shtml"
+            }, {
+                "name": "SD and USB Memory Card _ Memory _ Proporta",
+                "uri": "http://www.proporta.com/F02/PPF02P05.php?t_id=2306&t_mode=des"
+            }, {
+                "name": "Shuttle XPC | PC Made Modern",
+                "uri": "http://us.shuttle.com/Home.aspx"
+            }, {
+                "name": "ThinLinX",
+                "uri": "http://www.thinlinx.com.au/index.php?module=Website&action=Home&content=home"
+            }, {
+                "name": "This is a new line of PCs that focuses o...",
+                "uri": "http://eeepc.asus.com/global/index.htm"
+            }, {
+                "name": "Unbiased comparison and reviews for the ...",
+                "uri": "http://www.phonedog.com/default.aspx"
+            }, {
+                "name": "Welcome to DREAMAX",
+                "uri": "http://www.indicube.com/"
+            }, {
+                "name": "Welcome to the Kurobox Wiki - NAS-Central",
+                "uri": "http://www.nas-central.org/index.php/Welcome_to_the_Kurobox_Wiki"
+            }, {
+                "name": "Zonbu",
+                "uri": "http://www.zonbu.com/home/index.htm"
+            }, {
+                "name": "Hp officejet 4215 ink cartridge Ink, Toner & Inkjet Cartridges at BizRate - Price Comparison",
+                "uri": "http://www.bizrate.com/inktoner_inkjetcartridges/products__keyword--hp+officejet+4215+ink+cartridge.html"
+            }, {
+                "name": "NETGEAR Router",
+                "uri": "http://192.168.1.1/cgi-bin/index.html"
+            }, {
+                "name": "Netiquette",
+                "uri": "http://www.albion.com/netiquette/"
+            }, {
+                "name": "ThinkGeek :: USB to SATA/IDE Combo Kit",
+                "uri": "http://www.thinkgeek.com/computing/usb-gadgets/bdbf/"
+            }, {
+                "name": "HP Thin Client - T5325 - 512 MB RAM - 1.2 GHz - 0 GB HDD",
+                "uri": "http://www.google.com/products/catalog?q=HP+t5325&oe=utf-8&rls=org.mozilla:en-US:official&client=firefox-a&um=1&ie=UTF-8&cid=6790939488266169375&ei=rRFGTI2OA5_1nAev_qiOAQ&sa=X&oi=product_catalog_result&ct=result&resnum=3&ved=0CDAQ8wIwAg"
+            }, {
+                "name": "USBGear",
+                "uri": "http://usbgear.com/"
+            }, {
+                "name": "Amazon.com: Plug-pc LXP-2310: Electronics",
+                "uri": "http://www.amazon.com/Chip-PC-Inc-CPN04522-LXP-2310/dp/B002DUD4NK/ref=sr_1_6?s=electronics&ie=UTF8&qid=1279794326&sr=1-6"
+            }, {
+                "name": "BeagleBoard.org - default",
+                "uri": "http://beagleboard.org/"
+            }, {
+                "name": "Tablet PC's",
+                "uri": "http://www.merimobiles.com/Tablet_PC_s_s/205.htm"
+            }, {
+                "name": "OpenPeak Inc.",
+                "uri": "http://www.openpeak.com/index.php"
+            }, {
+                "name": "joojoo",
+                "uri": "https://thejoojoo.com/"
+            }, {
+                "name": "PDAdb.net - Comprehensive Database of Smartphone, PDA, PDA Phone, PNA, netbook & Mobile Device Specifications",
+                "uri": "http://pdadb.net/"
+            }, {
+                "name": "Notion Ink Adam",
+                "uri": "http://www.notionink.com/index.php"
+            }, {
+                "name": "TRITTON Technologies, Inc. - TRI-XD250 Xtreme Docking Station",
+                "uri": "http://www.trittontechnologies.com/products/TRIUS100.htm"
+            }, {
+                "name": "DreamPlug: A Linux PC That Looks Like a Phone Charger - HotHardware",
+                "uri": "http://hothardware.com/News/DreamPlug-a-Linux-PC-that-looks-like-a-phone-charger/"
+            }, {
+                "name": "Coolest Gadgets - the ongoing search for the coolest gadget continues...",
+                "uri": "http://www.coolest-gadgets.com/"
+            }, {
+                "name": "Swiss+Tech Products - Multi-Purpose Key Ring Tools",
+                "uri": "http://swisstechtools.com/default.aspx"
+            }, {
+                "name": "This Is Why I'm Broke",
+                "uri": "http://www.thisiswhyimbroke.com/"
+            }, {
+                "name": "Amazon.com: Et?n American Red Cross CLIPRAY ARCCR100R_SNG USB Cell Phone Charger with Hand Crank LED Flashlight (Red): Sports & Outdoors",
+                "uri": "http://www.amazon.com/American-CLIPRAY-ARCCR100R_SNG-Charger-Flashlight/dp/B003BYROUQ/ref=sr_1_180?ie=UTF8&s=sporting-goods&qid=1285738182&sr=1-180"
+            }, {
+                "name": "Amazon.com: fit-PC Slim Linux: Electronics",
+                "uri": "https://www.amazon.com/fit-PC-Slim-Linux/dp/B001L18ED2/ref=sr_1_1?ie=UTF8&s=electronics&qid=1279744768&sr=8-1"
+            }, {
+                "name": "Cirago CDD1000 Hard Drive Docking Station USB with Card Reader",
+                "uri": "http://www.cirago.com/cdd1000.htm"
+            }, {
+                "name": "21st Century Goods",
+                "uri": "http://www.21st-century-goods.com/"
+            }, {
+                "name": "APC",
+                "uri": "http://apc.io/"
+            }, {
+                "name": "Mele A1000 is a $70 hackable, Linux-friendly ARM-based PC - Liliputing",
+                "uri": "http://liliputing.com/2012/03/mele-a1000-is-a-70-hackable-linux-friendly-arm-based-pc.html"
+            }, {
+                "name": "OUYA: A New Kind of Video Game Console by OUYA ? Cue the global countdown: less than 40 hours to go, we've got global news to share ? Kickstarter",
+                "uri": "http://www.kickstarter.com/projects/ouya/ouya-a-new-kind-of-video-game-console/posts/283033"
+            }, {
+                "name": "OUYA",
+                "uri": "http://www.ouya.tv/"
+            }, {
+                "name": "Aliexpress.com - Android PC-Stick",
+                "uri": "http://www.aliexpress.com/store/613484"
+            }, {
+                "name": "SolidRun - Home of the CuBox",
+                "uri": "http://www.solid-run.com/"
+            }, {
+                "name": "NAS support/compatability for Plex Media Server",
+                "uri": "https://docs.google.com/spreadsheet/ccc?key=0AhqU12yGv_OxdC1VYjYtMmRiSlVReVZhNVBLZ0JxSmc#gid=0"
+            }, {
+                "name": "Cubieboard | Open ARM Box",
+                "uri": "http://cubieboard.org/"
+            }, {
+                "name": "eLinux.org",
+                "uri": "http://elinux.org/Main_Page"
+            }, {
+                "name": "Xi3 | Introducing Xi3 Architecture",
+                "uri": "http://www.xi3.com/"
+            }, {
+                "name": "SaaS Data Backup: Restore & Backup Google Apps, Salesforce, GMail & More | Backupify",
+                "uri": "https://www.backupify.com/"
+            }, {
+                "name": "ARMdevices.net",
+                "uri": "http://armdevices.net/"
+            }, {
+                "name": "Willow Garage",
+                "uri": "https://www.willowgarage.com/"
+            }, {
+                "name": "Wandboard - Freescale i.MX6 ARM Cortex-A9 Opensource Community Development Board - BLOG",
+                "uri": "http://www.wandboard.org/"
+            }, {
+                "name": "ODROID | Hardkernel",
+                "uri": "http://www.hardkernel.com/renewal_2011/products/prdt_info.php?g_code=G137510300620"
+            }, {
+                "name": "Comparison of single-board computers - Wikipedia, the free encyclopedia",
+                "uri": "https://en.wikipedia.org/wiki/Comparison_of_single-board_computers"
+            }, {
+                "name": "Miniand - your one stop shop for mini PCs and hobby tech",
+                "uri": "https://www.miniand.com/"
+            }, {
+                "name": "3G and 4G LTE Cell Coverage Map - OpenSignal",
+                "uri": "http://opensignal.com/"
+            }, {
+                "name": "LEGO.com Home",
+                "uri": "http://www.lego.com/en-us/"
+            }, {
+                "name": "MAME | Multiple Arcade Machine Emulator",
+                "uri": "http://mamedev.org/"
+            }, {
+                "name": "Mini Wireless Keyboards for Android Mini PC",
+                "uri": "http://www.squidoo.com/rii-ipazzport-favi-mini-wireless-keyboard"
+            }, {
+                "name": "Welcome to SiliconDust | SiliconDust ? HDHomeRun?",
+                "uri": "http://www.silicondust.com/"
+            }, {
+                "name": "Ultimarc - switches & parts",
+                "uri": "http://www.ultimarc.com/"
+            }, {
+                "name": "PlugResources",
+                "children": [{
+                    "name": "PlugComputer Community",
+                    "uri": "http://plugcomputer.org/"
+                }, {
+                    "name": "PlugComputer.org - PlugForum",
+                    "uri": "http://www.plugcomputer.org/plugforum/"
+                }, {
+                    "name": "PlugComputer.org - PlugWiki",
+                    "uri": "http://plugcomputer.org/plugwiki/index.php?title=Main_Page"
+                }, {
+                    "name": "PlugApps Wiki (Plugbox Linux)",
+                    "uri": "http://www.plugapps.com/index.php5?title=Main_Page"
+                }, {
+                    "name": "PlugApps Forum (Plugbox Linux)",
+                    "uri": "http://plugapps.com/forum/"
+                }, {
+                    "name": "ComputingPlugs (wiki)",
+                    "uri": "http://computingplugs.com/index.php/Main_Page"
+                }, {
+                    "name": "The Official Pogoplug Community & Forum: Pogoplug News, Downloads, Developer Resources, and More",
+                    "uri": "http://www.pogoplugged.com/"
+                }, {
+                    "name": "FreedomBox - Debian Wiki",
+                    "uri": "http://wiki.debian.org/FreedomBox"
+                }, {
+                    "name": "Amahi Plug Edition - Amahi",
+                    "uri": "http://wiki.amahi.org/index.php/Amahi_Plug_Edition"
+                }, {
+                    "name": "PlugPBX Project",
+                    "uri": "http://www.plugpbx.org/"
+                }, {
+                    "name": "Marvell: Plug Computer",
+                    "uri": "http://www.marvell.com/platforms/plug_computer/"
+                }, {
+                    "name": "SqueezePlug",
+                    "uri": "http://squeezeplug.de/"
+                }, {
+                    "name": "MyPlugBox",
+                    "uri": "http://myplugbox.com/"
+                }, {
+                    "name": "Glype Proxy Script - Free Anonymous Proxies List",
+                    "uri": "http://www.glype.com/"
+                }]
+            }, {
+                "name": "Compare Phones (Phone Scoop)",
+                "uri": "http://www.phonescoop.com/phones/compare.php?p=4408,4453,4489,4066,4421"
+            }]
+        }, {
+            "name": "SyncML",
+            "children": [{
+                "name": "mooha SyncML server - PHP/MySQL",
+                "uri": "https://code.google.com/p/mooha/"
+            }, {
+                "name": "Horde SyncHowTo",
+                "uri": "http://wiki.horde.org/SyncHowTo?referrer=SyncML"
+            }, {
+                "name": "Z-Push - open source push technology",
+                "uri": "http://z-push.sourceforge.net/soswp/"
+            }, {
+                "name": "AUR : zarafa",
+                "uri": "http://aur.archlinux.org/packages.php?K=zarafa"
+            }]
+        }, {
+            "name": "ChromeExtensions",
+            "children": [{
+                "name": "Adblock Plus",
+                "uri": "https://chrome.google.com/webstore/detail/adblock-plus/cfhdojbkjhnklbpkdaibdccddilifddb"
+            }, {
+                "name": "Awesome New Tab Page",
+                "uri": "https://chrome.google.com/webstore/detail/awesome-new-tab-page/mgmiemnjjchgkmgbeljfocdjjnpjnmcg"
+            }, {
+                "name": "Better History",
+                "uri": "https://chrome.google.com/webstore/detail/better-history/obciceimmggglbmelaidpjlmodcebijb"
+            }, {
+                "name": "Chrome Toolbox",
+                "uri": "https://chrome.google.com/webstore/detail/chrome-toolbox-by-google/fjccknnhdnkbanjilpjddjhmkghmachn"
+            }, {
+                "name": "Click&Clean",
+                "uri": "https://chrome.google.com/webstore/detail/clickclean/ghgabhipcejejjmhhchfonmamedcbeod"
+            }, {
+                "name": "Disconnect",
+                "uri": "https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo"
+            }, {
+                "name": "Forecastfox",
+                "uri": "https://chrome.google.com/webstore/detail/forecastfox/ihffmkcfkejomlfnilnmkokcpgclhfeg"
+            }, {
+                "name": "G-calize",
+                "uri": "https://chrome.google.com/webstore/detail/g-calize/peconnficnlajdpgfcjfmhjibkoijlbp"
+            }, {
+                "name": "Chrome Web Store - Google Dictionary (by Google)",
+                "uri": "https://chrome.google.com/webstore/detail/google-dictionary-by-goog/mgijmajocgfcbeboacabfgobmjgjcoja"
+            }, {
+                "name": "Google Mail Checker",
+                "uri": "https://chrome.google.com/webstore/detail/google-mail-checker/mihcahmgecmbnbcchbopgniflfhgnkff"
+            }, {
+                "name": "Google Voice (by Google)",
+                "uri": "https://chrome.google.com/webstore/detail/google-voice-by-google/kcnhkahnjcbndmmehfkdnkjomaanaooo"
+            }, {
+                "name": "Electronic Frontier Foundation",
+                "uri": "https://www.eff.org/https-everywhere"
+            }, {
+                "name": "LastPass",
+                "uri": "https://chrome.google.com/webstore/detail/lastpass/hdokiejnpimakedhajhdlcegeplioahd"
+            }, {
+                "name": "LocalLinks",
+                "uri": "https://chrome.google.com/webstore/detail/locallinks/jllpkdkcdjndhggodimiphkghogcpida/related"
+            }, {
+                "name": "Meta-Tile Widget [ANTP]",
+                "uri": "https://chrome.google.com/webstore/detail/meta-tile-widget-antp/ibhffciboaodhfapmcpckhbdpbjjppan"
+            }, {
+                "name": "Microformats",
+                "uri": "https://chrome.google.com/webstore/detail/microformats-for-google-c/oalbifknmclbnmjlljdemhjjlkmppjjl/related"
+            }, {
+                "name": "Neater Bookmarks",
+                "uri": "https://chrome.google.com/webstore/detail/neater-bookmarks/ofgjggbjanlhbgaemjbkiegeebmccifi"
+            }, {
+                "name": "Pocket",
+                "uri": "https://chrome.google.com/webstore/detail/pocket-formerly-read-it-l/niloccemoadcdkdjlinkgdfekeahmflj"
+            }, {
+                "name": "Rapportive",
+                "uri": "https://chrome.google.com/webstore/detail/rapportive/hihakjfhbmlmjdnnhegiciffjplmdhin"
+            }, {
+                "name": "Send using Gmail? (no button)",
+                "uri": "https://chrome.google.com/webstore/detail/send-using-gmail-no-butto/ahldefgplekckalfcolhhnljbbgaiboc"
+            }, {
+                "name": "Service Pages for Google Chrome?",
+                "uri": "https://chrome.google.com/webstore/detail/service-pages-for-google/fjmhjjohhiehaoljianalpmfcceojaff"
+            }, {
+                "name": "Springpad Extension",
+                "uri": "https://chrome.google.com/webstore/detail/springpad-extension/njhgeimnepehieioinbhmfpphfoocmng"
+            }]
+        }, {
+            "name": "Mozilla Firefox",
+            "children": [{
+                "name": "Help and Tutorials",
+                "uri": "http://www.mozilla.com/en-US/firefox/help/"
+            }, {
+                "name": "Customize Firefox",
+                "uri": "http://www.mozilla.com/en-US/firefox/customize/"
+            }, {
+                "name": "Get Involved",
+                "uri": "http://www.mozilla.com/en-US/firefox/community/"
+            }, {
+                "name": "About Us",
+                "uri": "http://www.mozilla.com/en-US/about/"
+            }]
+        }, {
+            "name": "owncloud on nginx",
+            "children": [{
+                "name": "Setting up Nginx and Owncloud | nblock ~",
+                "uri": "http://nblock.org/2012/03/12/nginx-and-owncloud/"
+            }, {
+                "name": "Duong Pham ? Installing ownCloud with nginx and sqlite, archlinux",
+                "uri": "http://dthpham.com/post/21425839861/installing-owncloud-with-nginx-and-sqlite-archlinux"
+            }, {
+                "name": "Distro Notes | ownCloud.org",
+                "uri": "http://owncloud.org/support/distro-notes/"
+            }, {
+                "name": "I just installed ownCloud: It's like my own, wholly controlled version of Google Docs (without the spying) and Dropbox (without the cost) - CLICK",
+                "uri": "http://www.insidesocal.com/click/2012/02/i-just-installed-owncloud-its.html"
+            }, {
+                "name": "Your Cloud, Your Data, Your Way! - ownCloud 4.0 On CentOS 6.2 + nginx + PostgreSQL | HowtoForge - Linux Howtos and Tutorials",
+                "uri": "http://www.howtoforge.com/your-cloud-your-data-your-way-owncloud-4.0-nginx-postgresql-on-centos-6.2"
+            }, {
+                "name": "Nginx can do web-dav (with a little help from a friend) | Vision Beyond Sight",
+                "uri": "http://blog.carlkoepke.com/index.php/2011/12/09/nginx-can-do-web-dav-with-a-little-help-from-a-friend/"
+            }, {
+                "name": "ownCloud nginx config",
+                "uri": "http://forum.nginx.org/read.php?2,221212,221223"
+            }]
+        }, {
+            "name": "VCS",
+            "children": [{
+                "name": "Understanding Version-Control Systems (DRAFT)",
+                "uri": "http://www.catb.org/esr/writings/version-control/version-control.html"
+            }, {
+                "name": "Revision control - Wikipedia, the free encyclopedia",
+                "uri": "https://en.wikipedia.org/wiki/Revision_control"
+            }, {
+                "name": "A Visual Guide to Version Control | BetterExplained",
+                "uri": "http://betterexplained.com/articles/a-visual-guide-to-version-control/"
+            }, {
+                "name": "Version Control with Subversion",
+                "uri": "http://svnbook.red-bean.com/"
+            }, {
+                "name": "Better SCM Initiative : Comparison",
+                "uri": "https://web.archive.org/web/20130516111938/http://better-scm.shlomifish.org/comparison/comparison.html"
+            }, {
+                "name": "Comparison of revision control software - Wikipedia, the free encyclopedia",
+                "uri": "https://en.wikipedia.org/wiki/Comparison_of_revision_control_software"
+            }, {
+                "name": "Plastic SCM blog: The version control timeline",
+                "uri": "http://codicesoftware.blogspot.com/2010/11/version-control-timeline.html"
+            }, {
+                "name": "Hg Init: a Mercurial tutorial by Joel Spolsky",
+                "uri": "http://hginit.com/"
+            }, {
+                "name": "Git - About Version Control",
+                "uri": "http://git-scm.com/book/en/Getting-Started-About-Version-Control"
+            }, {
+                "name": "Version Control by Example",
+                "uri": "http://www.ericsink.com/vcbe/html/bk01-toc.html"
+            }, {
+                "name": "Comments on Open Source Software / Free Software (OSS/FS) Software Configuration Management (SCM) / Revision-Control Systems",
+                "uri": "http://www.dwheeler.com/essays/scm.html"
+            }]
+        }, {
+            "name": "OMAPpedia",
+            "uri": "http://www.omappedia.org/wiki/Main_Page"
+        }, {
+            "name": "Video tools/software and downloads - VideoHelp.com",
+            "uri": "http://www.videohelp.com/tools"
+        }, {
+            "name": "UserAgentString.com - List of User Agent Strings",
+            "uri": "http://www.useragentstring.com/pages/useragentstring.php"
+        }, {
+            "name": "Glasnost: Bringing Transparency to the Internet",
+            "uri": "http://broadband.mpi-sws.org/transparency/#tools"
+        }, {
+            "name": "Zentyal - The Linux Small Business Server",
+            "uri": "http://www.zentyal.org/"
+        }, {
+            "name": "ClearFoundation develops ClearOS, a Linux Network, Gateway, Server",
+            "uri": "http://www.clearfoundation.com/"
+        }, {
+            "name": "greyhole - Project Hosting on Google Code",
+            "uri": "http://code.google.com/p/greyhole/"
+        }, {
+            "name": "CrashPlan ? FREE automatic, secure backup for your life.",
+            "uri": "http://b5.crashplan.com/consumer/index.html"
+        }, {
+            "name": "Box Backup",
+            "uri": "http://www.boxbackup.org/"
+        }, {
+            "name": "Beginners' Guide - ArchWiki",
+            "uri": "http://wiki.archlinux.org/index.php/Beginners%27_Guide"
+        }, {
+            "name": "vortexbox.org",
+            "uri": "http://vortexbox.org/"
+        }, {
+            "name": "Server Fault",
+            "uri": "http://serverfault.com/"
+        }, {
+            "name": "Stack Exchange - Free, Community-Powered Q&A",
+            "uri": "http://stackexchange.com/"
+        }, {
+            "name": "Calomel.org :: Open Source Research and Reference",
+            "uri": "https://calomel.org/"
+        }, {
+            "name": "ProductWiki",
+            "uri": "http://www.productwiki.com/"
+        }, {
+            "name": "Transparent dynamic reverse proxy with nginx",
+            "uri": "http://www.cmdln.org/2009/07/12/transparent_dynamic-reverse-proxy-with-nginx/"
+        }, {
+            "name": "Services",
+            "uri": "http://www.nick.rozanski.org.uk/index.php?page=services"
+        }, {
+            "name": "NimbleX : Portable Linux That's Ready to Rock",
+            "uri": "http://downloadsquad.switched.com/2008/07/23/nimblex-portable-linux-thats-ready-to-rock/"
+        }, {
+            "name": "portablelinuxapps.org",
+            "uri": "http://portablelinuxapps.org/"
+        }, {
+            "name": "Portable Apps | Linux for Travelers",
+            "uri": "http://www.linuxfortravelers.com/general/portable-apps"
+        }, {
+            "name": "What does \"Address already in use: connect\" mean?too - Parasoft Forum",
+            "uri": "http://forums.parasoft.com/index.php?showtopic=435"
+        }, {
+            "name": "LinuxLive USB Creator",
+            "uri": "http://www.linuxliveusb.com/en/home"
+        }, {
+            "name": "Unhosted - storage",
+            "uri": "http://unhosted.org/"
+        }, {
+            "name": "Communities Dominate Brands: Full Analysis of iPhone Economics - it is bad news. And then it gets worse",
+            "uri": "http://communities-dominate.blogs.com/brands/2010/06/full-analysis-of-iphone-economics-its-bad-news-and-then-it-gets-worse.html"
+        }, {
+            "name": "Apache Ant User Manual",
+            "uri": "http://ant.apache.org/manual/"
+        }, {
+            "name": "id3v2.3.0 - ID3.org",
+            "uri": "http://www.id3.org/id3v2.3.0"
+        }, {
+            "name": "Epoch Converter - Unix Timestamp Converter",
+            "uri": "http://www.epochconverter.com/"
+        }, {
+            "name": "Comparison of online backup services - Wikipedia, the free encyclopedia",
+            "uri": "https://secure.wikimedia.org/wikipedia/en/wiki/List_of_online_backup_services"
+        }, {
+            "name": "List of Chromium Command Line Switches ? Peter Beverloo",
+            "uri": "http://peter.sh/experiments/chromium-command-line-switches/#allow-file-access-from-files"
+        }, {
+            "name": "Web Services Repository| WSDL | SOA",
+            "uri": "http://www.visualwebservice.com/"
+        }, {
+            "name": "Open Atrium",
+            "uri": "http://openatrium.com/"
+        }, {
+            "name": "ownCloud - Home - Open wiki - Gitorious",
+            "uri": "http://gitorious.org/owncloud/pages/Home"
+        }, {
+            "name": "OnLive Desktop - Simple PC App Access from Anywhere",
+            "uri": "http://desktop.onlive.com/"
+        }, {
+            "name": "LinuxonAndroid",
+            "uri": "http://linuxonandroid.org/"
+        }, {
+            "name": "Tools | Mozilla Webmaker",
+            "uri": "https://webmaker.org/en-US/tools/"
+        }, {
+            "name": "PDF Association | The future of PDF",
+            "uri": "http://www.pdfa.org/"
+        }, {
+            "name": "BrickLink - Unofficial LEGO? Marketplace",
+            "uri": "http://www.bricklink.com/"
+        }, {
+            "name": "LEGO.com Digital Designer Virtual Building Software",
+            "uri": "http://ldd.lego.com/"
+        }, {
+            "name": "ModMyPi Case | Cases for yo' Raspberry Pi | Shop",
+            "uri": "https://www.modmypi.com/"
+        }, {
+            "name": "RPi Distributions - eLinux.org",
+            "uri": "http://elinux.org/RPi_Distributions"
+        }, {
+            "name": "Developer Resources | USA.gov",
+            "uri": "http://www.usa.gov/About/developer-resources/developers.shtml"
+        }, {
+            "name": "Code for America | A New Kind of Public Service",
+            "uri": "http://codeforamerica.org/"
+        }, {
+            "name": "IndieAuth - Sign in with your domain name",
+            "uri": "https://indieauth.com/"
+        }, {
+            "name": "Quilla ? Short-links for email.",
+            "uri": "http://a.quil.la/"
+        }, {
+            "name": "Camlistore",
+            "uri": "http://camlistore.org/"
+        }, {
+            "name": "ephemeral.im",
+            "uri": "https://www.ephemeral.im/"
+        }, {
+            "name": "Secret - Speak Freely",
+            "uri": "https://www.secret.ly/"
+        }, {
+            "name": "Verify Java Plugin",
+            "uri": "https://www.java.com/en/download/uninstallapplet.jsp"
+        }, {
+            "name": "cheat sheets",
+            "uri": "http://sheet.shiar.nl/"
+        }, {
+            "name": "SmartThings: Automate your home and your life",
+            "uri": "http://smartthings.com/"
+        }, {
+            "name": "TiddlyWiki ? a non-linear personal web notebook",
+            "uri": "http://tiddlywiki.com/#TiddlyDesktop:HelloThere%20GettingStarted%20%5B%5BUsing%20TiddlyWiki%20on%20TiddlyDesktop%5D%5D%20TiddlyDesktop%20Upgrading%20Features%20Community%20RoadMap%20Docs"
+        }]
+    }, {
+        "name": "Programming",
+        "children": [{
+            "name": "java",
+            "children": [{
+                "name": "drewnoakes.com - jpeg exif _ iptc metada...",
+                "uri": "http://drewnoakes.com/code/exif/"
+            }, {
+                "name": "image library",
+                "uri": "http://reader.imagero.com/index.html"
+            }, {
+                "name": "Java Documentations in Windows Help form...",
+                "uri": "http://www.allimant.org/javadoc/index.php"
+            }, {
+                "name": "Java EE APIs & Docs",
+                "uri": "http://java.sun.com/javaee/reference/"
+            }, {
+                "name": "JSR181 - Web Services Metadata for the J...",
+                "uri": "http://dev2dev.bea.com/webservices/jwsm.html"
+            }, {
+                "name": "Overview (Java 2 Platform SE v1.4.2)",
+                "uri": "http://java.sun.com/j2se/1.4.2/docs/api/"
+            }, {
+                "name": "Roedy Green?s Java & Internet Glossary :...",
+                "uri": "http://mindprod.com/jgloss/exec.html"
+            }, {
+                "name": "Top 119 Cheat Sheets _ Ultimate Web Deve...",
+                "uri": "http://www.econsultant.com/web-developer/cheat-sheets/"
+            }, {
+                "name": "Hibernate Chapter 15: Criteria Queries",
+                "uri": "http://docs.jboss.org/hibernate/core/3.3/reference/en/html/querycriteria.html"
+            }, {
+                "name": "Struts 2",
+                "uri": "http://struts.apache.org/2.0.14/docs/home.html"
+            }, {
+                "name": "Daemon - Daemon : Java based daemons or services",
+                "uri": "http://commons.apache.org/daemon/index.html"
+            }, {
+                "name": "Java Native Access (JNA): Pure Java Access to Native Libraries ? Java.net",
+                "uri": "http://jna.java.net/"
+            }, {
+                "name": "Daemon - Daemon : Procrun",
+                "uri": "http://commons.apache.org/daemon/procrun.html"
+            }, {
+                "name": "Enigma To Eureka: Writing a Windows Service in Java",
+                "uri": "http://enigma2eureka.blogspot.com/2011/05/writing-windows-service-in-java.html"
+            }, {
+                "name": "YAJSW - Yet Another Java Service Wrapper - Introduction",
+                "uri": "http://yajsw.sourceforge.net/"
+            }, {
+                "name": "WinRun4J",
+                "uri": "http://winrun4j.sourceforge.net/"
+            }, {
+                "name": "Download Launch4j Executable Wrapper from SourceForge.net",
+                "uri": "http://sourceforge.net/projects/launch4j/files/launch4j-3/3.0.2/launch4j-3.0.2-win32.exe/download"
+            }, {
+                "name": "Enigma To Eureka",
+                "uri": "http://enigma2eureka.blogspot.com/"
+            }, {
+                "name": "jnaerator - JNAerator - Native C / C++ / Objective-C libraries come to Java ! - Google Project Hosting",
+                "uri": "http://code.google.com/p/jnaerator/"
+            }, {
+                "name": "Spring Framework Reference Documentation",
+                "uri": "http://static.springsource.org/spring-framework/docs/3.2.0.RELEASE/spring-framework-reference/html/index.html"
+            }, {
+                "name": "IBM Using WebSphere MQ automatic client reconnection with the WebSphere MQ classes for JMS - United States",
+                "uri": "http://www-01.ibm.com/support/docview.wss?uid=swg21508357"
+            }, {
+                "name": "The Central Repository Search Engine",
+                "uri": "http://search.maven.org/#browse"
+            }, {
+                "name": "pdf",
+                "children": [{
+                    "name": "www.freewebs.com/venkatsalem/download/PrintPdf.java",
+                    "uri": "http://www.freewebs.com/venkatsalem/download/PrintPdf.java"
+                }, {
+                    "name": "Java PDF example code Printer.java",
+                    "uri": "http://www.jpedal.org/gplSrc/org/jpedal/examples/simpleviewer/utils/Printer.java.html"
+                }, {
+                    "name": "Java PDF Viewer, PDF to image, print PDF, PDF to text and more",
+                    "uri": "http://www.jpedal.org/"
+                }, {
+                    "name": "java printing - printing a pdf (Beginning Java forum at JavaRanch)",
+                    "uri": "http://www.coderanch.com/t/410208/java/java/java-printing-printing-pdf"
+                }, {
+                    "name": "Aspose - Java PDF Library to Manipulate PDF files - PDF Editor - PDF Viewer",
+                    "uri": "http://www.aspose.com/categories/java-components/aspose.pdf.kit-for-java/default.aspx"
+                }, {
+                    "name": "Java: Generating PDF and Previewing it as an Image ? iText and PDF Renderer ? AMIS Technology blog",
+                    "uri": "http://technology.amis.nl/blog/4174/java-generating-pdf-and-previewing-it-as-an-image-itext-and-pdf-renderer"
+                }, {
+                    "name": "Open Source PDF Libraries in Java",
+                    "uri": "http://java-source.net/open-source/pdf-libraries"
+                }, {
+                    "name": "PdftoImage-Convert PDF to Image by using PdfRenderer library | RubyPDF Blog",
+                    "uri": "http://blog.rubypdf.com/2008/01/30/pdftoimage-convert-pdf-to-image-by-using-pdfrenderer-library/"
+                }, {
+                    "name": "Export PDF pages to a series of images in Java - Stack Overflow",
+                    "uri": "http://stackoverflow.com/questions/550129/export-pdf-pages-to-a-series-of-images-in-java"
+                }, {
+                    "name": "Print a PDF Document in Java",
+                    "uri": "http://juixe.com/techknow/index.php/2008/01/17/print-a-pdf-document-in-java/"
+                }, {
+                    "name": "PDFViewer (english) - Oracle Development",
+                    "uri": "https://sites.google.com/site/oraont/pdfviewer-en"
+                }, {
+                    "name": "Open source Java projects: SwingLabs PDF Renderer - JavaWorld",
+                    "uri": "http://www.javaworld.com/javaworld/jw-06-2008/jw-06-opensourcejava-pdf-renderer.html"
+                }, {
+                    "name": "https://swinglabs.dev.java.net/ is not available",
+                    "uri": "https://swinglabs.dev.java.net/"
+                }, {
+                    "name": "PDF Reference and Adobe Extensions to the PDF Specification | Adobe Developer Connection",
+                    "uri": "http://www.adobe.com/devnet/pdf/pdf_reference.html"
+                }, {
+                    "name": "The big secret revealed! A PDF viewing library! | Java.net",
+                    "uri": "http://weblogs.java.net/blog/joshy/archive/2007/12/the_big_secret.html"
+                }, {
+                    "name": "iText?: what is it, what can you do with it?",
+                    "uri": "http://itextpdf.com/itext.php"
+                }, {
+                    "name": "Apache PDFBox - Apache PDFBox - Java PDF Library",
+                    "uri": "http://pdfbox.apache.org/index.html"
+                }, {
+                    "name": "Lesson: Printing (The Java? Tutorials > 2D Graphics)",
+                    "uri": "http://download.oracle.com/javase/tutorial/2d/printing/index.html"
+                }, {
+                    "name": "Pdf-renderer ? Java.net",
+                    "uri": "http://java.net/projects/pdf-renderer"
+                }, {
+                    "name": "Install Pdftk",
+                    "uri": "http://www.pdflabs.com/docs/install-pdftk/"
+                }]
+            }, {
+                "name": "MuleSoft eLearning platform Loginpage",
+                "uri": "http://go.learnmule.com/lms/login.php?target=&soap_pw=&ext_uid=&cookies=nocookies&client_id=ilias_mulesoft&lang=en"
+            }]
+        }, {
+            "name": "Apache",
+            "children": [{
+                "name": "All .htacces and mod_rewrite answered - ...",
+                "uri": "http://www.myhtaccess.com/"
+            }, {
+                "name": "Apache Server Mod Rewrite Tips, Tricks a...",
+                "uri": "http://www.modrewrite.com/"
+            }, {
+                "name": "Struts - Apache",
+                "uri": "http://struts.apache.org/"
+            }, {
+                "name": "Zoho offers a suite of online web applic...",
+                "uri": "http://www-128.ibm.com/developerworks/ibm/library/j-struts/"
+            }]
+        }, {
+            "name": "CodeSearch",
+            "children": [{
+                "name": "Codase - Source Code Search Engine",
+                "uri": "http://www.codase.com/"
+            }, {
+                "name": "CodeSearch's Search Engine _ EnginePulle...",
+                "uri": "http://enginepuller.com/engines/114/CodeSearch.aspx"
+            }, {
+                "name": "Google Code Search",
+                "uri": "http://www.google.com/codesearch"
+            }, {
+                "name": "Koders - Source Code Search Engine",
+                "uri": "http://www.koders.com/"
+            }, {
+                "name": "Krugle - Code Search for Developers",
+                "uri": "http://www.krugle.com/"
+            }]
+        }, {
+            "name": "Eclipse",
+            "children": [{
+                "name": "Open Source Plug-ins",
+                "uri": "http://www.eclipse.org/community/osplugins.php"
+            }, {
+                "name": "Ant for eclipse - access eclipse configurations from within ant",
+                "uri": "http://ant4eclipse.sourceforge.net/ant-for-eclipse-faq.html"
+            }]
+        }, {
+            "name": "Graphics",
+            "children": [{
+                "name": "Alice_ Free, Easy, Interactive 3D Graphi...",
+                "uri": "http://www.alice.org/"
+            }, {
+                "name": "DHTML Site - Free 16x16 Icons",
+                "uri": "http://www.dhtmlsite.com/icons.php"
+            }, {
+                "name": "Tango Icon Gallery - Tango Desktop Project",
+                "uri": "http://tango.freedesktop.org/Tango_Icon_Gallery"
+            }, {
+                "name": "Wikipedia_Icons - Wikipedia, the free en...",
+                "uri": "http://en.wikipedia.org/wiki/Wikipedia:Icons"
+            }, {
+                "name": "Icon Archive - 25,900+ free icons, buddy icons, xp icons, vista icons, desktop icons, aim icons",
+                "uri": "http://www.iconarchive.com/"
+            }, {
+                "name": "getFavicon",
+                "uri": "http://g.etfv.co/"
+            }]
+        }, {
+            "name": "HTML",
+            "children": [{
+                "name": "HTML Reference Guide",
+                "uri": "http://www.webspawner.com/cc/html/"
+            }, {
+                "name": "Sizzling HTML Jalfrezi - HTML by Example",
+                "uri": "http://www.jalfrezi.com/iniframe.htm"
+            }, {
+                "name": "Style Sheets help with Sizzling HTML Jal...",
+                "uri": "http://www.jalfrezi.com/styles.htm"
+            }, {
+                "name": "The Bare Bones Guide to HTML",
+                "uri": "http://werbach.com/barebones/"
+            }, {
+                "name": "The World Wide Web Consortium",
+                "uri": "http://www.w3.org/"
+            }, {
+                "name": "TopStyle Cascading Style Sheet Editor - ...",
+                "uri": "http://bradsoft.com/topstyle/index.asp"
+            }, {
+                "name": "Web Style Sheets",
+                "uri": "http://www.w3.org/Style/"
+            }]
+        }, {
+            "name": "javascript",
+            "children": [{
+                "name": "CodePress - Real Time Syntax Highlightin...",
+                "uri": "http://codepress.org/index.php"
+            }, {
+                "name": "Douglas Crockford's Javascript",
+                "uri": "http://javascript.crockford.com/"
+            }, {
+                "name": "Ext JS: Extend the Web. World-class Java...",
+                "uri": "http://extjs.com/"
+            }, {
+                "name": "Home | The Dojo Toolkit",
+                "uri": "http://dojotoolkit.org/"
+            }, {
+                "name": "ThickBox 3.1",
+                "uri": "http://jquery.com/demo/thickbox/"
+            }]
+        }, {
+            "name": "Misc",
+            "children": [{
+                "name": ".__ NOTEPAD++ __.",
+                "uri": "http://notepad-plus.sourceforge.net/uk/site.htm"
+            }, {
+                "name": "A complete list of web design galleries ...",
+                "uri": "http://webdesigngalleries.wordpress.com/2007/05/05/a-complete-list-of-web-design-galleries/"
+            }, {
+                "name": "Amazon Mechanical Turk - Welcome",
+                "uri": "http://www.mturk.com/mturk/welcome"
+            }, {
+                "name": "Cardinality Notations - Entity Relations...",
+                "uri": "http://www.smartdraw.com/tutorials/software-erd/erdcardinality.htm"
+            }, {
+                "name": "CHC-3 Writing",
+                "uri": "http://www.chc-3.com/pubs.htm"
+            }, {
+                "name": "CHEATSHEETS & REFERENCE",
+                "uri": "http://mypage.bluewin.ch/yuppi/links/cheatsheets.html"
+            }, {
+                "name": "Checking the PHP version - Practical PHP...",
+                "uri": "http://hudzilla.org/phpwiki/index.php?title=Checking_the_PHP_version"
+            }, {
+                "name": "Chris Shiflett_ Articles",
+                "uri": "http://shiflett.org/articles"
+            }, {
+                "name": "Comparison of Data Modelling Techniques",
+                "uri": "http://www.essentialstrategies.com/publications/modeling/compare.htm"
+            }, {
+                "name": "Developer Fusion Free tutorials and so...",
+                "uri": "http://www.vbweb.co.uk/"
+            }, {
+                "name": "DLL World",
+                "uri": "http://dll.yaroslavl.ru/"
+            }, {
+                "name": "Dreaming of Dawn ? Blog Archive ? Hackin...",
+                "uri": "http://elizabethmariesmith.com/?p=19"
+            }, {
+                "name": "EasyEclipse _ Plugins",
+                "uri": "http://easyeclipse.org/site/plugins/index.html"
+            }, {
+                "name": "Eclipse NewsPortal",
+                "uri": "http://www.eclipse.org/newsportal/"
+            }, {
+                "name": "Free Computer Art Business & Investing e...",
+                "uri": "http://www.ebooklobby.com/index.php?cid=35"
+            }, {
+                "name": "Genii Software _ WebEditors",
+                "uri": "http://www.geniisoft.com/showcase.nsf/WebEditors"
+            }, {
+                "name": "Getting Data into Environment Variables ...",
+                "uri": "http://www.student.northpark.edu/pemente/sed/bat_env.htm"
+            }, {
+                "name": "Interesting Projects",
+                "uri": "http://douweosinga.com/projects"
+            }, {
+                "name": "Leknor.com - Code - gziped_",
+                "uri": "http://leknor.com/code/gziped.php"
+            }, {
+                "name": "thefreecountry.com_ Free Programmers' Re...",
+                "uri": "http://www.thefreecountry.com/"
+            }, {
+                "name": "Quick Reference Cards",
+                "uri": "http://www.digilife.be/quickreferences/quickrefs.htm"
+            }, {
+                "name": "Source Control HOWTO",
+                "uri": "http://www.ericsink.com/scm/source_control.html"
+            }, {
+                "name": "Planet Eclipse",
+                "uri": "http://planeteclipse.org/planet/"
+            }, {
+                "name": "Practical Guide to Binary, Decimal and H...",
+                "uri": "http://www.myhome.org/pg/numbers.html"
+            }, {
+                "name": "PHP Help_ PHP Freaks!",
+                "uri": "http://www.phpfreaks.com/"
+            }, {
+                "name": "BOB: Business Objects Board - Index",
+                "uri": "http://forumtopics.com/busobj/"
+            }, {
+                "name": "Unison File Synchronizer",
+                "uri": "http://www.cis.upenn.edu/~bcpierce/unison/"
+            }, {
+                "name": "Version Control with Subversion",
+                "uri": "http://svnbook.red-bean.com/nightly/en/index.html"
+            }, {
+                "name": "Open Source Tecnnology_ Best Top Ten Ope...",
+                "uri": "http://ashko.blogspot.com/2006/11/best-top-ten-open-sourceajaxdhtml.html"
+            }, {
+                "name": "Peter Coffee's Top 10 Stupid Things that...",
+                "uri": "http://www.eweek.com/slideshow/0,1206,pg=0&s=700&a=186516,00.asp"
+            }, {
+                "name": "The Encyclopedia of Computer Languages",
+                "uri": "http://hopl.murdoch.edu.au/"
+            }]
+        }, {
+            "name": "PHP",
+            "children": [{
+                "name": "A super-fast, easy-to-use, RSS and Atom ...",
+                "uri": "http://simplepie.org/"
+            }, {
+                "name": "Professional PHP Blog",
+                "uri": "http://www.procata.com/blog/"
+            }, {
+                "name": "Regular Expressions PHP Tutorial",
+                "uri": "http://weblogtoolscollection.com/regex/regex.php"
+            }, {
+                "name": "Swift Mailer - A Pluggable PHP Mailing L...",
+                "uri": "http://www.swiftmailer.org/"
+            }]
+        }, {
+            "name": "sampletext",
+            "children": [{
+                "name": "Anguish Languish",
+                "uri": "http://www.crockford.com/wrrrld/anguish.html"
+            }, {
+                "name": "Lorem Ipsum - All the facts - Lipsum gen...",
+                "uri": "http://www.lipsum.com/"
+            }]
+        }, {
+            "name": "Shells",
+            "children": [{
+                "name": "50 nifty Linux command-line tools",
+                "uri": "http://searchopensource.techtarget.com/generic/0,295582,sid39_gci1154277,00.html?track=NL-386&ad=580327&asrc=EM_NLT_1018604&uid=5543210"
+            }, {
+                "name": "Advanced Bash-Scripting Guide",
+                "uri": "http://tldp.org/LDP/abs/html/"
+            }, {
+                "name": "KCCF Unix info Pages",
+                "uri": "http://www.apl.jhu.edu/Misc/Unix-info/"
+            }, {
+                "name": "korn shell",
+                "uri": "http://www.apl.jhu.edu/Misc/Unix-info/shells/korn.html"
+            }, {
+                "name": "LinuxCommand.org Learn the Linux command...",
+                "uri": "http://linuxcommand.org/"
+            }, {
+                "name": "MS-DOS help and commands",
+                "uri": "http://www.computerhope.com/msdos.htm"
+            }, {
+                "name": "msdos commands introduction",
+                "uri": "http://www.eeng.brad.ac.uk/help/.dos/.dosman.html"
+            }, {
+                "name": "Robocopy",
+                "uri": "http://www.ss64.com/nt/robocopy.html"
+            }, {
+                "name": "SS64.com",
+                "uri": "http://ss64.com/"
+            }, {
+                "name": "TB Unix Cheat Sheet",
+                "uri": "http://www.rain.org/~mkummel/unix.html"
+            }, {
+                "name": "Unix Cheat Sheet",
+                "uri": "http://landru.uwaterloo.ca/~mjhudson/docs/unix_cheat_sheet.html"
+            }, {
+                "name": "UNIX tips_ Learn 10 good UNIX usage habits",
+                "uri": "http://www-128.ibm.com/developerworks/aix/library/au-badunixhabits.html"
+            }, {
+                "name": "Vi Cheat Sheet",
+                "uri": "http://lagmonster.org/docs/vi.html"
+            }, {
+                "name": "Wilson on Operating Systems",
+                "uri": "http://www.wilsonmar.com/1opsys.htm"
+            }, {
+                "name": "Windows - Programming, Scripting, Tips a...",
+                "uri": "http://www.dx21.com/SCRIPTING/RUNDLL32/REFGUIDE.ASP?ISF=0&P=A"
+            }, {
+                "name": "Batch Function Library for Windows NT4/2000/XP/2003",
+                "uri": "http://www.commandline.co.uk/lib/treeview/index.php"
+            }, {
+                "name": "Rob van der Woude's Scripting Pages",
+                "uri": "http://www.robvanderwoude.com/"
+            }, {
+                "name": "O?Reilly?s Linux Command Directory",
+                "uri": "http://oreilly.com/linux/command-directory/"
+            }, {
+                "name": "Shell Tips and Tricks [dev.ImpactClub.ro]",
+                "uri": "http://dev.impactclub.ro/devices/mybookworld/shell"
+            }]
+        }, {
+            "name": "SQL_DB",
+            "children": [{
+                "name": "282010 - ACC2002 Updated Version of Micr...",
+                "uri": "http://support.microsoft.com/default.aspx?scid=kb;en-us;Q282010"
+            }, {
+                "name": "ConnectionStrings.com - Forgot that ...",
+                "uri": "http://www.connectionstrings.com/"
+            }, {
+                "name": "MySQL Documentation MySQL By chapter ...",
+                "uri": "http://www.mysql.com/documentation/mysql/bychapter/manual_toc.html#SHOW_CREATE_TABLE"
+            }, {
+                "name": "Transact-SQL Overview",
+                "uri": "http://msdn.microsoft.com/library/default.asp?url=/library/en-us/tsqlref/ts_tsqlcon_6lyk.asp?frame=true"
+            }, {
+                "name": "SQL Reserved Words Checker",
+                "uri": "http://www.petefreitag.com/tools/sql_reserved_words_checker/?word=type"
+            }]
+        }, {
+            "name": "Standards",
+            "children": [{
+                "name": "Developers - Free Standards Group",
+                "uri": "http://www.freestandards.org/en/Developers"
+            }, {
+                "name": "iNames.net",
+                "uri": "http://www.inames.net/index.html"
+            }, {
+                "name": "Metacrap",
+                "uri": "http://www.well.com/~doctorow/metacrap.htm"
+            }, {
+                "name": "microformats",
+                "uri": "http://microformats.org/"
+            }, {
+                "name": "OAuth: Introduction",
+                "uri": "http://oauth.net/about/"
+            }, {
+                "name": "OpenID",
+                "uri": "http://openid.net/"
+            }, {
+                "name": "The open standards stack for the ubiquit...",
+                "uri": "http://www.dataportability.org/"
+            }, {
+                "name": "Architectural Styles and the Design of Network-based Software Architectures",
+                "uri": "https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm"
+            }, {
+                "name": "App Links - Link to what you want, wherever you are.",
+                "uri": "http://applinks.org/"
+            }, {
+                "name": "everyauth",
+                "uri": "http://everyauth.com/"
+            }]
+        }, {
+            "name": "VB",
+            "children": [{
+                "name": "ActiveX Control - OCX, COM, Component Do...",
+                "uri": "http://www.activexcontrol.com/graphics.htm"
+            }, {
+                "name": "ADODB ActiveX Data Objects 2.1",
+                "uri": "http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnaxctrl/html/ado_objm.asp"
+            }, {
+                "name": "All About Interop Search Results For mq...",
+                "uri": "http://blogs.msdn.com/dotnetinterop/search.aspx?q=mqseries&p=1"
+            }, {
+                "name": "Atalasoft - Home of ImgX and EyeBatch. I...",
+                "uri": "http://www.atalasoft.com/index.asp"
+            }, {
+                "name": "Using SC.EXE to Develop Windows NT Services",
+                "uri": "http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnpic/html/msdn_scmslite.asp"
+            }, {
+                "name": "VB Controls Set and retreive PaperSize f...",
+                "uri": "http://www.experts-exchange.com/Programming/Programming_Languages/Visual_Basic/VB_Controls/Q_20727281.html"
+            }, {
+                "name": "vbAccelerator - The Site For Advanced Vi...",
+                "uri": "http://vbaccelerator.com/"
+            }, {
+                "name": "VBnet\" Visual Basic Developers Resource ...",
+                "uri": "http://vbnet.mvps.org/"
+            }, {
+                "name": "Visual Basic World - The leading online ...",
+                "uri": "http://vbworld.com/"
+            }, {
+                "name": "Windows Forms FAQ",
+                "uri": "http://www.syncfusion.com/FAQ/WinForms/default.asp"
+            }, {
+                "name": "XML Core",
+                "uri": "http://msdn.microsoft.com/library/default.asp?url=/nhp/Default.asp?contentid=28000438"
+            }, {
+                "name": "Debbie's Visual Basic Ezine - VB-XML Con...",
+                "uri": "http://members.aol.com/stgeorgej/XML.html"
+            }, {
+                "name": "DB2 Client-Server Tips & Samples",
+                "uri": "http://www-3.ibm.com/software/data/db2/os390/cstips/"
+            }, {
+                "name": "DevX",
+                "uri": "http://www.devx.com/"
+            }, {
+                "name": "Designing Business Objects - ADO(R) Reco...",
+                "uri": "http://www.vbip.com/books/186100107X/chapter_107X_06.asp"
+            }, {
+                "name": "OASIS",
+                "uri": "http://www.oasis-open.org/home/index.php"
+            }, {
+                "name": "LEAD Product Download Center",
+                "uri": "http://www.leadtools.com/download/downloadcenter.htm"
+            }, {
+                "name": "Saving Pictures to JPG in VB",
+                "uri": "http://vbaccelerator.com/codelib/gfx/vbjpeg.htm"
+            }, {
+                "name": "PlanetSourceCode",
+                "uri": "http://planetsourcecode.com/"
+            }, {
+                "name": "Top XML Persisting ADO as an XML file",
+                "uri": "http://www.vbxml.com/xml/guides/developers/ado_persist_xml.asp"
+            }, {
+                "name": "Smaller Animals Software ImgSource",
+                "uri": "http://www.smalleranimals.com/isource.htm"
+            }, {
+                "name": "True DBGrid Pro by ComponentOne at VBxtras",
+                "uri": "http://www.vbxtras.com/products/truedbgrid.asp"
+            }, {
+                "name": "Control position of common dialogs! - vi...",
+                "uri": "http://www.planet-source-code.com/vb/scripts/ShowCode.asp?txtCodeId=479&lngWId=-10"
+            }, {
+                "name": "Atalasoft - ImgX Purchase",
+                "uri": "http://www.atalasoft.com/Components/Purchase/"
+            }]
+        }, {
+            "name": "WebMash",
+            "children": [{
+                "name": "DISQUS | Turn Blog Comments into a Webwide Discussion with a Powerful Comment System",
+                "uri": "http://disqus.com/"
+            }]
+        }, {
+            "name": "widgets",
+            "children": [{
+                "name": "Boost Widget Distribution and Get Real T...",
+                "uri": "http://www.gigya.com/"
+            }, {
+                "name": "Create widgets, banners, mini-sites, mas...",
+                "uri": "http://sproutbuilder.com/"
+            }, {
+                "name": "MuseStorm - Content Engagement Platform",
+                "uri": "http://www.musestorm.com/"
+            }, {
+                "name": "netvibes UWA: Cross-Platform Widget API",
+                "uri": "http://dev.netvibes.com/"
+            }, {
+                "name": "Right Stuff, Right Place",
+                "uri": "http://blog.snipperoo.com/widget_platforms/index.html"
+            }, {
+                "name": "The Widget Network for building, deployi...",
+                "uri": "http://www.clearspring.com/"
+            }, {
+                "name": "widget blog, widget news, widget reviews...",
+                "uri": "http://www.widgetbeat.net/index.php/03/2008/paramount-indiana-jones-widget/"
+            }, {
+                "name": "Widgetbox is the world's largest widget ...",
+                "uri": "http://www.widgetbox.com/"
+            }, {
+                "name": "Widgipedia - your ultimate widgets resou...",
+                "uri": "http://www.widgipedia.com/"
+            }, {
+                "name": "WidSets is a clever service that brings ...",
+                "uri": "http://www.widsets.com/"
+            }]
+        }, {
+            "name": "SharePoint",
+            "children": [{
+                "name": "Office 2013 and SharePoint 2013 application services",
+                "uri": "http://msdn.microsoft.com/en-US/library/office/jj164088(v=office.15)"
+            }, {
+                "name": "What?s new in Word Automation Services | Office Blogs",
+                "uri": "http://blogs.office.com/2012/09/26/whats-new-in-word-automation-services/"
+            }, {
+                "name": "SharePoint 2013 .NET Server, CSOM, JSOM, and REST API index",
+                "uri": "http://msdn.microsoft.com/en-us/library/dn268594(v=office.15).aspx"
+            }, {
+                "name": "OpenXML SDK 2.0 vs Aspose for server side word 2007 document generation in .NET - Stack Overflow",
+                "uri": "https://stackoverflow.com/questions/6302422/openxml-sdk-2-0-vs-aspose-for-server-side-word-2007-document-generation-in-net"
+            }, {
+                "name": "Considerations for server-side Automation of Office",
+                "uri": "http://support.microsoft.com/default.aspx?scid=kb;EN-US;q257757"
+            }, {
+                "name": "SharePoint Foundation vs SharePoint Server 2013 Comparison | Apps4Rent",
+                "uri": "http://www.apps4rent.com/sharepoint-2013-features-comparison.html"
+            }, {
+                "name": "Configure Word Automation Service in SharePoint 2013 | SharePoint Learner",
+                "uri": "http://sharepointlearner.com/configure-word-automation-service-in-sharepoint-2013/"
+            }, {
+                "name": "SharePoint DEV",
+                "uri": "http://sharepointtest/zs_test_site/SitePages/Home.aspx"
+            }, {
+                "name": "SP-2013-test2",
+                "uri": "http://sp2013-test2/"
+            }, {
+                "name": "Gnostice - .NET PDF components - Java PDF library - PDF VCL components - PDF Developer Tools For .NET, Delphi, C++Builder & Java - Create PDF - Edit PDF - Convert PDF - PDF Viewer - PDF Printer - Delphi Report Export - Create, Fill, Flatten PDF Forms - Merge & Split PDF documents - Generate HTML, Word RTF, TIFF, JPG documents and images",
+                "uri": "http://www.gnostice.com/"
+            }, {
+                "name": "Choose the right API set in SharePoint 2013",
+                "uri": "http://msdn.microsoft.com/en-us/library/office/jj164060(v=office.15).aspx"
+            }, {
+                "name": "Start: Set up the development environment for SharePoint 2013",
+                "uri": "http://msdn.microsoft.com/en-us/library/office/ee554869(v=office.15).aspx"
+            }, {
+                "name": "SharePoint 2010 Best Practices - TechNet Articles - United States (English) - TechNet Wiki",
+                "uri": "https://social.technet.microsoft.com/wiki/contents/articles/8666.sharepoint-2010-best-practices.aspx"
+            }, {
+                "name": "SharePoint 2010 Best Practices - Maps For That!",
+                "uri": "https://www.mapsforthat.com/viewmap.php?m=2569"
+            }, {
+                "name": "Deploy a single server with a built-in database (SharePoint Server 2010)",
+                "uri": "http://technet.microsoft.com/en-us/library/cc263202(v=office.14).aspx"
+            }, {
+                "name": "Hardware and software requirements (SharePoint Server 2010)",
+                "uri": "http://technet.microsoft.com/en-us/library/cc262485(v=office.14).aspx"
+            }, {
+                "name": "Clinic 10277: What's New in Microsoft SharePoint 2010 for Developers",
+                "uri": "https://www.microsoftelearning.com/eLearning/course.aspx?guid=62F3A54D-F459-460F-9B5D-DC039F6C3DD3"
+            }, {
+                "name": "SharePoint 2010 Developer Ramp-Up - Part 5 - Online Training Course for Developers",
+                "uri": "http://pluralsight.com/training/Courses/TableOfContents/cpt-sp2010-dev-ramp-part5"
+            }, {
+                "name": "Office SharePoint 2013: Convert Word file to PDF with REST and Word Automation Services sample",
+                "uri": "http://code.msdn.microsoft.com/office/SharePoint-2013-Convert-1e0578a1"
+            }, {
+                "name": "Apps for SharePoint compared with SharePoint solutions",
+                "uri": "http://msdn.microsoft.com/en-US/library/jj163114(v=office.15).aspx"
+            }, {
+                "name": "Download Developing Applications for SharePoint 2010 from Official Microsoft Download Center",
+                "uri": "http://www.microsoft.com/en-us/download/confirmation.aspx?id=23919"
+            }, {
+                "name": "Download SharePoint 2010: Professional Developer Evaluation Guide and Walkthroughs from Official Microsoft Download Center",
+                "uri": "http://www.microsoft.com/en-us/download/confirmation.aspx?id=7204"
+            }, {
+                "name": "SharePoint for developers | apps for SharePoint | tools, samples",
+                "uri": "http://msdn.microsoft.com/en-US/office/dn448478"
+            }, {
+                "name": "010 - SharePoint Technical Training - All Documents",
+                "uri": "https://portal.collaborative.com/InternalInitiatives/CBS/Bench%20Project%20Portal/Forms/AllItems.aspx?RootFolder=%2FInternalInitiatives%2FCBS%2FBench%20Project%20Portal%2F010%20%2D%20SharePoint%20Technical%20Training&FolderCTID=0x01200002F61C9A6F507A419E2A18FB2E63FB18&View=%7b7E6627DB-FA63-40EF-93F9-E6990C05F349"
+            }, {
+                "name": "SharePoint 2010 Developer Ramp-Up - Part 1 - Online Training Course for Developers",
+                "uri": "http://pluralsight.com/training/Courses/TableOfContents/cpt-sp2010-dev-ramp-part1"
+            }, {
+                "name": "Understanding SharePoint 2013: Part 1 - Basics - Online Training Course for Developers",
+                "uri": "http://pluralsight.com/training/Courses/TableOfContents/understanding-sharepoint2013-basics"
+            }, {
+                "name": "SharePoint 2010 Fundamentals - Online Training Course for Developers",
+                "uri": "http://pluralsight.com/training/Courses/TableOfContents/sp2010-foundation-fundamentals"
+            }, {
+                "name": "SharePoint 2010 Developer Ramp-Up - Part 4 - Online Training Course for Developers",
+                "uri": "http://pluralsight.com/training/Courses/TableOfContents/cpt-sp2010-dev-ramp-part4"
+            }, {
+                "name": "SharePoint 2010 Developer Ramp-Up - Part 2 - Online Training Course for Developers",
+                "uri": "http://pluralsight.com/training/Courses/TableOfContents/cpt-sp2010-dev-ramp-part2"
+            }, {
+                "name": "SharePoint 2010 Developer Ramp-Up - Part 3 - Online Training Course for Developers",
+                "uri": "http://pluralsight.com/training/Courses/TableOfContents/cpt-sp2010-dev-ramp-part3"
+            }, {
+                "name": "SharePoint Document Converter - Home",
+                "uri": "https://spwordtopdfconverter.codeplex.com/"
+            }, {
+                "name": "Converting Word Documents to PDF using SharePoint Server 2010 and Word Services",
+                "uri": "http://msdn.microsoft.com/en-us/library/office/ff181518.aspx"
+            }, {
+                "name": "Word Automation Services Overview",
+                "uri": "http://msdn.microsoft.com/en-us/library/office/ee558830(v=office.14).aspx"
+            }, {
+                "name": "PowerPoint Automation Services in SharePoint 2013",
+                "uri": "http://msdn.microsoft.com/en-us/library/office/fp179894.aspx"
+            }, {
+                "name": "Using SharePoint 2010 Word Automation Services to convert document synchronously | Second Life of a Hungarian SharePoint Geek",
+                "uri": "http://pholpar.wordpress.com/2011/10/27/using-sharepoint-2010-word-automation-services-to-convert-document-synchronously/"
+            }]
+        }, {
+            "name": "XML",
+            "children": [{
+                "name": "Design Place XML Message Design Ahead of...",
+                "uri": "http://msdn.microsoft.com/msdnmag/issues/02/12/WebServicesDesign/default.aspx#void"
+            }, {
+                "name": "Binding XML Schemas",
+                "uri": "http://java.sun.com/webservices/docs/2.0/tutorial/doc/JAXBWorks4.html"
+            }, {
+                "name": "xsddoc - xframe - xsddoc - documentation tool for W3C XML Schemas",
+                "uri": "http://xframe.sourceforge.net/xsddoc/usage-console.html"
+            }, {
+                "name": "select - XSLT Assignment of element value to variable: Works with Altova XML Spy, but fails in .NET app - Stack Overflow",
+                "uri": "http://stackoverflow.com/questions/2029730/xslt-assignment-of-element-value-to-variable-works-with-altova-xml-spy-but-fai"
+            }, {
+                "name": "XHTML 1.1 - XHTML 1.1 XML Schema Definition",
+                "uri": "http://www.w3.org/TR/xhtml11/xhtml11_schema.html#a_xhtml11_schema"
+            }, {
+                "name": "XSL Transformations (XSLT) Version 2.0",
+                "uri": "http://www.w3.org/TR/xslt20/#xslt-namespace"
+            }, {
+                "name": "XSL Transformations (XSLT) Version 2.0",
+                "uri": "http://www.w3.org/TR/xslt20/"
+            }, {
+                "name": "Transform XHTML to XHTML with XSLT",
+                "uri": "http://www.xmlplease.com/xhtmlxhtml"
+            }, {
+                "name": "The perils of default namespaces | Jeni's Musings",
+                "uri": "http://www.jenitennison.com/blog/node/36"
+            }, {
+                "name": "edankert ... - XPath and Default Namespaces",
+                "uri": "http://www.edankert.com/defaultnamespaces.html"
+            }, {
+                "name": "xml serialization - Is it possible to customize the namespace prefix that JAXB uses when marshalling to a String? - Stack Overflow",
+                "uri": "http://stackoverflow.com/questions/1982977/is-it-possible-to-customize-the-namespace-prefix-that-jaxb-uses-when-marshalling"
+            }, {
+                "name": "Customize namespace prefix when marshalling with Jaxb ? Dutchworks Blog / Dutchworks: Enterprise Java, Open Source, software solutions, Amsterdam",
+                "uri": "http://blog.dutchworks.nl/2009/02/02/customize-namespace-prefix-when-marshalling-with-jaxb/"
+            }, {
+                "name": "System Mobile ? Customizing JAXB?s Namespace Prefixes",
+                "uri": "http://www.systemmobile.com/?p=280"
+            }]
+        }, {
+            "name": "UML",
+            "children": [{
+                "name": "The UML Class Diagram: Part 1 - Developer.com",
+                "uri": "http://www.developer.com/design/article.php/2206791/The-UML-Class-Diagram-Part-1.htm"
+            }, {
+                "name": "Class diagram - Wikipedia, the free encyclopedia",
+                "uri": "https://secure.wikimedia.org/wikipedia/en/wiki/Class_diagram"
+            }, {
+                "name": "Object Management Group - UML",
+                "uri": "http://uml.org/"
+            }]
+        }, {
+            "name": "JSP",
+            "children": [{
+                "name": "JSP XML CheatSheet",
+                "uri": "http://ndpsoftware.com/JSPXMLCheatSheet.html"
+            }]
+        }, {
+            "name": "PDF",
+            "children": [{
+                "name": "PDFill PDF Editor with FREE PDF Writer and FREE PDF Tools - www.PDFill.com",
+                "uri": "http://www.pdfill.com/pdf_tools_free.html"
+            }, {
+                "name": "Gnostice PDFOne - Java? components to create, edit, enhance, view, print PDF | Create, edit, fill, flatten PDF Forms | Works in Windows, Linux and Mac",
+                "uri": "http://www.gnostice.com/PDFOne_Java.asp"
+            }, {
+                "name": "pdftex - How to annotate PDF files generated by pdflatex? - TeX - LaTeX - Stack Exchange",
+                "uri": "http://tex.stackexchange.com/questions/6306/how-to-annotate-pdf-files-generated-by-pdflatex"
+            }, {
+                "name": "The TeX Catalogue OnLine, Entry for pdfcomment, Ctan Edition",
+                "uri": "http://dante.ctan.org/tex-archive/help/Catalogue/entries/pdfcomment.html"
+            }, {
+                "name": "Portable Document Format - Wikipedia, the free encyclopedia",
+                "uri": "http://en.wikipedia.org/wiki/Portable_Document_Format"
+            }, {
+                "name": "Portable Document Format - Wikipedia, the free encyclopedia",
+                "uri": "http://en.wikipedia.org/wiki/Portable_Document_Format#Annotating_PDFs"
+            }, {
+                "name": "Poppler (software) - Wikipedia, the free encyclopedia",
+                "uri": "http://en.wikipedia.org/wiki/Poppler_(software)"
+            }, {
+                "name": "ICEpdf - Java Programming PDF Java PDF Library J2EE PDF Java PDF Viewer",
+                "uri": "http://www.icesoft.com/products/icepdf.html"
+            }, {
+                "name": "jPDFNotes | Java PDF Annotation Bean, Add annotations, comments to PDF with Java",
+                "uri": "http://www.qoppa.com/pdfnotes/"
+            }, {
+                "name": "Overview (EasyPDF Java SDK v6.1 API Specification)",
+                "uri": "http://www.pdfonline.com/easypdf/sdk-63/programming-pdf/java/java-manual/index.html"
+            }, {
+                "name": "Download RasterMaster?, Imaging and Conversion SDK | Snowbound Software",
+                "uri": "http://www.snowboundsoftware.com/evaluate/73jG0CvaZ910k2/rm.php?eml=zach.shelton@sentry.com#"
+            }, {
+                "name": "PDF Tools AG - PDF & PDF/A Software - API, Shell, Services",
+                "uri": "http://www.pdf-tools.com/pdf/Home.aspx"
+            }, {
+                "name": "PDF Standards - PDF/A",
+                "uri": "http://pdf.editme.com/PDFA"
+            }, {
+                "name": "Print PDF to all Windows Printers, PDF Print (PDF Printing) Command Line product",
+                "uri": "http://www.verypdf.com/pdfprint/index.html"
+            }, {
+                "name": "Brochures and Datasheets | Adlib",
+                "uri": "http://www.adlibsoftware.com/resources/brochures-and-datasheets.aspx"
+            }, {
+                "name": "Tracker Software Products :: PDF-XChange PRO SDK",
+                "uri": "http://www.tracker-software.com/product/pdf-xchange-pro-sdk"
+            }, {
+                "name": "Adobe TV",
+                "uri": "http://tv.adobe.com/"
+            }, {
+                "name": "Adobe Acrobat X Pro | FAQ",
+                "uri": "http://www.adobe.com/products/acrobatpro/faq.html"
+            }, {
+                "name": "pdf/a standard - Google Search",
+                "uri": "https://www.google.com/webhp?rlz=1C1CHNV_enUS381US389&sourceid=chrome-instant&ix=seb&ie=UTF-8&ion=1&safe=on#hl=en&safe=active&rlz=1C1CHNV_enUS381US389&output=search&sclient=psy-ab&q=pdf%2Fa%20standard&pbx=1&oq=&aq=&aqi=&aql=&gs_sm=&gs_upl=&fp=f2b36fc8b12b8d19&ix=seb&ion=1&ix=seb&ion=1&bav=on.2,or.r_gc.r_pw.r_cp.r_qf.,cf.osb&fp=f2b36fc8b12b8d19&biw=1225&bih=766&ix=seb&ion=1"
+            }, {
+                "name": "Topics | PDF Association | The future of PDF",
+                "uri": "http://www.pdfa.org/topics/"
+            }, {
+                "name": "www.adobe.com/enterprise/pdfs/pdfarchiving.pdf",
+                "uri": "http://www.adobe.com/enterprise/pdfs/pdfarchiving.pdf"
+            }, {
+                "name": "ISO 19005-1:2005 - Document management -- Electronic document file format for long-term preservation -- Part 1: Use of PDF 1.4 (PDF/A-1)",
+                "uri": "http://www.iso.org/iso/catalogue_detail?csnumber=38920"
+            }, {
+                "name": "PDF/A-1, PDF for Long-term Preservation, Use of PDF 1.4",
+                "uri": "http://www.digitalpreservation.gov/formats/fdd/fdd000125.shtml"
+            }, {
+                "name": "PDF/A - Wikipedia, the free encyclopedia",
+                "uri": "http://en.wikipedia.org/wiki/PDF/A"
+            }, {
+                "name": "www.aiim.org/documents/standards/19005-1_FAQ.PDF",
+                "uri": "http://www.aiim.org/documents/standards/19005-1_FAQ.PDF"
+            }, {
+                "name": "www.pdf-tools.com/public/downloads/whitepapers/whitepaper-pdfa.pdf",
+                "uri": "http://www.pdf-tools.com/public/downloads/whitepapers/whitepaper-pdfa.pdf"
+            }, {
+                "name": "PDF/A for long-term archiving - Latest Information, News, Products, Tips",
+                "uri": "http://www.pdf-tools.com/pdf/pdfa-longterm-archiving-iso-19005-pdf.aspx?gclid=CP3O-Ibusa4CFYvRKgodcmbuRw#PDFAproducts"
+            }, {
+                "name": "PDF/A Archiving",
+                "uri": "http://www.alliancegroup.co.uk/pdf-a.htm"
+            }, {
+                "name": "ISO standard PDF/A - PDF documents to last for ever! [callas software]",
+                "uri": "http://www.callassoftware.com/callas/doku.php/en:support:knowledge:pdfa"
+            }, {
+                "name": "com.sun.tools.internal.ws.wsimport - Google Search",
+                "uri": "https://www.google.com/search?rlz=1C1CHNV_enUS381US389&aq=f&ix=seb&sourceid=chrome&ie=UTF-8&q=com.sun.tools.internal.ws.WsImport&safe=on"
+            }]
+        }, {
+            "name": "software_to_learn",
+            "children": [{
+                "name": "IBM Cognos software",
+                "uri": "http://www-01.ibm.com/software/analytics/cognos/"
+            }, {
+                "name": "Business Discovery: Business Intelligence For Everyone | QlikView",
+                "uri": "http://www.qlikview.com/us"
+            }]
+        }, {
+            "name": "modx",
+            "children": [{
+                "name": "The CMS Less Traveled - A blog about MODx Revolution",
+                "uri": "http://cmslesstraveled.com/"
+            }, {
+                "name": "splittingred.com :: Technology",
+                "uri": "http://www.splittingred.com/technology/"
+            }, {
+                "name": "The Coding Pad | Web Development, Drupal, and MODx Tutorials",
+                "uri": "http://codingpad.maryspad.com/"
+            }, {
+                "name": "MODx Video Tutorials and Screencasts - MODx Video Tutorials",
+                "uri": "http://modxvideotutorials.com/"
+            }, {
+                "name": "MODxperience | Home",
+                "uri": "http://www.modxperience.com/"
+            }, {
+                "name": "Greg Smart, MODx web developer and managed hosting through Pleth, LLC.",
+                "uri": "http://www.gregorysmart.com/"
+            }, {
+                "name": "Eat.Sleep.MODx.",
+                "uri": "http://www.eatsleepmodx.com/"
+            }, {
+                "name": "Toad Blog: Thoughts on Web Design",
+                "uri": "http://www.redtoadmedia.com/blog/"
+            }, {
+                "name": "jasoncoward.com | The Latest and Greatest from Taos, New Mexico",
+                "uri": "http://www.jasoncoward.com/"
+            }, {
+                "name": "DESIGNfromWITHIN - Web-design & development",
+                "uri": "http://designfromwithin.com/"
+            }, {
+                "name": "Home",
+                "uri": "http://www.greengoatmedia.com/"
+            }, {
+                "name": "MODxperience | BGuide",
+                "uri": "http://www.modxperience.com/modxperi/experience/beginners-guide/"
+            }, {
+                "name": "Bob's Guides | The MODx CMS",
+                "uri": "http://bobsguides.com/modx.html"
+            }, {
+                "name": "HandyMan-Mobile Manager for MODX",
+                "uri": "http://modxmobile.com/"
+            }, {
+                "name": "MODx Wiki",
+                "uri": "http://wiki.modxcms.com/index.php/Main_Page"
+            }, {
+                "name": "MODx Revolution 2.x Docs",
+                "uri": "http://rtfm.modx.com/display/revolution20/Home"
+            }, {
+                "name": "modx-boilerplate - GitHub",
+                "uri": "https://github.com/smooth-graphics/modx-boilerplate"
+            }]
+        }, {
+            "name": "PLEAC - Programming Language Examples Alike Cookbook",
+            "uri": "http://pleac.sourceforge.net/"
+        }, {
+            "name": "REGex TESTER v1.5.3 - test/validate regular expressions, online tester",
+            "uri": "http://www.regextester.com/"
+        }, {
+            "name": "Reason codes",
+            "uri": "http://middleware.its.state.nc.us/middleware/Documentation/en_US/htm/csqzak06/csqzak065m.htm"
+        }, {
+            "name": "Pixsy | Command Your Internet",
+            "uri": "http://www.pixsy.net/"
+        }, {
+            "name": "Phabricator",
+            "uri": "http://phabricator.org/"
+        }, {
+            "name": "favicons (16?16)",
+            "uri": "https://www.google.com/s2/favicons?domain=zachofalltrades.net"
+        }, {
+            "name": "Material Design - Google design guidelines",
+            "uri": "http://www.google.com/design/spec/material-design/introduction.html"
+        }, {
+            "name": "Award-winning web developers' resource: ...",
+            "uri": "http://devguru.com/"
+        }, {
+            "name": "Cheat Sheets",
+            "uri": "http://www.fuzzyfuture.com/programming/the-developer-cheat-sheet-compilation/"
+        }, {
+            "name": "Create Web services using Apache Axis and Castor",
+            "uri": "http://www.ibm.com/developerworks/webservices/library/ws-castor/"
+        }, {
+            "name": "Design Guidelines - Eionet",
+            "uri": "http://www.eionet.europa.eu/software/design"
+        }, {
+            "name": "LPRAFP sample code that runs on Windows ...",
+            "uri": "http://www-1.ibm.com/support/docview.wss?rs=95&dc=D400&q1=psd1*&uid=psd1P4000243&loc=en_US&cs=utf-8&lang=en"
+        }, {
+            "name": "MD5: Command Line Message Digest Utility",
+            "uri": "http://www.fourmilab.ch/md5/"
+        }, {
+            "name": "Yahoo! Developer Network Home - Welcome!",
+            "uri": "http://developer.yahoo.com/"
+        }, {
+            "name": "Your portal to the dozens of community-d...",
+            "uri": "http://www.mvps.org/"
+        }, {
+            "name": "Tech Facts at Your Fingertips | Refcardz",
+            "uri": "http://refcardz.dzone.com/?oid=ban00020-0"
+        }, {
+            "name": "Stack Overflow",
+            "uri": "http://beta.stackoverflow.com/"
+        }, {
+            "name": "JSP Tutorial",
+            "uri": "http://www.jsptut.com/Index.html#contents"
+        }, {
+            "name": "EclipseZone - Tuning Eclipse Performance and Avoiding ...",
+            "uri": "http://www.eclipsezone.com/eclipse/forums/t61618.html"
+        }, {
+            "name": "15 Essential Checks Before Launching Your Website | How-To | Smashing Magazine",
+            "uri": "http://www.smashingmagazine.com/2009/04/07/15-essential-checks-before-launching-your-website/"
+        }, {
+            "name": "Developer Icon Sets: Collection of the best free to both personal & commercial use Icon sets - aComment.net",
+            "uri": "http://acomment.net/developer-icon-sets-collection-of-the-best-free-to-both-personal-commercial-use-icon-sets/152"
+        }, {
+            "name": "InfoQ: Using Google Web Toolkit",
+            "uri": "http://www.infoq.com/presentations/gwt"
+        }, {
+            "name": "txt2re: regular expression generator",
+            "uri": "http://www.txt2re.com/"
+        }, {
+            "name": "SendSignal",
+            "uri": "http://www.latenighthacking.com/projects/2003/sendSignal/"
+        }, {
+            "name": "Monitor and manage Java applications with JConsole | Programming and Development | TechRepublic.com",
+            "uri": "http://blogs.techrepublic.com.com/programming-and-development/?p=678"
+        }, {
+            "name": "Appmator",
+            "uri": "http://appmator.appspot.com/"
+        }, {
+            "name": "DevTools: API Reference",
+            "uri": "http://iblogbox.com/devtools/api/"
+        }, {
+            "name": "Unified Modeling Language - Wikipedia, the free encyclopedia",
+            "uri": "http://en.wikipedia.org/wiki/Unified_Modeling_Language"
+        }, {
+            "name": "EditorConfig",
+            "uri": "http://editorconfig.org/"
+        }, {
+            "name": "Learn to code | Codecademy",
+            "uri": "http://www.codecademy.com/#!/exercises/0"
+        }, {
+            "name": "Service Locator, Factories and Dependency Injection",
+            "uri": "http://code.imagej.net/gbh/arch/ServiceLocator,FactoriesandDependencyInj.html"
+        }, {
+            "name": "JFrog - Home of Artifactory Binary Repository Manager",
+            "uri": "http://www.jfrog.com/"
+        }, {
+            "name": "Flexibility 4 - Responsive MODX Revolution template based on Foundation 4",
+            "uri": "http://flexibilitymodx.com/"
+        }, {
+            "name": "Core java quiz questions on identifiers | JAVA INTERVIEW QUESTIONS",
+            "uri": "http://java-interview-questions.com/"
+        }, {
+            "name": "Google Structured Data Testing Tool",
+            "uri": "https://www.google.com/webmasters/tools/richsnippets"
+        }, {
+            "name": "Top 10 Reasons to Use HTML5 Right Now | Codrops",
+            "uri": "http://tympanus.net/codrops/2011/11/24/top-10-reasons-to-use-html5-right-now/"
+        }, {
+            "name": "Homegrown programmers - Colt Daggerfist",
+            "uri": "http://blog.bywires.com/articles/programming/homegrown-programmers/"
+        }, {
+            "name": "web services - IIS 7.5 Handling 500 Errors Differently Than IIS 6.0 - Stack Overflow",
+            "uri": "http://stackoverflow.com/questions/9982949/iis-7-5-handling-500-errors-differently-than-iis-6-0"
+        }, {
+            "name": "Agile Software Development: A gentle introduction.",
+            "uri": "http://www.agile-process.org/"
+        }, {
+            "name": "iD",
+            "uri": "http://ideditor.com/"
+        }, {
+            "name": "iPhone Dev Center - Apple Developer Conn...",
+            "uri": "http://developer.apple.com/iphone/devcenter/designingcontent.html"
+        }, {
+            "name": "Build with Chrome",
+            "uri": "https://www.buildwithchrome.com/"
+        }, {
+            "name": "Tent - the protocol for decentralized communication and evented data storage",
+            "uri": "https://tent.io/"
+        }]
+    }, {
+        "name": "Diversions",
+        "children": [{
+            "name": "Shows",
+            "children": [{
+                "name": "Late Show with David Letterman",
+                "uri": "http://lateshow.cbs.com/latenight/lateshow/"
+            }, {
+                "name": "Saturday Night Live - All Videos",
+                "uri": "http://www.nbc.com/Saturday_Night_Live/video/"
+            }, {
+                "name": "NBC",
+                "uri": "http://www.nbc.com/"
+            }, {
+                "name": "CBS",
+                "uri": "http://www.cbs.com/"
+            }, {
+                "name": "ABC",
+                "uri": "http://abc.go.com/video/index"
+            }, {
+                "name": "The Rachel Maddow Show",
+                "uri": "http://www.msnbc.msn.com/id/26315908/"
+            }, {
+                "name": "Countdown with Keith Olbermann",
+                "uri": "http://www.msnbc.msn.com/id/3036677/"
+            }, {
+                "name": "The Daily Show with Jon Stewart",
+                "uri": "http://www.thedailyshow.com/index.jhtml"
+            }, {
+                "name": "Colbertnation",
+                "uri": "http://www.colbertnation.com/home"
+            }, {
+                "name": "Watch Weeds",
+                "uri": "http://watch-weeds.com/"
+            }, {
+                "name": "Heroes",
+                "uri": "http://www.nbc.com/Heroes/"
+            }, {
+                "name": "Olberman's",
+                "uri": "http://www.poetv.com/video.php?vid=4019"
+            }, {
+                "name": "Hulu - Kyle XY",
+                "uri": "http://www.hulu.com/kyle-xy"
+            }]
+        }, {
+            "name": "Individual-i",
+            "uri": "http://www.individual-i.com/"
+        }, {
+            "name": "Microsoft Live Labs: Photosynth",
+            "uri": "http://labs.live.com/photosynth/"
+        }, {
+            "name": "OK_Cancel",
+            "uri": "http://www.ok-cancel.com/"
+        }, {
+            "name": "SuTree - free video 'how to' lessons and...",
+            "uri": "http://www.sutree.com/index.asp"
+        }, {
+            "name": "TMW-Archive",
+            "uri": "http://www.workingforchange.com/column_lst.cfm?AuthrId=43"
+        }, {
+            "name": "2048",
+            "uri": "http://gabrielecirulli.github.io/2048/"
+        }, {
+            "name": "Wait But Why",
+            "uri": "http://waitbutwhy.com/"
+        }, {
+            "name": "IndieWebCamp",
+            "uri": "http://indiewebcamp.com/"
+        }, {
+            "name": "Humble Mozilla Bundle: Powered by asm.js",
+            "uri": "https://www.humblebundle.com/downloads?key=wRDxPnHneDkmYs42"
+        }, {
+            "name": "Hulu",
+            "uri": "http://www.hulu.com/"
+        }, {
+            "name": "Netflix",
+            "uri": "http://movies.netflix.com/WiHome"
+        }, {
+            "name": "Movies",
+            "uri": "http://www.google.com/movies?near=54481"
+        }, {
+            "name": "Wisconsin Public Radio - Home",
+            "uri": "http://wpr.org/"
+        }, {
+            "name": "Best of the Left Podcast",
+            "uri": "http://www.bestoftheleftpodcast.com/"
+        }, {
+            "name": "xkcd - A webcomic of romance, sarcasm, m...",
+            "uri": "http://xkcd.com/"
+        }, {
+            "name": "TED (Technology, Entertainment, Design) ...",
+            "uri": "http://www.ted.com/"
+        }, {
+            "name": "This Modern World",
+            "uri": "http://thismodernworld.com/"
+        }, {
+            "name": "Mark Fiore's Animated Cartoon Site",
+            "uri": "http://www.markfiore.com/"
+        }, {
+            "name": "The Oatmeal",
+            "uri": "http://theoatmeal.com/"
+        }, {
+            "name": "Babelgum",
+            "uri": "http://www.babelgum.com/"
+        }, {
+            "name": "Pandora",
+            "uri": "http://www.pandora.com/"
+        }, {
+            "name": "Bug Bash",
+            "uri": "http://www.bugbash.net/"
+        }, {
+            "name": "clock",
+            "uri": "http://www.yugop.com/ver3/stuff/03/fla.html"
+        }, {
+            "name": "Giveaway of the Day",
+            "uri": "http://www.giveawayoftheday.com/"
+        }, {
+            "name": "LineRider.com",
+            "uri": "http://www.linerider.com/"
+        }, {
+            "name": "The Caffeine Database",
+            "uri": "http://www.energyfiend.com/the-caffeine-database/"
+        }, {
+            "name": "Unitarian Universalist Audio Sermons",
+            "uri": "http://www.uuaudiosermons.com/200611.htm"
+        }, {
+            "name": "What's Special About This Number_",
+            "uri": "http://www.stetson.edu/~efriedma/numbers.html"
+        }, {
+            "name": "? The complete TR Demotivator collection...",
+            "uri": "http://blogs.techrepublic.com.com/geekend/?p=385&tag=nl.e138"
+        }, {
+            "name": "FreeRangeKids",
+            "uri": "http://freerangekids.wordpress.com/"
+        }, {
+            "name": "Academic Earth - Video lectures from the world's top scholars",
+            "uri": "http://academicearth.org/"
+        }, {
+            "name": "Boohbah",
+            "uri": "http://www.boohbah.com/"
+        }, {
+            "name": "CSMonitor",
+            "uri": "http://www.csmonitor.com/"
+        }, {
+            "name": "Ben 10",
+            "uri": "http://www.cartoonnetwork.com/video/dlink/index.html?section=shows&showID=8a25c3920d1231fe010d12652d03008d"
+        }, {
+            "name": "Miro Video Player | Download",
+            "uri": "http://www.getmiro.com/download/"
+        }, {
+            "name": "The Online Internet Site for Information on Dr. Demento music, songs, lyrics and chat.",
+            "uri": "http://www.drdemento.com/"
+        }, {
+            "name": "EZTakes",
+            "uri": "http://www.eztakes.com/"
+        }, {
+            "name": "Journey of the Fellowship 2011: A LEGO? creation by Chris Phipson : MOCpages.com",
+            "uri": "http://www.mocpages.com/moc.php/276793"
+        }, {
+            "name": "joshvmusic's sounds on SoundCloud - Create, record and share your sounds for free",
+            "uri": "http://soundcloud.com/joshvmusic"
+        }, {
+            "name": "JoshVMusic",
+            "uri": "http://joshvmusic.bandcamp.com/"
+        }, {
+            "name": "joshvmusic - YouTube",
+            "uri": "http://www.youtube.com/joshvmusic"
+        }, {
+            "name": "Steven Giesler.com",
+            "uri": "http://www.stevengiesler.com/index_f.html"
+        }, {
+            "name": "Technologiy - Satire - spoofs - comedy - cartoons",
+            "uri": "http://www.schnews.org.uk/satire/index-technology.html"
+        }, {
+            "name": ":focus",
+            "uri": "http://focusmanifesto.com/"
+        }, {
+            "name": "List of popular music genres - Wikipedia, the free encyclopedia",
+            "uri": "http://en.wikipedia.org/wiki/List_of_popular_music_genres"
+        }, {
+            "name": "TED Blog | The 20 most-watched TED Talks to date",
+            "uri": "http://blog.ted.com/2012/08/21/the-20-most-watched-ted-talks-to-date/"
+        }, {
+            "name": "Green Bay Packers Tickets - The Official Ticket Exchange of the NFL",
+            "uri": "http://www.ticketexchangebyticketmaster.com/NFL/green-bay-packers-tickets/"
+        }, {
+            "name": "HFC",
+            "uri": "http://happyfuncorp.com/"
+        }, {
+            "name": "PBS KIDS: Educational Games, Videos and Activities For Kids!",
+            "uri": "http://pbskids.org/"
+        }, {
+            "name": "Tastefully Offensive",
+            "uri": "http://www.tastefullyoffensive.com/"
+        }, {
+            "name": "AnyDice",
+            "uri": "http://anydice.com/"
+        }, {
+            "name": "Kerbal Space Program",
+            "uri": "https://kerbalspaceprogram.com/"
+        }, {
+            "name": "FiveThirtyEight",
+            "uri": "http://fivethirtyeight.com/"
+        }, {
+            "name": "US TrailMaps",
+            "uri": "http://www.ustrailmaps.com/contact/"
+        }, {
+            "name": "Congressional Record, Volume 152 Issue 108 (Wednesday, September 6, 2006)",
+            "uri": "http://www.gpo.gov/fdsys/pkg/CREC-2006-09-06/html/CREC-2006-09-06-pt1-PgE1632.htm"
+        }, {
+            "name": "Year Round Action Sports Camp - Windells",
+            "uri": "http://windells.com/"
+        }, {
+            "name": "Microsoft Live Labs - Seadragon",
+            "uri": "http://labs.live.com/Seadragon.aspx"
+        }]
+    }]
+}

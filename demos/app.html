@@ -19,7 +19,7 @@
 <script>
 
 	$('#wrapper').append($("<div/>"));
-	$("#wrapper div").linkroll({buttons: true});
+	$("#wrapper div").linkroll({buttons: true, onSuccess: function(node){node.accordion({collapsible: true, animate: 100})} });
 	$('#wrapper').prepend(
 		$("<button/>").html("clear").click( function() {
 			$("#wrapper div:first").empty();
