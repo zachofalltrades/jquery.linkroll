@@ -321,6 +321,12 @@ LinkRoll.prototype = {
 		var that = this;
 		var span = $('<span/>');
 		var input = $('<input />', {type: 'text'});
+		input.bind("keypress", function (e) {
+			if (e.keyCode == 13) {
+				e.preventDefault();
+				that.loadFromJsonUrl( input.val() );
+			}
+		});
 		var btn = $('<button/>', {type: 'button'});
 		btn.html("load from url");
 		btn.click( function () {
@@ -400,7 +406,13 @@ LinkRoll.prototype = {
 	
 }; //end prototype
 
-
+/**
+ * This is a recursive function to dive into the data structure and render it as HTML
+ * 
+ * @param {Array} content - an array to accumulate rendered substrings
+ * @param {Object} template - from teh LinkRoller options
+ * @param {Object} folder - the current node in the tree that is being recursed
+ */
 function recurseBookmarks(content, template, folder) {
 	if (Array.isArray(folder.children)) {
 		for (var i in folder.children) {
@@ -429,32 +441,14 @@ function recurseBookmarks(content, template, folder) {
 		console.log("!!!!!!!!!!  NOT A FOLDER   !!!!!!!!");
 		console.log(folder);
 	}
-			// $.each(this.jsonModel, function( index, value ) {
-		// 	console.log(index);
-		// 	content.push( template.beforeEachCategory + value.category + template.afterEachCategory );
-		// 	content.push( template.beforeLinks );
-		// 	$.each( value.links, function( index2, site ) {
-		// 		if ( template.beforeEachLink ) {
-		// 			content.push( formatSite( site, template.beforeEachLink, template ) );
-		// 		}
-		// 		if ( template.eachLink ) {
-		// 			content.push( formatSite( site, template.eachLink, template ) );
-		// 		}
-		// 		if ( template.afterEachLink ) {
-		// 			content.push( formatSite( site, template.afterEachLink, template ) );
-		// 		}
-		// 	});
-		// 	content.push( template.afterLinks );
-		// });
-
-	
 }
 	
 
 /**
- * linkroll tree structure:
- * root object must be a 'folder'
+ * take a data structure and turn it into the native format
+ * Supports: bookmark json for Chrome and Firefox
  * 
+ * linkroll tree structure:
  * Object (bookmark)
  * 		name		String
  * 		uri:		String
@@ -463,28 +457,39 @@ function recurseBookmarks(content, template, folder) {
  * 		name		String
  * 		children	Array [] -- objects in array may be bookmarks or folders
  * 
+ * @param {Object} data - JSON object structure
  */
 function normalizeData(data) {
-	if (data.type==='text/x-moz-place-container') {
-		var mozTree = recurseMozilla(data);
-		var mozData = {name: 'Mozilla Bookmarks', children: mozTree};
-		return mozData;
+	var normalData = {};
+	if (Array.isArray(data) && data.length>0 && typeof data[0].category === 'string' && Array.isArray(data[0].links)) {
+		normalData.name = 'old format';
+		normalData.children = getFlatCategories(data);
+	} else if (data.type==='text/x-moz-place-container') {
+		normalData.name = 'Mozilla Bookmarks';
+		normalData.children = recurseMozilla(data);
 	} else if (typeof data.roots==='object' && typeof data.roots.other==='object') {
-		var crmTree = recurseChrome(data.roots.other);
-		var crmData = {name: 'Chrome Bookmarks', children: crmTree};
-		console.log(crmData);
-		return crmData;
+		normalData.name = 'Chrome Bookmarks';
+		normalData.children = recurseChrome(data.roots.other);
 	} else if (typeof data.name === 'string' && Array.isArray(data.children)) {
-		//root object has property 'children' that is an array (good)
-		console.log(data.name);
-		return data;
-	} 
-	console.log("!!!!!!!   UNEXPECTED FORMAT   !!!!!!!!!!!!!");
-	console.log(data);
-	return data;
+		normalData = data;
+	} else {
+		normalData.name = '!!!!!!!   UNEXPECTED FORMAT   !!!!!!!!!';
+		normalData.children = [];
+	}
+	console.log(normalData.name)
+	return normalData;
 }
 
+function getFlatCategories(data) {
+	var myChildren = [];
+	//TODO
+	return myChildren;
+}
 
+/**
+ * return a nested array of child objects
+ * @param {object} parent - the current "folder"
+ */
 function recurseChrome(parent) {
 	var myChildren = [];
 	if ( Array.isArray( parent.children ) ) {
@@ -504,13 +509,14 @@ function recurseChrome(parent) {
 }
 
 /**
- * return an array of objects
+ * return a nested array of child objects
+ * @param {object} parent - the current "container"
  */
-function recurseMozilla (container) {
+function recurseMozilla (parent) {
 	var myChildren = [];
-	if ( Array.isArray( container.children ) ) {
-		for (var i in container.children) {
-			var child = container.children[i];
+	if ( Array.isArray( parent.children ) ) {
+		for (var i in parent.children) {
+			var child = parent.children[i];
 			if ( child.type==='text/x-moz-place-container' && Array.isArray(child.children) && child.children.length > 0) {
 				var grandchildren = recurseMozilla(child);
 				var folder = {name: child.title, children: grandchildren};
