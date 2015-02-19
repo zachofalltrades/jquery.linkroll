@@ -1,55 +1,42 @@
 fakeJsonP(
-[
-  {
-    "category": "search",
-    "links": [
-      {
-        "name": "Google",
-        "link": "https://google.com"
-      },
-      {
-        "name": "ASK",
-        "link": "http://www.ask.com"
-      },
-      {
-        "name": "Bing",
-        "link": "https://bing.com"
-      }
-    ]
-  },
-  {
-    "category": "languages",
-    "links": [
-      {
-        "name": "PHP",
-        "link": "http://php.net"
-      },
-      {
-        "name": "Java",
-        "link": "http://java.com"
-      },
-      {
-        "name": "Perl",
-        "link": "https://www.perl.org/"
-      }
-    ]
-  },
-  {
-    "category": "databases",
-    "links": [
-      {
-        "name": "MySQL",
-        "link": "https://www.mysql.com/"
-      },
-      {
-        "name": "PostgreSQL",
-        "link": "http://www.postgresql.org/"
-      },
-      {
-        "name": "MongoDB",
-        "link": "https://www.mongodb.org/"
-      }
-    ]
-  }
-]
+{
+  "name": "sample bookmarks",
+  "children": [{
+    "name": "search",
+    "children": [{
+      "name": "Google",
+      "uri": "https://google.com"
+    }, {
+      "name": "ASK",
+      "uri": "http://www.ask.com"
+    }, {
+      "name": "Bing",
+      "uri": "https://bing.com"
+    }]
+  }, {
+    "name": "languages",
+    "children": [{
+      "name": "PHP",
+      "uri": "http://php.net"
+    }, {
+      "name": "Java",
+      "uri": "http://java.com"
+    }, {
+      "name": "Perl",
+      "uri": "https://www.perl.org/"
+    }]
+  }, {
+    "name": "databases",
+    "children": [{
+      "name": "MySQL",
+      "uri": "https://www.mysql.com/"
+    }, {
+      "name": "PostgreSQL",
+      "uri": "http://www.postgresql.org/"
+    }, {
+      "name": "MongoDB",
+      "uri": "https://www.mongodb.org/"
+    }]
+  }]
+}
 );

@@ -1,3 +1,11 @@
+/*
+ * jquery-linkroll - v0.0.1
+ * A jQuery plugin to format a JSON bookmark file.
+ * https://github.com/zachofalltrades/jquery.linkroll
+ *
+ * Made by Zach Shelton
+ * Under  License
+ */
 /**
 * linkroll - jQuery plugin to load and/or format linkrolls.
 * https://github.com/zachofalltrades/jquery.linkroll
@@ -10,7 +18,7 @@
 * http://www.opensource.org/licenses/mit-license.php
 * http://www.gnu.org/licenses/gpl.html
 *  
-* JSONEditor functionality is (currently) handled in the cloud via 'JSON Blob'
+* JSONEditor functionality is (currently) handled in the cloud via "JSON Blob"
 * https://jsonblob.com/about
 * 
 * JSONProxy functionality is handled in the cloud via NodeJitsu
@@ -21,15 +29,16 @@
 
 /*** private internal constants ***/
 var urlPartsRegX       = /^(((([^:\/#\?]+:)?(?:(\/\/)((?:(([^:@\/#\?]+)(?:\:([^:@\/#\?]+))?)@)?(([^:\/#\?\]\[]+|\[[^\/\]@#?]+\])(?:\:([0-9]+))?))?)?)?((\/?(?:[^\/\?#]+\/+)*)([^\?#]*)))?(\?[^#]+)?)(#.*)?/,
-	iconForUrl         = '//www.google.com/s2/favicons?domain_url=', 
-	iconForHost        = '//www.google.com/s2/favicons?domain=',
-	supportedMethods   = ['append','prepend','before','after','html'],
-	jsonProxy          = 'https://jsonp.nodejitsu.com/?callback=?&url=',
-	jsonEditorEndpoint = 'https://jsonblob.com',
-	jsonEditorApi      = '/api/jsonBlob',
+	iconForUrl         = "//www.google.com/s2/favicons?domain_url=", 
+	iconForHost        = "//www.google.com/s2/favicons?domain=",
+	supportedMethods   = ["append","prepend","before","after","html"],
+	jsonProxy          = "https://jsonp.nodejitsu.com/?callback=?&url=",
+	jsonEditorEndpoint = "https://jsonblob.com",
+	jsonEditorApi      = "/api/jsonBlob",
 	FileApiSupported   = window.File && window.FileReader && window.FileList,
-	DialogApi          = $.isFunction($.fn.dialog),
-	NotSupported       = 'feature not supported';
+	DialogApiAvailable = $.isFunction($.fn.dialog),
+	debugEnabled       = window.console && window.console.log && true,
+	NotSupported       = "feature not supported";
 
 
 /**
@@ -37,17 +46,16 @@ var urlPartsRegX       = /^(((([^:\/#\?]+:)?(?:(\/\/)((?:(([^:@\/#\?]+)(?:\:([^:
 * @param {object} options - an optional object specifying overrides of the default configuration
 */
 $.fn.linkroll = function ( options ) {
-	var roller = new LinkRoll(options);
 	return this.each(function(){
 		var node = $(this);
-		roller.targetNode = node;
+		var roller = new LinkRoll(options, node);
 		if (roller.options.jsonUrl) {
 			roller.loadFromJsonUrl(roller.options.jsonUrl);
 		} else {
-			if (node.is('a')) {
+			if (node.is("a")) {
 				roller.insertImage(node);
 			} else {
-				node.find('a').each(function (){
+				node.find("a").each(function (){
 					var subNode = $(this);
 					roller.insertImage(subNode);
 				});
@@ -64,7 +72,7 @@ $.fn.linkroll = function ( options ) {
 };
 
 /**
- * expose a 'read-only' copy of the supported insertion methods
+ * expose a "read-only" copy of the supported insertion methods
  */
 $.fn.linkroll.methods = function() {
 	return 	supportedMethods.slice();
@@ -74,8 +82,8 @@ $.fn.linkroll.methods = function() {
  * default configuration is globally accessible to allow overrides
  */
 $.fn.linkroll.defaults = {
-	addClass    : 'linkroll', //class name to add to all created/modified elements
-	method      : 'append',  //jQuery node insertion method for img tag (must be one of the supported methods)
+	addClass    : "linkroll", //class name to add to all created/modified elements
+	method      : "append",  //jQuery node insertion method for img tag (must be one of the supported methods)
 	jsonUrl     : false,      //optinal url of json to be loaded
 	useProxy    : false,      //set true if json url is (trusted) remote host that does not enable CORS or JSONP
 	onSuccess   : false,      //optional callback function to apply additional formatting (useful when loading json async)
@@ -85,147 +93,147 @@ $.fn.linkroll.defaults = {
 		loadFromUrl  : false,
 		exportJson   : false,
 		editJson     : false,
-		reloadFromUrl: false
+		reloadFromUrl: false,
+		clear        : false
 	},
 	jsonTemplate: {
-		begin: '',
-		beforeEachCategory: '<h3>',
-		afterEachCategory: '</h3>',
-		beforeLinks: '<div><ul>',
-		afterLinks: '</ul></div>',
-		beforeEachLink: false,
+		begin: "",
+		beforeEachCategory: "<h3>",
+		eachCategory: "<h3>##CATEGORY##</h3>",
+		afterEachCategory: "</h3>",
+		beforeChildren: "<div><ul>",
+		afterChildren: "</ul></div>",
+		beforeEachLink: "",
 		eachLink: "<li class='linkroll' style=\"list-style-image: url('##ICONURL##');\"><a href='##SITEURL##'>##SITENAME##</a></li>",
-		afterEachLink: false,
-		end:   '',
-		replaceWithIconUrl: '##ICONURL##',
-		replaceWithSiteUrl: '##SITEURL##',
-		replaceWithSiteName: '##SITENAME##'
+		afterEachLink: '',
+		end:   "",
+		replaceWithCategory: "##CATEGORY##",
+		replaceWithIconUrl:  "##ICONURL##",
+		replaceWithSiteUrl:  "##SITEURL##",
+		replaceWithSiteName: "##SITENAME##"
 	}
 };
 
-function getIconUrl ( url ) {
-	return iconForHost + urlPartsRegX.exec(url)[11];
-}
 
-function formatSite ( bookmark, layout, opts ) {
-	//allow for multiple json structures...
-	var url = (typeof bookmark.uri==='string') ? bookmark.uri : bookmark;
-	var name = (typeof bookmark.name==='string') ? bookmark.name : urlPartsRegX.exec(url)[11];
-	
-	var temp = layout.replace(opts.replaceWithIconUrl, getIconUrl(url));
-		temp = temp.replace(opts.replaceWithSiteUrl, url);
-		temp = temp.replace(opts.replaceWithSiteName, name);
-	return temp;
-}
 
 /**
+ * get a new LinkRoll object
  * @constructor
  * @param {Object} opts - overrides of $.fn.linkroll.defaults
  */
-function LinkRoll ( opts) {
-	this.init(opts);
-}
-
-LinkRoll.prototype = {
+function LinkRoll ( opts, target ) {
+	var //private member variables/methods are declared in constructor ( http://javascript.crockford.com/private.html )
+	targetNode = target, //DOM node where linkroll will be rendered
+	sourceUrl  = null,   //most recently loaded source url
+	myWidget   = null,
+	jsonModel  = null,   //most recently loaded json object
 	//watch for changes...
 	//https://gist.github.com/eligrey/384583 
 	//https://api.jquery.com/category/events/event-object/
-	options: {},
-	targetNode: null, 
-	sourceUrl: null, 
-	jsonModel: null, //hold reference to most recently loaded json object
-	myWidget: null,
-	init: function( overrides ) {
-		this.options = $.extend({}, $.fn.linkroll.defaults, overrides);
+	that = this,        //private reference to current instance
+
+	/**
+	 * private initialization routine
+	 */
+	init = function ( opts ) {
+		that.options = $.extend({}, $.fn.linkroll.defaults, opts);
 		//ensure that selected method is supported
-		this.options.method = ($.inArray(this.options.method, supportedMethods)) ? this.options.method : supportedMethods[0];
-		if (this.options.jsonUrl) {
-			this.sourceUrl = this.options.jsonUrl;
+		that.options.method = ($.inArray(that.options.method, supportedMethods)) ? that.options.method : supportedMethods[0];
+		if ( that.options.jsonUrl ) {
+			that.sourceUrl = that.options.jsonUrl;
 		};
-		if (this.options.buttons===true) {//set all buttons to true
-			this.options.buttons = {
+		if (that.options.buttons===true) {//set all buttons to true
+			that.options.buttons = {
 				loadFromFile : true,
 				loadFromUrl  : true,
 				exportJson   : true,
 				editJson     : true,
-				reloadFromUrl: true
+				reloadFromUrl: true,
+				clear        : true
 			};
 		};
 	},
-
+	
+	
 	/**
-	 * load data from url 
-	 * @param {String} url - a json url
+	 * 
 	 */
-	loadFromJsonUrl: function ( url ) {
-		this.updateSourceUrl( url );
-		var that = this;
-		$.getJSON( this.sourceUrl ).done( function ( data ) {
-			that.buildFromJson( data );
-		});
-	},
-
-	updateSourceUrl: function ( url ) {
+	updateSourceUrl = function ( url ) {
 		var temp = url;
-		if ( this.options.useProxy ) {
+		if ( that.options.useProxy ) {
 			//prefix with proxy only if it has not already bee prefixed
 			if ( url.indexOf( jsonProxy ) === -1) {
 				temp = jsonProxy + url;
 			};
 		};
-		this.sourceUrl = temp;
-	},
+		that.sourceUrl = temp;
+	}
+	
+	;
+	
+	/**
+	 * priveleged methods are assigned to 'this' from inside the constructor
+	 */
+	
+	/**
+	 * load data from url 
+	 * @param {String} url - a json url
+	 */
+	this.loadFromJsonUrl = function ( url ) {
+		updateSourceUrl( url );
+		$.getJSON( this.sourceUrl ).done( function ( data ) {
+			that.buildFromJson( data );
+		});
+	};
+
 
 	/**
 	 * load the given data 
 	 * @param {Object} jsonData - the data to load
 	 */
-	buildFromJson: function( jsonData ) {
-		var template = this.options.jsonTemplate;
-		var callback = this.options.onSuccess;
-		this.jsonModel = normalizeData(jsonData);  //save json object to internal model
-		var content = [];           //temp array to build a string
+	this.buildFromJson = function( jsonData ) {
+		var opts = this.options;
+		var template = opts.jsonTemplate;
+		var callback = opts.onSuccess;
+		that.jsonModel = toNativeFormat(jsonData);  //save json object to internal model
+		var content = [];                           //temp array to build a string
 		if (template.begin) {
 			content.push( template.begin );
 		}
-		recurseBookmarks(content, template, this.jsonModel);
+		recurseBookmarks(content, template, that.jsonModel);
 		if (template.end) {
 			content.push( template.end );
 		}
-		// $.each(this.jsonModel, function( index, value ) {
-		// 	console.log(index);
-		// 	content.push( template.beforeEachCategory + value.category + template.afterEachCategory );
-		// 	content.push( template.beforeLinks );
-		// 	$.each( value.links, function( index2, site ) {
-		// 		if ( template.beforeEachLink ) {
-		// 			content.push( formatSite( site, template.beforeEachLink, template ) );
-		// 		}
-		// 		if ( template.eachLink ) {
-		// 			content.push( formatSite( site, template.eachLink, template ) );
-		// 		}
-		// 		if ( template.afterEachLink ) {
-		// 			content.push( formatSite( site, template.afterEachLink, template ) );
-		// 		}
-		// 	});
-		// 	content.push( template.afterLinks );
-		// });
-		this.targetNode.html( content.join("") );
-		if ( this.options.addClass ) {
-			this.targetNode.addClass( this.options.addClass );
+		targetNode.html( content.join("") );
+		if ( opts.addClass ) {
+			targetNode.addClass( opts.addClass );
 		}
 		if ($.isFunction( callback ) ) {
-			callback( this.targetNode );
+			callback( targetNode );
 		}
-	},
+	};
+
+	
+	
+	init(opts);//call the private initialization method
+
+}//end LinkRoll constructor
+
+/**
+ * 
+ */ 
+LinkRoll.prototype = {
+	//all properties and methods defined in the prototype are PUBLIC
+	options: {},
 
 	/**
 	 * insert an <img> into the DOM by a link using one of the supported insertion methods
 	 * @param {Object} link - an <a> element selected by jQuery
 	 */
 	insertImage: function ( link ) {
-		var href = $(link).attr('href');
+		var href = $(link).attr("href");
 		var url = getIconUrl( href );
-		var img = $('<img />', {src: url});
+		var img = $("<img />", {src: url});
 		if ( this.options.addClass ) {
 			img.addClass( this.options.addClass );
 			link.addClass( this.options.addClass );
@@ -236,7 +244,7 @@ LinkRoll.prototype = {
 	
 	getWidget: function () {
 		var hasButton = this.options.buttons;
-		var widget = $('<div/>');
+		var widget = $("<div/>");
 		if ( hasButton ) {
 			if ( hasButton.loadFromFile ) {
 				widget.append(this.LoadFromFileButton());
@@ -253,6 +261,9 @@ LinkRoll.prototype = {
 			if ( hasButton.reloadFromUrl ) {
 				widget.append(this.ReloadButton());
 			};
+			if ( hasButton.clear ) {
+				widget.append(this.ClearButton());
+			};
 		
 		}
 		this.myWidget = widget;
@@ -260,12 +271,12 @@ LinkRoll.prototype = {
 	},
 	
 	popup: function ( url, title ) {
-		if ( DialogApi ) {
+		if ( DialogApiAvailable && this.myWidget) {
 			var t = (title) ? title : "LinkRoller";
 			var h = window.innerHeight - 10;
 			var w = window.innerWidth - 10;
-			var iframe = $('<iframe height="'+(h-100)+'" width="'+(w-100)+'" frameborder="0" marginwidth="0" marginheight="0" src="' + url + '" />');
-			var diag = $('<div id="mydialog" />');
+			var iframe = $("<iframe height='"+(h-100)+"' width='"+(w-100)+"' frameborder='0' marginwidth='0' marginheight='0' src='" + url + "' />");
+			var diag = $("<div id='mydialog' />");
 			diag.append(iframe);
 			var that = $(this.myWidget);
 			that.append(diag);
@@ -273,10 +284,10 @@ LinkRoll.prototype = {
 				title: t,
 				modal: true,
 				resizable: true,
-				height: 'auto',
+				height: "auto",
 				width: w,
 				close: function () {
-					$('#mydialog').remove();
+					$("#mydialog").remove();
 				}
 			} );
 		} else {
@@ -286,12 +297,12 @@ LinkRoll.prototype = {
 	},
 	
 	LoadFromFileButton: function () {
-		var span = $('<span/>');
+		var span = $("<span/>");
 		if ( FileApiSupported ) {
 			var that = this;
-			var input = $('<input />', { type: 'file', css: { visibility: 'hidden', width: 0, height: 0 } } );
-			input.attr('accept', 'json');
-			input.on('change', function( evt ) {
+			var input = $("<input />", { type: "file", css: { visibility: "hidden", width: 0, height: 0 } } );
+			input.attr("accept", "json");
+			input.on("change", function( evt ) {
 			    var files = evt.target.files;  // HTML5 FileList
 			    var f = files[0];              // HTML5 File
 			    var reader = new FileReader(); // HTML5 FileReader
@@ -302,9 +313,9 @@ LinkRoll.prototype = {
 			            that.buildFromJson(data);
 			        };
 			    })(f);
-			    reader.readAsText(f, 'UTF-8');
+			    reader.readAsText(f, "UTF-8");
 			});
-			var btn = $('<button/>', {type: 'button'});
+			var btn = $("<button/>", {type: "button"});
 			btn.html("load from file");
 			btn.click( function() {
 				input.click();
@@ -319,15 +330,15 @@ LinkRoll.prototype = {
 	
 	LoadFromUrlButton: function () {
 		var that = this;
-		var span = $('<span/>');
-		var input = $('<input />', {type: 'text'});
+		var span = $("<span/>");
+		var input = $("<input />", {type: "text"});
 		input.bind("keypress", function (e) {
 			if (e.keyCode == 13) {
 				e.preventDefault();
 				that.loadFromJsonUrl( input.val() );
 			}
 		});
-		var btn = $('<button/>', {type: 'button'});
+		var btn = $("<button/>", {type: "button"});
 		btn.html("load from url");
 		btn.click( function () {
 			that.loadFromJsonUrl( input.val() );
@@ -338,23 +349,23 @@ LinkRoll.prototype = {
 	},
 	
 	EditButton: function() {
-		var span = $('<span/>');
+		var span = $("<span/>");
 		if ( FileApiSupported ) {
 			var that = this;
-			var btn = $('<button/>', {type: 'button'} );
-			btn.html('edit');
+			var btn = $("<button/>", {type: "button"} );
+			btn.html("edit");
 			btn.click(function() {
 				var reEdit = ( that.sourceUrl && that.sourceUrl.indexOf( jsonEditorEndpoint ) > -1 ) ? true : false;
 				if ( reEdit ) {
-					var editorUrl = that.sourceUrl.replace( jsonEditorApi, '' );
-					that.popup(editorUrl);
+					var editorUrl = that.sourceUrl.replace( jsonEditorApi, "" );
+					that.popup(editorUrl, "editing via JSONBlob service, save here, then reload");
 				} else {
 					var jsonData = that.jsonModel;
 					var jsonTxt = JSON.stringify(jsonData);
 					$.ajax({
 						url: jsonEditorEndpoint + jsonEditorApi,
-						contentType: 'application/json; charset=utf-8',
-						type: 'POST',
+						contentType: "application/json; charset=utf-8",
+						type: "POST",
 						data: jsonTxt,
 						error: function (xhr, status) {
 							alert(status);
@@ -362,8 +373,8 @@ LinkRoll.prototype = {
 						success: function (data, status, xhr) {
 							var location = xhr.getResponseHeader("location");
 							that.sourceUrl = location;
-							var editorUrl = location.replace(jsonEditorApi, '');
-							that.popup(editorUrl);
+							var editorUrl = location.replace(jsonEditorApi, "");
+							that.popup(editorUrl, "editing via JSONBlob service, save here, then reload");
 						}
 					});
 				}
@@ -376,16 +387,16 @@ LinkRoll.prototype = {
 	},
 	
 	ExportButton: function() {
-		var span = $('<span/>');
+		var span = $("<span/>");
 		if (FileApiSupported) {
 			var that = this;
-			var btn = $('<button/>',{type: 'button'});
-			btn.html('export');
+			var btn = $("<button/>",{type: "button"});
+			btn.html("export");
 			btn.click( function() {
 				var data = that.jsonModel;
-				var jsonTxt = JSON.stringify(data, null, ' ');
+				var jsonTxt = JSON.stringify(data, null, " ");
 				var blob = new Blob ( [ jsonTxt ], { type: "application/json" } );
-				that.popup(URL.createObjectURL(blob));
+				that.popup(URL.createObjectURL(blob), "LinkRoller Data");
 			});
 			span.append( btn );
 		} else {
@@ -396,15 +407,25 @@ LinkRoll.prototype = {
 	
 	ReloadButton: function() {
 		var that = this;
-		var btn = $('<button/>');
-		btn.html('reload');
+		var btn = $("<button/>");
+		btn.html("reload");
 		btn.click( function () {
 			that.loadFromJsonUrl( that.sourceUrl );
 		});
 		return btn;
+	},
+
+	ClearButton: function() {
+		var that = this;
+		var btn = $("<button/>");
+		btn.html("clear");
+		btn.click( function () {
+			that.targetNode.empty();
+		});
+		return btn;
 	}
 	
-}; //end prototype
+}; //end LinkRoll prototype
 
 /**
  * This is a recursive function to dive into the data structure and render it as HTML
@@ -419,10 +440,10 @@ function recurseBookmarks(content, template, folder) {
 			var child = folder.children[i];
 			if (Array.isArray(child.children)) {
 				content.push( template.beforeEachCategory + child.name + template.afterEachCategory );
-				content.push( template.beforeLinks );
+				content.push( template.beforeChildren );
 				recurseBookmarks(content, template, child);
-				content.push( template.afterLinks );
-			} else if (typeof child.uri==='string') {
+				content.push( template.afterChildren );
+			} else if (typeof child.uri==="string") {
 				if ( template.beforeEachLink ) {
 					content.push( formatSite( child, template.beforeEachLink, template ) );
 				}
@@ -433,22 +454,23 @@ function recurseBookmarks(content, template, folder) {
 					content.push( formatSite( child, template.afterEachLink, template ) );
 				}
 			} else {
-				console.log("!!!!!! UNEXPECTED OBJECT !!!!!!");
-				console.log(child);
+				debug("!!!!!! UNEXPECTED OBJECT !!!!!!");
+				debug(child);
 			}
 		}
 	} else {
-		console.log("!!!!!!!!!!  NOT A FOLDER   !!!!!!!!");
-		console.log(folder);
+		debug("!!!!!!!!!!  NOT A FOLDER   !!!!!!!!");
+		debug(folder);
 	}
 }
 	
 
 /**
- * take a data structure and turn it into the native format
- * Supports: bookmark json for Chrome and Firefox
+ * recognize a data structure and return it in the native format
+ * Supports: bookmark json formats for Chrome, Firefox, and the native "linkroll" format 
  * 
- * linkroll tree structure:
+ * linkroll tree structure is a "folder" object with nested bookmark and folder objects 
+ * 
  * Object (bookmark)
  * 		name		String
  * 		uri:		String
@@ -459,27 +481,35 @@ function recurseBookmarks(content, template, folder) {
  * 
  * @param {Object} data - JSON object structure
  */
-function normalizeData(data) {
+function toNativeFormat(data) {
 	var normalData = {};
-	if (Array.isArray(data) && data.length>0 && typeof data[0].category === 'string' && Array.isArray(data[0].links)) {
-		normalData.name = 'old format';
+	if (Array.isArray(data) && data.length>0 && typeof data[0].category === "string" && Array.isArray(data[0].links)) {
+		normalData.name = "old format";
 		normalData.children = getFlatCategories(data);
-	} else if (data.type==='text/x-moz-place-container') {
-		normalData.name = 'Mozilla Bookmarks';
+	} else if (data.type==="text/x-moz-place-container") {
+		normalData.name = "Mozilla Bookmarks";
 		normalData.children = recurseMozilla(data);
-	} else if (typeof data.roots==='object' && typeof data.roots.other==='object') {
-		normalData.name = 'Chrome Bookmarks';
+	} else if (typeof data.roots==="object" && typeof data.roots.other==="object") {
+		normalData.name = "Chrome Bookmarks";
 		normalData.children = recurseChrome(data.roots.other);
-	} else if (typeof data.name === 'string' && Array.isArray(data.children)) {
+	} else if (typeof data.name === "string" && Array.isArray(data.children)) {
 		normalData = data;
 	} else {
-		normalData.name = '!!!!!!!   UNEXPECTED FORMAT   !!!!!!!!!';
+		normalData.name = "!!!!!!!   UNEXPECTED FORMAT   !!!!!!!!!";
 		normalData.children = [];
 	}
-	console.log(normalData.name)
+	debug(normalData.name)
 	return normalData;
 }
 
+
+/******************************************************************************************
+ * utility functions that are private to the plugin, but not part of each LinkRoll instance
+ *****************************************************************************************/
+
+/**
+ * convert pre-release format to current version
+ */
 function getFlatCategories(data) {
 	var myChildren = [];
 	//TODO
@@ -495,11 +525,11 @@ function recurseChrome(parent) {
 	if ( Array.isArray( parent.children ) ) {
 		for (var i in parent.children) {
 			var child = parent.children[i];
-			if ( child.type==='folder' && Array.isArray(child.children) && child.children.length > 0) {
+			if ( child.type==="folder" && Array.isArray(child.children) && child.children.length > 0) {
 				var grandchildren = recurseChrome(child);
 				var folder = {name: child.name, children: grandchildren};
 				myChildren.push(folder);
-			} else if (child.type==='url') {
+			} else if (child.type==="url") {
 				var bookmark = {name: child.name, uri: child.url};
 				myChildren.push(bookmark);
 			}
@@ -517,11 +547,11 @@ function recurseMozilla (parent) {
 	if ( Array.isArray( parent.children ) ) {
 		for (var i in parent.children) {
 			var child = parent.children[i];
-			if ( child.type==='text/x-moz-place-container' && Array.isArray(child.children) && child.children.length > 0) {
+			if ( child.type==="text/x-moz-place-container" && Array.isArray(child.children) && child.children.length > 0) {
 				var grandchildren = recurseMozilla(child);
 				var folder = {name: child.title, children: grandchildren};
 				myChildren.push(folder);
-			} else if (child.type==='text/x-moz-place') {
+			} else if (child.type==="text/x-moz-place") {
 				var bookmark = {name: child.title, uri: child.uri};
 				myChildren.push(bookmark);
 			}
@@ -530,6 +560,27 @@ function recurseMozilla (parent) {
 	return myChildren;
 }
 
+function debug(arg) {
+	if ( debugEnabled ) {
+		window.console.log(arg);
+	};
+};
+
+function getIconUrl ( url ) {
+	return iconForHost + urlPartsRegX.exec(url)[11];
+}
+
+function formatSite ( bookmark, layout, opts ) {
+	//allow for multiple json structures...
+	var url = (typeof bookmark.uri==="string") ? bookmark.uri : bookmark;
+	var name = (typeof bookmark.name==="string") ? bookmark.name : urlPartsRegX.exec(url)[11];
+	
+	var temp = layout.replace(opts.replaceWithIconUrl, getIconUrl(url));
+		temp = temp.replace(opts.replaceWithSiteUrl, url);
+		temp = temp.replace(opts.replaceWithSiteName, name);
+	return temp;
+}
+	
 }(jQuery)); //end of IIFE (see http://benalman.com/news/2010/11/immediately-invoked-function-expression/ )
 
 

@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script	src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-<script src="../jquery.linkroll.js"></script>
+<script src="../src/jquery.linkroll.js"></script>
 <style>
 </style>
 </head>
@@ -19,12 +19,7 @@
 <script>
 
 	$('#wrapper').append($("<div/>"));
-	$("#wrapper div").linkroll({buttons: true, onSuccess: function(node){node.accordion({collapsible: true, animate: 100})} });
-	$('#wrapper').prepend(
-		$("<button/>").html("clear").click( function() {
-			$("#wrapper div:first").empty();
-		})
-	);
+	$("#wrapper div").linkroll({buttons: true});
 
 </script>
 

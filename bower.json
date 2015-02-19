@@ -1,0 +1,37 @@
+{
+  "name": "jquery-linkroll",
+  "description": "a jQuery plugin to format a JSON bookmark file",
+  "version": "0.0.1",
+  "main": "src/jquery.linkroll.js",
+  "license": [
+    "MIT",
+    "GPL"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "demos",
+    "docs",
+    "test",
+    "tests"
+  ],
+  "keywords": [
+    "jquery",
+    "linkroll",
+    "plugin",
+    "favicon"
+  ],
+  "authors": [
+    "Zach Shelton <zachofalltrades@users.sourceforge.net> (http://zachofalltrades.net)"
+  ],
+  "homepage": "https://github.com/zachofalltrades/jquery.linkroll",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zachofalltrades/jquery.linkroll.git"
+  },
+  "dependencies": {
+    "jquery": "1.8"
+  },
+  "private": true
+}
