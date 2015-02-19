@@ -158,26 +158,12 @@ function LinkRoll ( opts, target ) {
 				temp = jsonProxy + url;
 			};
 		};
-		that.sourceUrl = temp;
-	}
-	
-	;
+		sourceUrl = temp;
+	};
 	
 	/**
 	 * priveleged methods are assigned to 'this' from inside the constructor
 	 */
-	
-	/**
-	 * load data from url 
-	 * @param {String} url - a json url
-	 */
-	this.loadFromJsonUrl = function ( url ) {
-		updateSourceUrl( url );
-		$.getJSON( this.sourceUrl ).done( function ( data ) {
-			that.buildFromJson( data );
-		});
-	};
-
 
 	/**
 	 * load the given data 
@@ -187,25 +173,45 @@ function LinkRoll ( opts, target ) {
 		var opts = this.options;
 		var template = opts.jsonTemplate;
 		var callback = opts.onSuccess;
-		that.jsonModel = toNativeFormat(jsonData);  //save json object to internal model
+		jsonModel = toNativeFormat(jsonData);  //save json object to internal model
 		var content = [];                           //temp array to build a string
 		if (template.begin) {
 			content.push( template.begin );
-		}
-		recurseBookmarks(content, template, that.jsonModel);
+		};
+		recurseBookmarks(content, template, jsonModel);
 		if (template.end) {
 			content.push( template.end );
-		}
+		};
 		targetNode.html( content.join("") );
 		if ( opts.addClass ) {
 			targetNode.addClass( opts.addClass );
-		}
+		};
 		if ($.isFunction( callback ) ) {
 			callback( targetNode );
-		}
+		};
 	};
 
+	this.clear = function() {
+		if (targetNode) {
+			targetNode.empty();
+		}
+	};
 	
+	this.reload = function() {
+		if (sourceUrl && targetNode) {
+			that.loadFromJsonUrl( sourceUrl );
+		}
+	}
+	/**
+	 * load data from url 
+	 * @param {String} url - a json url
+	 */
+	this.loadFromJsonUrl = function ( url ) {
+		updateSourceUrl( url );
+		$.getJSON( sourceUrl ).done( function ( data ) {
+			that.buildFromJson( data );
+		});
+	};
 	
 	init(opts);//call the private initialization method
 
@@ -402,7 +408,7 @@ LinkRoll.prototype = {
 		var btn = $("<button/>");
 		btn.html("reload");
 		btn.click( function () {
-			that.loadFromJsonUrl( that.sourceUrl );
+			that.reload();
 		});
 		return btn;
 	},
@@ -412,7 +418,7 @@ LinkRoll.prototype = {
 		var btn = $("<button/>");
 		btn.html("clear");
 		btn.click( function () {
-			that.targetNode.empty();
+			that.clear();
 		});
 		return btn;
 	}
