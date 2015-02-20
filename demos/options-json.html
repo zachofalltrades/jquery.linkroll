@@ -4,7 +4,7 @@
 <title>jQuery Link Roll</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="../jquery.linkroll.js"></script>
+<script src="../src/jquery.linkroll.js"></script>
 <style>
 </style>
 </head>
@@ -17,13 +17,28 @@
 <script>
 
 	$('#wrapper').append(
-		$("<button/>").html("option - JSON file").click( function() {
-			$("#wrapper div").linkroll({json: 'sample.json'});
+		$("<button/>").html("load from json (on relative url)").click( function() {
+			$("#wrapper div").linkroll({jsonUrl: 'sample.json'});
 		})
 	);
 
 	$('#wrapper').append($("<div/>"));
 
+	// $.fn.linkroll.defaults.jsonTemplate = {
+	// 		begin: '',
+	// 		beforeEachCategory: '<h3>',
+	// 		afterEachCategory: '</h3>',
+	// 		beforeLinks: '<div><ul>',
+	// 		afterLinks: '</ul></div>',
+	// 		beforeEachLink: '<button>',
+	// 		eachLink: "<li class='linkroll' style=\"list-style-image: url('##ICONURL##');\"><a href='##SITEURL##'>##SITENAME##</a></li>",
+	// 		afterEachLink: '</button>',
+	// 		end:   '',
+	// 		replaceWithIconUrl: '##ICONURL##',
+	// 		replaceWithSiteUrl: '##SITEURL##',
+	// 		replaceWithSiteName: '##SITENAME##'
+	// 	};
+		
 </script>
 
 </html>

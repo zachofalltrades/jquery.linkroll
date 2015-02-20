@@ -1,3 +1,4 @@
+fakeJsonP(
 {
   "name": "sample bookmarks",
   "children": [{
@@ -38,3 +39,4 @@
     }]
   }]
 }
+);

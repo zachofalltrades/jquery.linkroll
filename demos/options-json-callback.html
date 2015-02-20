@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script	src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-<script src="../jquery.linkroll.js"></script>
+<script src="../src/jquery.linkroll.js"></script>
 <style>
 </style>
 </head>
@@ -17,8 +17,8 @@
 </body>
 <script>
 	$('#wrapper').append(
-		$("<button/>").html("load from json and use callback for jQuery accordion").click( function() {
-			$("#wrapper div").linkroll({json: 'sample.json', onSuccess: function(node){node.accordion({collapsible: true, animate: 100});}});
+		$("<button/>").html("load from json (on relative url) and use callback for jQuery accordion").click( function() {
+			$("#wrapper div").linkroll({jsonUrl: 'sample.json', onSuccess: function(node){node.accordion({collapsible: true, animate: 100});}});
 		})
 	);
 	$('#wrapper').append($("<div/>"));
