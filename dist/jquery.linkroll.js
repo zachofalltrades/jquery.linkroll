@@ -1,31 +1,15 @@
-/*
- * jquery-linkroll - v0.0.1
+/**
+ * jquery-linkroll - v0.0.1 2015-02-20
  * A jQuery plugin to format a JSON bookmark file.
  * https://github.com/zachofalltrades/jquery.linkroll
  *
- * Made by Zach Shelton
- * Under  License
+ * Copyright (c)2015 Zach Shelton
+ * <zachofalltrades@users.sourceforge.net>  (http://zachofalltrades.net)
+ * Released Under License:  MIT,GPL 
  */
-/**
-* linkroll - jQuery plugin to load and/or format linkrolls.
-* https://github.com/zachofalltrades/jquery.linkroll
-*
-* Version - 0.1
-* Copyright (c) 2015 Zach Shelton
-* http://zachofalltrades.net
-*
-* Dual licensed under the MIT and GPL licenses:
-* http://www.opensource.org/licenses/mit-license.php
-* http://www.gnu.org/licenses/gpl.html
-*  
-* JSONEditor functionality is (currently) handled in the cloud via "JSON Blob"
-* https://jsonblob.com/about
-* 
-* JSONProxy functionality is handled in the cloud via NodeJitsu
-* https://jsonp.nodejitsu.com/
-*/
-
-(function( $ ) { //begin closure 
+ //begin closure 
+;(function ( $, window, document, undefined ) { // jshint ignore:line  
+	"use strict";
 
 /*** private internal constants ***/
 var urlPartsRegX       = /^(((([^:\/#\?]+:)?(?:(\/\/)((?:(([^:@\/#\?]+)(?:\:([^:@\/#\?]+))?)@)?(([^:\/#\?\]\[]+|\[[^\/\]@#?]+\])(?:\:([0-9]+))?))?)?)?((\/?(?:[^\/\?#]+\/+)*)([^\?#]*)))?(\?[^#]+)?)(#.*)?/,
@@ -49,9 +33,7 @@ $.fn.linkroll = function ( options ) {
 	return this.each(function(){
 		var node = $(this);
 		var roller = new LinkRoll(options, node);
-		if (roller.options.jsonUrl) {
-			roller.loadFromJsonUrl(roller.options.jsonUrl);
-		} else {
+		if (!roller.isWidget) {
 			if (node.is("a")) {
 				roller.insertImage(node);
 			} else {
@@ -63,9 +45,6 @@ $.fn.linkroll = function ( options ) {
 			if ($.isFunction(roller.options.onSuccess)) {
 				roller.options.onSuccess(node);
 			}
-		}
-		if ( roller.options.buttons ) {
-			node.after(roller.getWidget());
 		}
 		return this;
 	});
@@ -89,12 +68,12 @@ $.fn.linkroll.defaults = {
 	onSuccess   : false,      //optional callback function to apply additional formatting (useful when loading json async)
 	buttons     : {
 		//a set of buttons that can be added to the UI when building from JSON
-		loadFromFile : false,
-		loadFromUrl  : false,
-		exportJson   : false,
-		editJson     : false,
-		reloadFromUrl: false,
-		clear        : false
+		file  : false,
+		url   : false,
+		raw   : false,
+		edit  : false,
+		reload: false,
+		clear : false
 	},
 	jsonTemplate: {
 		begin: "",
@@ -123,67 +102,147 @@ $.fn.linkroll.defaults = {
  * @param {Object} target - the jquery node where the json and/or widget will be loaded
  */
 function LinkRoll ( opts, target ) {
-	var //private member variables/methods are declared in constructor ( http://javascript.crockford.com/private.html )
-	targetNode = target, //DOM node where linkroll will be rendered
-	sourceUrl  = null,   //most recently loaded source url
-//	myWidget   = null,
-	jsonModel  = null,   //most recently loaded json object
-	//watch for changes...
-	//https://gist.github.com/eligrey/384583 
-	//https://api.jquery.com/category/events/event-object/
-	that = this,        //private reference to current instance
+	var
+		exportButton, editButton, clearButton, reloadButton,
+		targetNode = target, //DOM node where linkroll will be rendered
+		sourceUrl  = null,   //most recently loaded source url
+		//	myWidget   = null,
+		jsonModel  = null,   //most recently loaded json object
+		//watch for changes...
+		//https://gist.github.com/eligrey/384583 
+		//https://api.jquery.com/category/events/event-object/
+		that = this;        //private reference to current instance
 
-	/**
-	 * private initialization routine
-	 */
-	init = function ( opts ) {
-		that.options = $.extend({}, $.fn.linkroll.defaults, opts);
-		//ensure that selected method is supported
-		that.options.method = ($.inArray(that.options.method, supportedMethods)) ? that.options.method : supportedMethods[0];
-		if ( that.options.jsonUrl ) {
-			that.sourceUrl = that.options.jsonUrl;
-		}
-		if (that.options.buttons===true) {//set all buttons to true
-			that.options.buttons = {
-				loadFromFile : true,
-				loadFromUrl  : true,
-				exportJson   : true,
-				editJson     : true,
-				reloadFromUrl: true,
-				clear        : true
-			};
-		}
-	},
+		function init ( opts ) {
+				that.options = $.extend({}, $.fn.linkroll.defaults, opts);
+				//ensure that selected method is supported
+				that.options.method = ($.inArray(that.options.method, supportedMethods)) ? that.options.method : supportedMethods[0];
+				
+				if ( that.options.jsonUrl ) {
+					loadFromJsonUrl( that.options.jsonUrl );
+					that.isWidget = true;
+				}
+				var buttons = ( that.options.buttons ) ? that.options.buttons : false;
+				if ( buttons === true ) {//set all buttons to true
+					 buttons = {
+							file  : true,
+							url   : true,
+							raw   : true,
+							edit  : true,
+							reload: true,
+							clear : true
+					};
+				}
+				if (hasAtLeastOneTrue(buttons)) {
+					var widget = $("<div/>");
+					
+					if ( buttons.file && FileApiSupported ) {
+						widget.append(loadFromFileButton(buildFromJson));
+					}
+					
+					if ( buttons.url ) {
+						widget.append(loadFromUrlButton(loadFromJsonUrl));
+					}
+					
+					if ( buttons.raw && FileApiSupported ) {
+									exportButton = $("<button/>",{type: "button", disabled: true});
+									exportButton.html("export");
+									exportButton.click( function() {
+										var data = jsonModel;
+										var jsonTxt = JSON.stringify(data, null, " ");
+										var blob = new window.Blob ( [ jsonTxt ], { type: "application/json" } );
+										popup(window.URL.createObjectURL(blob), "LinkRoller Data");
+									});
+						widget.append(exportButton);
+					}
+
+					if (buttons.edit && FileApiSupported) {
+						editButton = $("<button/>", {
+							type: "button",
+							disabled: true
+						});
+						editButton.html("edit");
+						editButton.click(function() {
+							var reEdit = (sourceUrl && sourceUrl.indexOf(jsonEditorEndpoint) > -1) ? true : false;
+							if (reEdit) {
+								var editorUrl = sourceUrl.replace(jsonEditorApi, "");
+								popup(editorUrl, "editing via JSONBlob service, save here, then reload");
+							}
+							else {
+								var jsonTxt = JSON.stringify(jsonModel);
+								$.ajax({
+									url: jsonEditorEndpoint + jsonEditorApi,
+									contentType: "application/json; charset=utf-8",
+									type: "POST",
+									data: jsonTxt,
+									error: function(xhr, status) {
+										window.alert(status);
+									},
+									success: function(data, status, xhr) {
+										sourceUrl = xhr.getResponseHeader("location");
+										var editorUrl = sourceUrl.replace(jsonEditorApi, "");
+										popup(editorUrl, "editing via JSONBlob service, save here, then reload");
+									}
+								});
+							}
+						});
+						
+						widget.append(editButton);
+					}
+					
+					if ( buttons.reload ) {
+							reloadButton = $("<button/>", {disabled: true}).html("reload").click( 
+									function () {
+										loadFromJsonUrl( sourceUrl );
+									});
+							if (true) {
+								reloadButton.tooltip();
+							}
+							widget.append( reloadButton );
+					}
+					
+					if ( buttons.clear ) {
+							clearButton = $("<button/>", {disabled: true}).html("clear").click( function () {
+									targetNode.empty(); 
+								 clearButton.prop("disabled", true);
+							});
+							widget.append( clearButton );
+					}
+					
+					targetNode.before(widget);
+					that.isWidget = true;
+				}
+	}
 	
-	
-	/**
-	 * 
-	 */
-	updateSourceUrl = function ( url ) {
+	function updateSourceUrl ( url ) {
 		var temp = url;
 		if ( that.options.useProxy ) {
-			//prefix with proxy only if it has not already bee prefixed
+			//prefix with proxy only if it has not already been prefixed
 			if ( url.indexOf( jsonProxy ) === -1) {
 				temp = jsonProxy + url;
 			}
 		}
 		sourceUrl = temp;
-	};
+		if (reloadButton) {
+			if (temp==="") {
+					reloadButton.prop("disabled", true);
+			}else{
+					reloadButton.prop("disabled", false);
+					reloadButton.attr("title", "reload from '" + temp + "'");
+			}
+		}
+	}
 	
-	/**
-	 * priveleged methods are assigned to 'this' from inside the constructor
-	 */
-
 	/**
 	 * load the given data 
 	 * @param {Object} jsonData - the data to load
 	 */
-	this.buildFromJson = function( jsonData ) {
-		var opts = this.options;
+	function buildFromJson ( jsonData ) {
+		var opts = that.options;
 		var template = opts.jsonTemplate;
 		var callback = opts.onSuccess;
 		jsonModel = toNativeFormat(jsonData);  //save json object to internal model
-		var content = [];                           //temp array to build a string
+		var content = [];                      //temp array to build a string
 		if (template.begin) {
 			content.push( template.begin );
 		}
@@ -195,44 +254,36 @@ function LinkRoll ( opts, target ) {
 		if ( opts.addClass ) {
 			targetNode.addClass( opts.addClass );
 		}
+		if (exportButton) {
+			exportButton.prop("disabled", false);
+		}
+		if (clearButton) {
+				clearButton.prop("disabled", false);
+		}
 		if ($.isFunction( callback ) ) {
 			callback( targetNode );
 		}
-	};
+	}
 
-	this.clear = function() {
-		if (targetNode) {
-			targetNode.empty();
-		}
-	};
-	
-	this.reload = function() {
-		if (sourceUrl && targetNode) {
-			that.loadFromJsonUrl( sourceUrl );
-		}
-	};
 	/**
 	 * load data from url 
 	 * @param {String} url - a json url
 	 */
-	this.loadFromJsonUrl = function ( url ) {
+	function loadFromJsonUrl ( url ) {
 		updateSourceUrl( url );
 		$.getJSON( sourceUrl ).done( function ( data ) {
-			that.buildFromJson( data );
+			buildFromJson( data );
 		});
-	};
-	
-	init(opts);//call the private initialization method
+	}
 
+	//still in constructor here, now do some some stuff...
+	init(opts);//call the private initialization method
+		
 }//end LinkRoll constructor
 
-/**
- * 
- */ 
 LinkRoll.prototype = {
-	//all properties and methods defined in the prototype are PUBLIC
 	options: {},
-
+	isWidget: false,//set true by constructor if json/widget is loaded 
 	/**
 	 * insert an <img> into the DOM by a link using one of the supported insertion methods
 	 * @param {Object} link - an <a> element selected by jQuery
@@ -247,77 +298,25 @@ LinkRoll.prototype = {
 		}
 		var insertionMethod = link[this.options.method];
 		insertionMethod.call( link, img );
-	},
+	}
 	
-	getWidget: function () {
-		var hasButton = this.options.buttons;
-		var widget = $("<div/>");
-		if ( hasButton ) {
-			if ( hasButton.loadFromFile ) {
-				widget.append(this.LoadFromFileButton());
-			}
-			if ( hasButton.loadFromUrl ) {
-				widget.append(this.LoadFromUrlButton());
-			}
-			if ( hasButton.exportJson ) {
-				widget.append(this.ExportButton());
-			}
-			if ( hasButton.editJson ) {
-				widget.append(this.EditButton());
-			}
-			if ( hasButton.reloadFromUrl ) {
-				widget.append(this.ReloadButton());
-			}
-			if ( hasButton.clear ) {
-				widget.append(this.ClearButton());
-			}
-		
-		}
-		this.myWidget = widget;
-		return widget;
-	},
-	
-	popup: function ( url, title ) {
-		var t = (title) ? title : "LinkRoller";
-		if ( DialogApiAvailable && this.myWidget) {
-			var h = window.innerHeight - 10;
-			var w = window.innerWidth - 10;
-			var iframe = $("<iframe height='"+(h-100)+"' width='"+(w-100)+"' frameborder='0' marginwidth='0' marginheight='0' src='" + url + "' />");
-			var diag = $("<div id='mydialog' />");
-			diag.append(iframe);
-			var that = $("body");
-			that.append(diag);
-			diag.dialog( { 
-				title: t,
-				modal: true,
-				resizable: true,
-				height: "auto",
-				width: w,
-				close: function () {
-					$("#mydialog").remove();
-				}
-			} );
-		} else {
-			var win = window.open( url, t );
-			win.focus();
-		}
-	},
-	
-	LoadFromFileButton: function () {
+}; //end LinkRoll prototype
+
+
+function loadFromFileButton (loadFunction) {
 		var span = $("<span/>");
 		if ( FileApiSupported ) {
-			var that = this;
 			var input = $("<input />", { type: "file", css: { visibility: "hidden", width: 0, height: 0 } } );
 			input.attr("accept", "json");
 			input.on("change", function( evt ) {
 			    var files = evt.target.files;  // HTML5 FileList
 			    var f = files[0];              // HTML5 File
-			    var reader = new FileReader(); // HTML5 FileReader
+			    var reader = new window.FileReader(); // HTML5 FileReader
 			    reader.onload = ( function() {
 			        return function( e ) { 
 			            var fileObj = e.target.result;
 			            var data = JSON.parse(fileObj);
-			            that.buildFromJson(data);
+			            loadFunction(data);
 			        };
 			    })(f);
 			    reader.readAsText(f, "UTF-8");
@@ -333,106 +332,27 @@ LinkRoll.prototype = {
 			span.html( NotSupported );
 		}
 		return span;
-	},
-	
-	LoadFromUrlButton: function () {
-		var that = this;
+}
+
+function	loadFromUrlButton (loadFunction) {
 		var span = $("<span/>");
 		var input = $("<input />", {type: "text"});
 		input.bind("keypress", function (e) {
 			if (e.keyCode === 13) {
 				e.preventDefault();
-				that.loadFromJsonUrl( input.val() );
+				loadFunction( input.val() );
 			}
 		});
 		var btn = $("<button/>", {type: "button"});
 		btn.html("load from url");
 		btn.click( function () {
-			that.loadFromJsonUrl( input.val() );
+			loadFunction( input.val() );
 		});
 		span.append( btn );
 		span.append( input );
 		return span;
-	},
-	
-	EditButton: function() {
-		var span = $("<span/>");
-		if ( FileApiSupported ) {
-			var that = this;
-			var btn = $("<button/>", {type: "button"} );
-			btn.html("edit");
-			btn.click(function() {
-				var reEdit = ( that.sourceUrl && that.sourceUrl.indexOf( jsonEditorEndpoint ) > -1 ) ? true : false;
-				if ( reEdit ) {
-					var editorUrl = that.sourceUrl.replace( jsonEditorApi, "" );
-					that.popup(editorUrl, "editing via JSONBlob service, save here, then reload");
-				} else {
-					var jsonData = that.jsonModel;
-					var jsonTxt = JSON.stringify(jsonData);
-					$.ajax({
-						url: jsonEditorEndpoint + jsonEditorApi,
-						contentType: "application/json; charset=utf-8",
-						type: "POST",
-						data: jsonTxt,
-						error: function (xhr, status) {
-							alert(status);
-						},
-						success: function (data, status, xhr) {
-							var location = xhr.getResponseHeader("location");
-							that.sourceUrl = location;
-							var editorUrl = location.replace(jsonEditorApi, "");
-							that.popup(editorUrl, "editing via JSONBlob service, save here, then reload");
-						}
-					});
-				}
-			});
-			span.append( btn );
-		} else {
-			span.html(NotSupported);
-		}
-		return span;
-	},
-	
-	ExportButton: function() {
-		var span = $("<span/>");
-		if (FileApiSupported) {
-			var that = this;
-			var btn = $("<button/>",{type: "button"});
-			btn.html("export");
-			btn.click( function() {
-				var data = that.jsonModel;
-				var jsonTxt = JSON.stringify(data, null, " ");
-				var blob = new Blob ( [ jsonTxt ], { type: "application/json" } );
-				that.popup(URL.createObjectURL(blob), "LinkRoller Data");
-			});
-			span.append( btn );
-		} else {
-			span.html( NotSupported );
-		}
-		return span;
-	},
-	
-	ReloadButton: function() {
-		var that = this;
-		var btn = $("<button/>");
-		btn.html("reload");
-		btn.click( function () {
-			that.reload();
-		});
-		return btn;
-	},
+}
 
-	ClearButton: function() {
-		var that = this;
-		var btn = $("<button/>");
-		btn.html("clear");
-		btn.click( function () {
-			that.clear();
-		});
-		return btn;
-	}
-	
-}; //end LinkRoll prototype
 
 /**
  * This is a recursive function to dive into the data structure and render it as HTML
@@ -576,20 +496,57 @@ function formatSite ( bookmark, layout, opts ) {
 	//allow for multiple json structures...
 	var url = (typeof bookmark.uri==="string") ? bookmark.uri : bookmark;
 	var name = (typeof bookmark.name==="string") ? bookmark.name : urlPartsRegX.exec(url)[11];
-	
 	var temp = layout.replace(opts.replaceWithIconUrl, getIconUrl(url));
 		temp = temp.replace(opts.replaceWithSiteUrl, url);
 		temp = temp.replace(opts.replaceWithSiteName, name);
 	return temp;
 }
 
+function hasAtLeastOneTrue( obj ) {
+		if (typeof obj === "object") {
+				for(var prop in obj) {
+					if (obj[prop]===true) {
+						return true;
+					}
+				}
+		}
+		return false;
+}
 
+
+function popup( url, title ) {
+		var t = (title) ? title : "LinkRoller";
+		if ( DialogApiAvailable ) {
+			var h = window.innerHeight - 10;
+			var w = window.innerWidth - 10;
+			var iframe = $("<iframe height='"+(h-100)+"' width='"+(w-100)+"' frameborder='0' marginwidth='0' marginheight='0' src='" + url + "' />");
+			var diag = $("<div id='mydialog' />");
+			diag.append(iframe);
+			$("body").append(diag);
+			diag.dialog( { 
+				title: t,
+				modal: true,
+				resizable: true,
+				height: "auto",
+				width: w,
+				close: function () {
+					diag.remove();
+				}
+			} );
+		} else {
+			var win = window.open( url, t );
+			win.focus();
+		}
+}
+
+
+	
 function debug(arg) {
 	if ( debugEnabled ) {
 		window.console.log(arg);
 	}
 }
 
-}(jQuery)); //end of IIFE (see http://benalman.com/news/2010/11/immediately-invoked-function-expression/ )
+}( jQuery, window, document )); //end of IIFE (see http://benalman.com/news/2010/11/immediately-invoked-function-expression/ )
 
 

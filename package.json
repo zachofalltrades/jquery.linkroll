@@ -1,47 +1,54 @@
 {
-    "name": "jquery-linkroll",
-    "version": "0.0.1",
-    "description": "A jQuery plugin to format a JSON bookmark file.",
-    "keywords": [
-        "jquery-plugin",
-        "jquery",
-        "linkroll",
-        "plugins",
-        "favicon"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/zachofalltrades/jquery.linkroll.git"
-    },
-    "bugs": {
-        "url": "https://github.com/zachofalltrades/jquery.linkroll/issues"
-    },
-    "author": {
-        "name": "Zach Shelton",
-        "email": "zachofalltrades@users.sourceforge.net",
-        "url": "http://zachofalltrades.net"
-    },
-    "homepage": "https://github.com/zachofalltrades/jquery.linkroll",
-    "contributors": [{
-        "name": "Zach Shelton",
-        "email": "zachofalltrades@users.sourceforge.net",
-        "url": "http://zachofalltrades.net"
-    }],
-    "licenses": [
-        "MIT",
-        "GPL"
-    ],
-    "private": true,
-    "devDependencies": {
-        "grunt": "~0.4.5",
-        "grunt-cli": "~0.1.13",
-        "grunt-contrib-coffee": "~0.10.1",
-        "grunt-contrib-concat": "~0.4.0",
-        "grunt-contrib-jshint": "~0.10.0",
-        "grunt-contrib-uglify": "~0.4.0",
-        "grunt-contrib-watch": "^0.6.1"
-    },
-    "scripts": {
-        "test": "grunt travis --verbose"
+  "name": "jquery-linkroll",
+  "version": "0.0.1",
+  "description": "A jQuery plugin to format a JSON bookmark file.",
+  "main": "dist/jquery.linkroll.js",
+  "keywords": [
+    "jquery-plugin",
+    "jquery-linkroll",
+    "jquery",
+    "linkroll",
+    "plugin",
+    "plugins",
+    "favicon"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zachofalltrades/jquery.linkroll.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zachofalltrades/jquery.linkroll/issues"
+  },
+  "author": {
+    "name": "Zach Shelton",
+    "email": "zachofalltrades@users.sourceforge.net",
+    "url": "http://zachofalltrades.net"
+  },
+  "homepage": "https://github.com/zachofalltrades/jquery.linkroll",
+  "contributors": [
+    {
+      "name": "Zach Shelton",
+      "email": "zachofalltrades@users.sourceforge.net",
+      "url": "http://zachofalltrades.net"
     }
+  ],
+  "licenses": [
+    "MIT",
+    "GPL"
+  ],
+  "private": true,
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-bump": "^0.3.0",
+    "grunt-cli": "~0.1.13",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-contrib-uglify": "^0.8.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-update-json": "^0.2.1",
+    "load-grunt-tasks": "^3.1.0"
+  },
+  "scripts": {
+    "test": "grunt travis --verbose"
+  }
 }
