@@ -21,7 +21,7 @@
 
 /*** private internal constants ***/
 var urlPartsRegX       = /^(((([^:\/#\?]+:)?(?:(\/\/)((?:(([^:@\/#\?]+)(?:\:([^:@\/#\?]+))?)@)?(([^:\/#\?\]\[]+|\[[^\/\]@#?]+\])(?:\:([0-9]+))?))?)?)?((\/?(?:[^\/\?#]+\/+)*)([^\?#]*)))?(\?[^#]+)?)(#.*)?/,
-	iconForUrl         = "//www.google.com/s2/favicons?domain_url=", 
+//	iconForUrl         = "//www.google.com/s2/favicons?domain_url=", 
 	iconForHost        = "//www.google.com/s2/favicons?domain=",
 	supportedMethods   = ["append","prepend","before","after","html"],
 	jsonProxy          = "https://jsonp.nodejitsu.com/?callback=?&url=",
@@ -58,7 +58,7 @@ $.fn.linkroll = function ( options ) {
 		}
 		if ( roller.options.buttons ) {
 			node.after(roller.getWidget());
-		};
+		}
 		return this;
 	});
 };
@@ -97,7 +97,7 @@ $.fn.linkroll.defaults = {
 		afterChildren: "</ul></div>",
 		beforeEachLink: "",
 		eachLink: "<li class='linkroll' style=\"list-style-image: url('##ICONURL##');\"><a href='##SITEURL##'>##SITENAME##</a></li>",
-		afterEachLink: '',
+		afterEachLink: "",
 		end:   "",
 		replaceWithCategory: "##CATEGORY##",
 		replaceWithIconUrl:  "##ICONURL##",
@@ -112,12 +112,13 @@ $.fn.linkroll.defaults = {
  * get a new LinkRoll object
  * @constructor
  * @param {Object} opts - overrides of $.fn.linkroll.defaults
+ * @param {Object} target - the jquery node where the json and/or widget will be loaded
  */
 function LinkRoll ( opts, target ) {
 	var //private member variables/methods are declared in constructor ( http://javascript.crockford.com/private.html )
 	targetNode = target, //DOM node where linkroll will be rendered
 	sourceUrl  = null,   //most recently loaded source url
-	myWidget   = null,
+//	myWidget   = null,
 	jsonModel  = null,   //most recently loaded json object
 	//watch for changes...
 	//https://gist.github.com/eligrey/384583 
@@ -133,7 +134,7 @@ function LinkRoll ( opts, target ) {
 		that.options.method = ($.inArray(that.options.method, supportedMethods)) ? that.options.method : supportedMethods[0];
 		if ( that.options.jsonUrl ) {
 			that.sourceUrl = that.options.jsonUrl;
-		};
+		}
 		if (that.options.buttons===true) {//set all buttons to true
 			that.options.buttons = {
 				loadFromFile : true,
@@ -143,7 +144,7 @@ function LinkRoll ( opts, target ) {
 				reloadFromUrl: true,
 				clear        : true
 			};
-		};
+		}
 	},
 	
 	
@@ -156,8 +157,8 @@ function LinkRoll ( opts, target ) {
 			//prefix with proxy only if it has not already bee prefixed
 			if ( url.indexOf( jsonProxy ) === -1) {
 				temp = jsonProxy + url;
-			};
-		};
+			}
+		}
 		sourceUrl = temp;
 	};
 	
@@ -177,18 +178,18 @@ function LinkRoll ( opts, target ) {
 		var content = [];                           //temp array to build a string
 		if (template.begin) {
 			content.push( template.begin );
-		};
+		}
 		recurseBookmarks(content, template, jsonModel);
 		if (template.end) {
 			content.push( template.end );
-		};
+		}
 		targetNode.html( content.join("") );
 		if ( opts.addClass ) {
 			targetNode.addClass( opts.addClass );
-		};
+		}
 		if ($.isFunction( callback ) ) {
 			callback( targetNode );
-		};
+		}
 	};
 
 	this.clear = function() {
@@ -201,7 +202,7 @@ function LinkRoll ( opts, target ) {
 		if (sourceUrl && targetNode) {
 			that.loadFromJsonUrl( sourceUrl );
 		}
-	}
+	};
 	/**
 	 * load data from url 
 	 * @param {String} url - a json url
@@ -246,22 +247,22 @@ LinkRoll.prototype = {
 		if ( hasButton ) {
 			if ( hasButton.loadFromFile ) {
 				widget.append(this.LoadFromFileButton());
-			};
+			}
 			if ( hasButton.loadFromUrl ) {
 				widget.append(this.LoadFromUrlButton());
-			};
+			}
 			if ( hasButton.exportJson ) {
 				widget.append(this.ExportButton());
-			};
+			}
 			if ( hasButton.editJson ) {
 				widget.append(this.EditButton());
-			};
+			}
 			if ( hasButton.reloadFromUrl ) {
 				widget.append(this.ReloadButton());
-			};
+			}
 			if ( hasButton.clear ) {
 				widget.append(this.ClearButton());
-			};
+			}
 		
 		}
 		this.myWidget = widget;
@@ -269,14 +270,14 @@ LinkRoll.prototype = {
 	},
 	
 	popup: function ( url, title ) {
+		var t = (title) ? title : "LinkRoller";
 		if ( DialogApiAvailable && this.myWidget) {
-			var t = (title) ? title : "LinkRoller";
 			var h = window.innerHeight - 10;
 			var w = window.innerWidth - 10;
 			var iframe = $("<iframe height='"+(h-100)+"' width='"+(w-100)+"' frameborder='0' marginwidth='0' marginheight='0' src='" + url + "' />");
 			var diag = $("<div id='mydialog' />");
 			diag.append(iframe);
-			var that = $(this.myWidget);
+			var that = $("body");
 			that.append(diag);
 			diag.dialog( { 
 				title: t,
@@ -304,7 +305,7 @@ LinkRoll.prototype = {
 			    var files = evt.target.files;  // HTML5 FileList
 			    var f = files[0];              // HTML5 File
 			    var reader = new FileReader(); // HTML5 FileReader
-			    reader.onload = ( function( theFile ) {
+			    reader.onload = ( function() {
 			        return function( e ) { 
 			            var fileObj = e.target.result;
 			            var data = JSON.parse(fileObj);
@@ -331,7 +332,7 @@ LinkRoll.prototype = {
 		var span = $("<span/>");
 		var input = $("<input />", {type: "text"});
 		input.bind("keypress", function (e) {
-			if (e.keyCode == 13) {
+			if (e.keyCode === 13) {
 				e.preventDefault();
 				that.loadFromJsonUrl( input.val() );
 			}
@@ -496,7 +497,7 @@ function toNativeFormat(data) {
 		normalData.name = "!!!!!!!   UNEXPECTED FORMAT   !!!!!!!!!";
 		normalData.children = [];
 	}
-	debug(normalData.name)
+	debug(normalData.name);
 	return normalData;
 }
 
@@ -511,6 +512,7 @@ function toNativeFormat(data) {
 function getFlatCategories(data) {
 	var myChildren = [];
 	//TODO
+	debug(data);
 	return myChildren;
 }
 
@@ -558,12 +560,6 @@ function recurseMozilla (parent) {
 	return myChildren;
 }
 
-function debug(arg) {
-	if ( debugEnabled ) {
-		window.console.log(arg);
-	};
-};
-
 function getIconUrl ( url ) {
 	return iconForHost + urlPartsRegX.exec(url)[11];
 }
@@ -578,7 +574,14 @@ function formatSite ( bookmark, layout, opts ) {
 		temp = temp.replace(opts.replaceWithSiteName, name);
 	return temp;
 }
-	
+
+
+function debug(arg) {
+	if ( debugEnabled ) {
+		window.console.log(arg);
+	}
+}
+
 }(jQuery)); //end of IIFE (see http://benalman.com/news/2010/11/immediately-invoked-function-expression/ )
 
 
