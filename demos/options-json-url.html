@@ -10,29 +10,52 @@
 </head>
 <body>
 
+	<div id="inputs" />
 	<div id="wrapper" />
 
-
-</body>
 <script>
-	$('#wrapper').prepend($('<input/>', {id: 'url'}));
+	var remoteJson = 'https://zachofalltrades.github.io/jquery.linkroll/demos/sample.json';
+	$('#inputs').prepend($('<input/>', {id: 'url'}));
 
-	$('#wrapper').prepend(
+	$('#inputs').prepend(
 		$("<button/>").html("load from URL").click( function() {
 			var url = $('#url').val();
 			$("#wrapper div").linkroll({jsonUrl: url});
 		})
 	);
-
-	$('#wrapper').append(
+	$('#inputs').append(
+		$("<button/>").html("load from url, adding NodeJitsu via option").click( function() {
+			var url = $('#url').val();
+			$("#wrapper div").linkroll({jsonUrl: remoteJson, useProxy: true});
+		})
+	);
+	$('#inputs').append(
 		$("<button/>").html("clear").click( function() {
 			$("#wrapper div").empty();
 		})
 	);
 
+
+	$('#wrapper').append(
+		$("<button/>").html("remote JSON").click( function() {
+			$('#url').val(remoteJson);
+		})
+	);
+
+	$('#wrapper').append(
+		$("<button/>").html("remote with JSONP support [faked]").click( function() {
+			$('#url').val(remoteJson.replace('.json', 'fakeJsonP.json') + '?callback=fakeJsonP');
+		})
+	);
+
+	$('#wrapper').append(
+		$("<button/>").html("remote with NodeJitsu").click( function() {
+			$('#url').val('https://jsonp.nodejitsu.com/?url=' + remoteJson + '&callback=?');
+		})
+	);
+
 	$('#wrapper').append($("<div/>"));
 
-
 </script>
-
+</body>
 </html>
