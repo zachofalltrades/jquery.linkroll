@@ -1,5 +1,5 @@
 /**
- * jquery-linkroll - v0.0.1 2015-02-20
+ * jquery-linkroll - v0.0.2 2015-02-23
  * A jQuery plugin to format a JSON bookmark file.
  * https://github.com/zachofalltrades/jquery.linkroll
  *
@@ -259,6 +259,9 @@ function LinkRoll ( opts, target ) {
 		}
 		if (clearButton) {
 				clearButton.prop("disabled", false);
+		}
+		if (editButton) {
+				editButton.prop("disabled", false);
 		}
 		if ($.isFunction( callback ) ) {
 			callback( targetNode );
