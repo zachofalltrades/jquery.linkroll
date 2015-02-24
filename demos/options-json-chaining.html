@@ -14,12 +14,10 @@
 
 	<div id="wrapper" />
 
-
-</body>
 <script>
 
 	$('#wrapper').append(
-		$("<button/>").html("load from json (on relative url), then chain to accordion").click( function() {
+		$("<button/>").html("load from json (on relative url), then chain to accordion [[expect this demo to fail]]").click( function() {
 			$("#wrapper div").linkroll({jsonUrl: 'sample.json'}).accordion({collapsible: true, animate: 100});;
 		})
 	);
@@ -27,5 +25,5 @@
 	$('#wrapper').append($("<div/>"));
 
 </script>
-
+</body>
 </html>

@@ -1,6 +1,6 @@
 [
   {
-    "category": "search",
+    "category": "old search",
     "links": [
       "http://google.com",
       "http://ask.com",
@@ -13,6 +13,14 @@
       "http://php.net",
       "http://cpan.org",
       "http://java.com"
+    ]
+  },
+  {
+    "category": "databases",
+    "links": [
+      "https://www.mysql.com/",
+      "http://www.postgresql.org/",
+      "https://www.mongodb.org/"
     ]
   },
   {
