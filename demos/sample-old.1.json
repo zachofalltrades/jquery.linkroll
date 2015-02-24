@@ -49,5 +49,18 @@
         "link": "https://www.mongodb.org/"
       }
     ]
+  },
+  {
+    "category": "tools",
+    "links": [
+      {
+        "name": "BeyondCompare",
+        "link": "http://scootersoftware.com"
+      },
+      {
+        "name": "EditPlus",
+        "link": "http://editplus.com"
+      }
+    ]
   }
 ]

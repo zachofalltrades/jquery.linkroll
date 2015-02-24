@@ -11,6 +11,9 @@
 		#demo { 
 			border: 10px solid gray;
 		}
+		#wrapper { 
+			border: 10px solid green;
+		}
 	</style>
 </head>
 <body>
@@ -22,7 +25,11 @@
 		var caption = (buttonText) ? buttonText : fileName;
 		$('#buttons').append($("<button/>").html(caption).click( function() {
 			$('#demo').empty();
-			$('#demo').load(fileName + ".html");
+			$('#demo').load(fileName + ".html", function (text, status, jqXhr) {
+				if (status!=="success") {
+					window.o
+				}
+			});
 		}));
 	}
 	addDemo('inline');
@@ -32,7 +39,6 @@
 	addDemo('options-json-chaining');
 	addDemo('options-callback');
 	addDemo('options-json-callback');
-	addDemo('options-json-remote');
 	addDemo('options-json-file');
 	addDemo('options-json-url');
 	addDemo('app');

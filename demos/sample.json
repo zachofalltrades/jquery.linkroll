@@ -36,5 +36,17 @@
       "name": "MongoDB",
       "uri": "https://www.mongodb.org/"
     }]
-  }]
+  },
+  {
+    "name": "tools",
+    "children":[ {
+      "name": "BeyondCompare",
+      "uri": "http://www.scootersoftware.com/"
+    }, {
+      "name": "EditPlus",
+      "uri": "https://editplus.com/"
+    }]
+  }
+  ]
 }
+
