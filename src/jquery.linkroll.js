@@ -244,7 +244,7 @@ function LinkRoll ( opts, target ) {
 			if ( url.indexOf( JSON_PROXY ) === -1) {
 				temp = JSON_PROXY + url;
 			}
-		};
+		}
 		sourceUrl = temp;
 		if (reloadButton) {
 			if (temp==="") {
@@ -252,16 +252,16 @@ function LinkRoll ( opts, target ) {
 			} else {
 				reloadButton.prop("disabled", false);
 				reloadButton.attr("title", "reload from '" + sourceUrl + "'");
-			};
-		};
-		
+			}
+		}
+		var cacheBuster;
 		if (!that.options.allowCaching) {
 			var x = new Date().getTime();
-			var cacheBuster = { "cacheBuster": x };	
+			cacheBuster = { "cacheBuster": x };	
 		}
 		$.getJSON( sourceUrl,  cacheBuster)
-			.done( function ( data, textStatus, jqXHR ) {
-				debug("getJSON: '"+textStatus+"' from " + sourceUrl);	
+			.done( function ( data, textStatus ) {
+				debug("getJSON: '" + textStatus + "' from " + sourceUrl);	
 				buildFromJson( data );
 			})
 			.fail( function ( jqXHR, textStatus, errorThrown ) {
