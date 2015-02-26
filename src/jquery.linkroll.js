@@ -164,6 +164,9 @@ function LinkRoll ( opts, target ) {
 							},
 							success: function(data, status, xhr) {
 								sourceUrl = xhr.getResponseHeader("location");
+								if (reloadButton) {
+									reloadButton.attr("title", "reload from '" + sourceUrl + "'");
+								}
 								var editorUrl = sourceUrl.replace(jsonEditorApi, "");
 								popup(editorUrl, "editing via JSONBlob service, save here, then reload");
 							}
@@ -175,10 +178,9 @@ function LinkRoll ( opts, target ) {
 			}
 			
 			if ( buttons.reload ) {
-				reloadButton = $("<button/>", {disabled: true}).html("reload").click( 
-						function () {
-							loadFromJsonUrl( sourceUrl );
-						});
+				reloadButton = $("<button/>", {disabled: true}).html("reload").click( function () {
+					loadFromJsonUrl( sourceUrl );
+				});
 				if (true) {
 					reloadButton.tooltip();
 				}
@@ -223,10 +225,10 @@ function LinkRoll ( opts, target ) {
 			exportButton.prop("disabled", false);
 		}
 		if (clearButton) {
-				clearButton.prop("disabled", false);
+			clearButton.prop("disabled", false);
 		}
 		if (editButton) {
-				editButton.prop("disabled", false);
+			editButton.prop("disabled", false);
 		}
 		if ($.isFunction( callback ) ) {
 			callback( targetNode );
@@ -529,6 +531,7 @@ function setButtons ( btnConfig ) {
 			reload: true,
 			clear : true
 		};
+		return buttons;
 	} else if (typeof buttons === "object") {
 		for(var prop in buttons) {
 			if (buttons[prop]===true) {
