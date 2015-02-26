@@ -98,7 +98,7 @@ function LinkRoll ( opts, target ) {
 	var clearButton = false; 
 	var reloadButton = false;
 	var targetNode = target; //DOM node where linkroll will be rendered
-	var targetID   = target.attr('id');
+	var targetID   = target.attr("id");
 	var sourceUrl  = null;   //most recently loaded source url
 	var jsonModel  = null;   //most recently loaded json object
 	//watch for changes...
@@ -588,7 +588,7 @@ function popup( url, title ) {
 function setCookie(name, value) {
 	var expires = new Date();
 	expires.setTime(expires.getTime() + ONE_YEAR_MS);
-	var ckie = name + "=" + escape(value) + "; expires=" + expires.toGMTString();
+	var ckie = name + "=" + window.escape(value) + "; expires=" + expires.toGMTString();
 	debug(ckie);
 	document.cookie = ckie;
 }
@@ -598,18 +598,18 @@ function getCookie(name) {
 	debug(dc);
 	var prefix = name + "=";
 	var begin = dc.indexOf(prefix);
-	if (begin == -1) {
+	if (begin === -1) {
 		return null;
 	}
 	begin = begin + prefix.length;
 	var end = document.cookie.indexOf(";", begin);
-	if (end == -1) {
+	if (end === -1) {
 		end = dc.length;
 	}
 	debug ("begin: " + begin + " -- end:" + end);
 	var sub = dc.substring(begin, end);
 	debug ("substring: " + sub);
-	var val = unescape(sub);
+	var val = window.unescape(sub);
 	debug("value: " + val);
 	return val;
 }
