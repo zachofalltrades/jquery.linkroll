@@ -1,6 +1,6 @@
 {
   "name": "jquery-linkroll",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A jQuery plugin to format a JSON bookmark file.",
   "main": "dist/jquery.linkroll.js",
   "keywords": [
