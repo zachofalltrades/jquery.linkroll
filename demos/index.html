@@ -27,7 +27,7 @@
 			$('#demo').empty();
 			$('#demo').load(fileName + ".html", function (text, status, jqXhr) {
 				if (status!=="success") {
-					window.o
+					window.open(fileName + ".html");
 				}
 			});
 		}));
