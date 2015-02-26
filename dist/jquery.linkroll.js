@@ -1,5 +1,5 @@
 /**
- * jquery-linkroll - v0.0.3 2015-02-26
+ * jquery-linkroll - v0.0.4 2015-02-26
  * A jQuery plugin to format a JSON bookmark file.
  * https://github.com/zachofalltrades/jquery.linkroll
  *
@@ -20,9 +20,8 @@ var urlPartsRegX       = /^(((([^:\/#\?]+:)?(?:(\/\/)((?:(([^:@\/#\?]+)(?:\:([^:
 	jsonEditorEndpoint = "https://jsonblob.com",
 	jsonEditorApi      = "/api/jsonBlob",
 	FILEAPI_ENABLED    = window.File && window.FileReader && window.FileList,
-	DIALOG_ENABLED     = $.isFunction($.fn.dialog),
 	DEBUG_ENABLED      = window.console && window.console.log && true,
-	NotSupported       = "feature not supported";
+	ONE_YEAR_MS        = 365 * 24 * 60 * 60 * 1000;
 
 
 /**
@@ -30,7 +29,7 @@ var urlPartsRegX       = /^(((([^:\/#\?]+:)?(?:(\/\/)((?:(([^:@\/#\?]+)(?:\:([^:
 * @param {object} options - an optional object specifying overrides of the default configuration
 */
 $.fn.linkroll = function ( options ) {
-	return this.each(function(){
+	return this.each( function() {
 		var node = $(this);
 		var roller = new LinkRoll(options, node);
 		if (!roller.isWidget) {
@@ -46,7 +45,6 @@ $.fn.linkroll = function ( options ) {
 				roller.options.onSuccess(node);
 			}
 		}
-		return this;
 	});
 };
 
@@ -64,6 +62,7 @@ $.fn.linkroll.defaults = {
 	addClass    : "linkroll", //class name to add to all created/modified elements
 	method      : "append",   //jQuery node insertion method for img tag (must be one of the supported methods)
 	jsonUrl     : false,      //optinal url of json to be loaded
+	enableCookie: true,       //use a cookie to save/reload widget state
 	allowCaching: false,
 	useProxy    : false,      //set true if json url is (trusted) remote host that does not enable CORS or JSONP
 	onSuccess   : false,      //optional callback function to apply additional formatting (useful when loading json async)
@@ -108,6 +107,7 @@ function LinkRoll ( opts, target ) {
 	var clearButton = false; 
 	var reloadButton = false;
 	var targetNode = target; //DOM node where linkroll will be rendered
+	var targetID   = target.attr("id");
 	var sourceUrl  = null;   //most recently loaded source url
 	var jsonModel  = null;   //most recently loaded json object
 	//watch for changes...
@@ -120,13 +120,9 @@ function LinkRoll ( opts, target ) {
 		//ensure that selected method is supported
 		that.options.method = ($.inArray(that.options.method, SUPPORTED_METHODS)) ? that.options.method : SUPPORTED_METHODS[0];
 		
-		if ( that.options.jsonUrl ) {
-			loadFromJsonUrl( that.options.jsonUrl );
-			that.isWidget = true;
-		}
 		var buttons = setButtons( that.options.buttons );
 		if (buttons) {
-			that.isWidget = true;
+			
 			var widget = $("<div/>");
 			
 			if ( buttons.file && FILEAPI_ENABLED ) {
@@ -172,10 +168,7 @@ function LinkRoll ( opts, target ) {
 								window.alert(status);
 							},
 							success: function(data, status, xhr) {
-								sourceUrl = xhr.getResponseHeader("location");
-								if (reloadButton) {
-									reloadButton.attr("title", "reload from '" + sourceUrl + "'");
-								}
+								saveUrl( xhr.getResponseHeader("location") );
 								var editorUrl = sourceUrl.replace(jsonEditorApi, "");
 								popup(editorUrl, "editing via JSONBlob service, save here, then reload");
 							}
@@ -190,8 +183,11 @@ function LinkRoll ( opts, target ) {
 				reloadButton = $("<button/>", {disabled: true}).html("reload").click( function () {
 					loadFromJsonUrl( sourceUrl );
 				});
-				if (true) {
+				if ( $.isFunction(reloadButton.tooltip) ) {
+					//jQueryUI
 					reloadButton.tooltip();
+				} else if (false) {
+					//jQueryMobile
 				}
 				widget.append( reloadButton );
 			}
@@ -205,9 +201,27 @@ function LinkRoll ( opts, target ) {
 			}
 			
 			targetNode.before(widget);
+			
+			if ( that.options.enableCookie && targetID) {
+				var oldUrl = getCookie(targetID + "-jsonUrl");
+				if (oldUrl && !sourceUrl) {
+					loadFromJsonUrl(oldUrl);
+				}
+			}
+			
+			that.isWidget = true;
+			
+		}//end if (buttons)
 		
+		if ( that.options.jsonUrl ) {
+			//possibly already loaded via url from cookie?
+			if (jsonModel===null) {
+				loadFromJsonUrl( that.options.jsonUrl );
+			}
+			that.isWidget = true;
 		}
-	}
+
+	}//end init()
 
 	/**
 	 * load the given data 
@@ -244,39 +258,46 @@ function LinkRoll ( opts, target ) {
 		}
 	}
 
-	/**
-	 * load data from url 
-	 * @param {String} url - a json url
-	 */
-	function loadFromJsonUrl ( url ) {
-		var temp = url;
-		if ( that.options.useProxy ) {
-			//prefix with proxy only if it has not already been prefixed
-			if ( url.indexOf( JSON_PROXY ) === -1) {
-				temp = JSON_PROXY + url;
-			}
-		}
-		sourceUrl = temp;
+	function saveUrl (url) {
+		sourceUrl = url;
 		if (reloadButton) {
-			if (temp==="") {
+			if (sourceUrl==="") {
 				reloadButton.prop("disabled", true);
 			} else {
 				reloadButton.prop("disabled", false);
 				reloadButton.attr("title", "reload from '" + sourceUrl + "'");
 			}
 		}
+		if ( that.options.enableCookie && targetID) {
+			setCookie(targetID + "-jsonUrl", sourceUrl);
+		}
+	}
+	/**
+	 * load data from url 
+	 * @param {String} url - a json url
+	 */
+	function loadFromJsonUrl ( url ) {
+		var tempUrl = url;
+		if ( that.options.useProxy ) {
+			//prefix with proxy only if it has not already been prefixed
+			if ( url.indexOf( JSON_PROXY ) === -1) {
+				tempUrl = JSON_PROXY + url;
+			}
+		}
+
 		var cacheBuster;
 		if (!that.options.allowCaching) {
 			var x = new Date().getTime();
 			cacheBuster = { "cacheBuster": x };	
 		}
-		$.getJSON( sourceUrl,  cacheBuster)
+		$.getJSON( tempUrl,  cacheBuster)
 			.done( function ( data, textStatus ) {
-				debug("getJSON: '" + textStatus + "' from " + sourceUrl);	
+				debug("getJSON: '" + textStatus + "' from " + tempUrl);
+				saveUrl(url);
 				buildFromJson( data );
 			})
 			.fail( function ( jqXHR, textStatus, errorThrown ) {
-				debug("getJSON: '" + textStatus + "' from " + sourceUrl);
+				debug("getJSON: '" + textStatus + "' from " + tempUrl);
 				debug(errorThrown);
 				debug(jqXHR);
 			});
@@ -310,53 +331,49 @@ LinkRoll.prototype = {
 
 
 function loadFromFileButton (loadFunction) {
-		var span = $("<span/>");
-		if ( FILEAPI_ENABLED ) {
-			var input = $("<input />", { type: "file", css: { visibility: "hidden", width: 0, height: 0 } } );
-			input.attr("accept", "json");
-			input.on("change", function( evt ) {
-			    var files = evt.target.files;  // HTML5 FileList
-			    var f = files[0];              // HTML5 File
-			    var reader = new window.FileReader(); // HTML5 FileReader
-			    reader.onload = ( function() {
-			        return function( e ) { 
-			            var fileObj = e.target.result;
-			            var data = JSON.parse(fileObj);
-			            loadFunction(data);
-			        };
-			    })(f);
-			    reader.readAsText(f, "UTF-8");
-			});
-			var btn = $("<button/>", {type: "button"});
-			btn.html("load from file");
-			btn.click( function() {
-				input.click();
-			});
-			span.append( btn );
-			span.append( input );
-		} else {
-			span.html( NotSupported );
-		}
-		return span;
+	var span = $("<span/>");
+	var input = $("<input />", { type: "file", css: { visibility: "hidden", width: 0, height: 0 } } );
+	input.attr("accept", "json");
+	input.on("change", function( evt ) {
+	    var files = evt.target.files;  // HTML5 FileList
+	    var f = files[0];              // HTML5 File
+	    var reader = new window.FileReader(); // HTML5 FileReader
+	    reader.onload = ( function() {
+	        return function( e ) { 
+	            var fileObj = e.target.result;
+	            var data = JSON.parse(fileObj);
+	            loadFunction(data);
+	        };
+	    })(f);
+	    reader.readAsText(f, "UTF-8");
+	});
+	var btn = $("<button/>", {type: "button"});
+	btn.html("load from file");
+	btn.click( function() {
+		input.click();
+	});
+	span.append( btn );
+	span.append( input );
+	return span;
 }
 
 function	loadFromUrlButton (loadFunction) {
-		var span = $("<span/>");
-		var input = $("<input />", {type: "text", size: "100"});
-		input.bind("keypress", function (e) {
-			if (e.keyCode === 13) {
-				e.preventDefault();
-				loadFunction( input.val() );
-			}
-		});
-		var btn = $("<button/>", {type: "button"});
-		btn.html("load from url");
-		btn.click( function () {
+	var span = $("<span/>");
+	var input = $("<input />", {type: "text", size: "100"});
+	input.bind("keypress", function (e) {
+		if (e.keyCode === 13) {
+			e.preventDefault();
 			loadFunction( input.val() );
-		});
-		span.append( btn );
-		span.append( input );
-		return span;
+		}
+	});
+	var btn = $("<button/>", {type: "button"});
+	btn.html("load from url");
+	btn.click( function () {
+		loadFunction( input.val() );
+	});
+	span.append( btn );
+	span.append( input );
+	return span;
 }
 
 
@@ -554,7 +571,7 @@ function setButtons ( btnConfig ) {
 
 function popup( url, title ) {
 		var t = (title) ? title : "LinkRoller";
-		if ( DIALOG_ENABLED ) {
+		if ( $.isFunction($.fn.dialog) ) {
 			var h = window.innerHeight - 10;
 			var w = window.innerWidth - 10;
 			var iframe = $("<iframe height='"+(h-100)+"' width='"+(w-100)+"' frameborder='0' marginwidth='0' marginheight='0' src='" + url + "' />");
@@ -577,6 +594,34 @@ function popup( url, title ) {
 		}
 }
 
+function setCookie(name, value) {
+	var expires = new Date();
+	expires.setTime(expires.getTime() + ONE_YEAR_MS);
+	var ckie = name + "=" + window.escape(value) + "; expires=" + expires.toGMTString();
+	debug(ckie);
+	document.cookie = ckie;
+}
+
+function getCookie(name) {
+	var dc = document.cookie;
+	debug(dc);
+	var prefix = name + "=";
+	var begin = dc.indexOf(prefix);
+	if (begin === -1) {
+		return null;
+	}
+	begin = begin + prefix.length;
+	var end = document.cookie.indexOf(";", begin);
+	if (end === -1) {
+		end = dc.length;
+	}
+	debug ("begin: " + begin + " -- end:" + end);
+	var sub = dc.substring(begin, end);
+	debug ("substring: " + sub);
+	var val = window.unescape(sub);
+	debug("value: " + val);
+	return val;
+}
 
 	
 function debug(arg) {
