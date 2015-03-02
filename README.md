@@ -18,16 +18,19 @@ A jQuery plugin to iconize links and/or load a load bookmark widget from JSON da
 
 ## Credits
 Favicons are taken from  the Google Shared Stuff (S2) favicon endpoint:
-google.com/s2/favicons?domain=<hostname.tld>
+
+ google.com/s2/favicons?domain=< hostname.tld >
 
 Editor functionality is (currently) handled in the cloud via "JSON Blob"
-https://jsonblob.com/about
+
+  https://jsonblob.com/about
 
 Proxy functionality is handled in the cloud via NodeJitsu
-https://jsonp.nodejitsu.com/
+
+  https://jsonp.nodejitsu.com/
 
 ## License
 MIT & GPL
 
 ## Author
-(c) Zach Shelton <zachofalltrades@users.sourceforge.com> (http://zachofalltrades.net)
+(c) 2015 Zach Shelton <zachofalltrades@users.sourceforge.com> (http://zachofalltrades.net)
