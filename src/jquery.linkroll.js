@@ -67,16 +67,16 @@ $.fn.linkroll.defaults = {
 		clear : false
 	},
 	jsonTemplate: {
-		begin: "",
+		begin: "<div>",
 		beforeEachCategory: "<h3>",
-		eachCategory: "<h3>##CATEGORY##</h3>",
+		eachCategory: "<h3 class='linkroll-cat'>##CATEGORY##</h3>",
 		afterEachCategory: "</h3>",
 		beforeChildren: "<div><ul>",
 		afterChildren: "</ul></div>",
 		beforeEachLink: "",
-		eachLink: "<li class='linkroll' style=\"list-style-image: url('##ICONURL##');\"><a href='##SITEURL##'>##SITENAME##</a></li>",
+		eachLink: "<li class='linkroll-item' style=\"list-style-image: url('##ICONURL##');\"><a href='##SITEURL##'>##SITENAME##</a></li>",
 		afterEachLink: "",
-		end:   "",
+		end:   "</div>",
 		replaceWithCategory: "##CATEGORY##",
 		replaceWithIconUrl:  "##ICONURL##",
 		replaceWithSiteUrl:  "##SITEURL##",
@@ -602,7 +602,7 @@ function getCookie(name) {
 		return null;
 	}
 	begin = begin + prefix.length;
-	var end = document.cookie.indexOf(";", begin);
+	var end = dc.indexOf(";", begin);
 	if (end === -1) {
 		end = dc.length;
 	}
@@ -622,5 +622,3 @@ function debug(arg) {
 }
 
 }( jQuery, window, document )); //end of IIFE (see http://benalman.com/news/2010/11/immediately-invoked-function-expression/ )
-
-
