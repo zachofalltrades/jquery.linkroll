@@ -48,15 +48,15 @@ module.exports = function(grunt) {
             files: ["src/*"],
             tasks: ["default"]
         },
-        // update bower.json with data from package.json 
+        // update bower.json with data from package.json
         update_json: {
             options: {
                 src: "package.json",
                 indent: "  "
             },
             bower: {
-                dest: 'bower.json', // where to write to 
-                // the fields to update, as a String Grouping 
+                dest: 'bower.json', // where to write to
+                // the fields to update, as a String Grouping
                 fields: { //to:   "from",
                     name: "name",
                     version: "version",

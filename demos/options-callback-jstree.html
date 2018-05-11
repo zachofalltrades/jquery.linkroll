@@ -7,6 +7,8 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script	src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="jquery.linkroll.js"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.5/themes/default/style.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.5/jstree.min.js"></script>
 <style>
 </style>
 </head>
@@ -37,11 +39,12 @@
 <script>
 
 	$('#wrapper').append(
-		$("<button/>").html("iconize and chain to jQuery accordion").click( function() {
-			$("#accordionList").linkroll().accordion({collapsible: true, animate: 100});
+		$("<button/>").html("iconize and use callback to jQuery accordion").click( function() {
+			$("#wrapper").jstree();
 		})
 	);
 
 </script>
 </body>
+
 </html>

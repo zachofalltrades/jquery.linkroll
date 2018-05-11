@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Link Roll</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.5/themes/default/style.min.css" />
+<script src="jstree.js"></script>
+<script	src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="jquery.linkroll.js"></script><style>
+</style>
+</head>
+<body>
+
+
+  <div id="jstree"></div>
+
+
+
+
+<script>
+var urlPartsRegX       = /^(((([^:\/#\?]+:)?(?:(\/\/)((?:(([^:@\/#\?]+)(?:\:([^:@\/#\?]+))?)@)?(([^:\/#\?\]\[]+|\[[^\/\]@#?]+\])(?:\:([0-9]+))?))?)?)?((\/?(?:[^\/\?#]+\/+)*)([^\?#]*)))?(\?[^#]+)?)(#.*)?/,
+//	ICON_FOR_URL       = "//www.google.com/s2/favicons?domain_url=",
+	ICON_FOR_HOST      = "//www.google.com/s2/favicons?domain=";
+
+var _tree = $('#jstree');
+_tree.before(loadFromFileButton(_tree));
+
+function searchBox(targetNode) {
+  var input = $("<input />", { type: "text" } );
+  var timer = false;
+  input.keyup(function () {
+    if(timer) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(function () {
+      var text = input.val();
+      targetNode.jstree(true).search(text, true, true);
+    }, 250);
+  });
+  return input;
+}
+
+function exportButton(targetNode) {
+  var btn = $("<button/>",{type: "button"});
+  btn.html("export");
+  btn.click(function(){
+    var jsonTxt = getJsonFromTarget(targetNode);
+    var _temp = document.createElement('a');
+    _temp.setAttribute('href', 'data:application/json;charset=utf-8,' + encodeURIComponent(jsonTxt));
+    _temp.setAttribute('download', 'bookmarks-jstree.json');
+    if (document.createEvent) {
+        var event = document.createEvent('MouseEvents');
+        event.initEvent('click', true, true);
+        _temp.dispatchEvent(event);
+    } else {
+        _temp.click();
+    }
+  });
+  return btn;
+}
+
+function getJsonFromTarget(targetNode) {
+  var nodes = targetNode.jstree(true).get_json('#', {no_state:true,no_li_attr:true});
+  var data = {text:"jsTreeBookmarks", children: nodes};
+  return JSON.stringify(data, null, " ");
+}
+
+function loadTargetWithJson(targetNode, jsTreeData) {
+  targetNode.jstree({
+    'core' : {
+      'animation' : 0,
+      'check_callback' : true,
+      'data' : function (obj, callback) {
+          callback.call(this, jsTreeData);
+      }
+    },
+    'plugins' : [ "dnd", "wholerow", "contextmenu", "search", "state", "types"],
+    'types' : {
+      "folder" : {},
+      "url" : {'max_children' : 0}
+    }
+  })
+  .on('activate_node.jstree', function (e, data) {
+    maybeOpen(data.node);
+  });
+}
+
+function maybeOpen(node) {
+  if (node.type === "url") {
+    window.open(node.a_attr.href,'_blank');
+  }
+}
+
+function loadFromFileButton (targetNode) {
+	var span = $("<span/>");
+	var input = $("<input />", { type: "file", css: { visibility: "hidden", width: 0, height: 0 } } );
+	input.attr("accept", "json");
+	input.on("change", function( evt ) {
+	    var files = evt.target.files;
+	    var f = files[0];
+	    var reader = new window.FileReader();
+	    reader.onload = ( function() {
+	        return function( e ) {
+            var fileObj = e.target.result;
+            var jsonData = JSON.parse(fileObj);
+            loadTargetWithJson(targetNode, toTreeFormat(jsonData));
+            targetNode.before(searchBox(targetNode));
+            targetNode.after(exportButton(targetNode));
+            span.remove();
+          };
+	    })(f);
+	    reader.readAsText(f, "UTF-8");
+	});
+	var btn = $("<button/>", {type: "button"});
+	btn.html("load from file");
+	btn.click( function() {
+		input.click();
+	});
+	span.append( btn );
+	span.append( input );
+	return span;
+}
+
+
+/**
+ * recognize a data structure and return it in jsTree format
+ * https://www.jstree.com/docs/json/
+ * Supports: bookmark json formats for Chrome & Firefox
+ *
+ * linkroll tree structure is a "folder" object with nested bookmark and folder objects
+ *
+ * Object (bookmark)
+ * 		text		String
+ * 		uri:		String
+ *
+ * Object (folder)
+ * 		name		String
+ * 		children	Array [] -- objects in array may be bookmarks or folders
+ *
+ * @param {Object} data - JSON object structure
+ */
+function toTreeFormat(data) {
+	var treeData = {};
+	if (data.type==="text/x-moz-place-container") {
+		treeData.text = "Mozilla Bookmarks";
+		treeData.children = recurseMozilla(data);
+	} else if (typeof data.roots==="object" && typeof data.roots.other==="object") {
+		treeData.text = "Chrome Bookmarks";
+		treeData.children = recurseChrome(data.roots.other);
+	} else if (typeof data.text === "string" && Array.isArray(data.children)) {
+		treeData = data.children;
+	} else {
+		treeData.text = "!!!!!!!   UNEXPECTED FORMAT   !!!!!!!!!";
+		treeData.children = [];
+	}
+	console.log(treeData.text);
+	return treeData;
+}
+
+function getIconUrl ( url ) {
+	return ICON_FOR_HOST + urlPartsRegX.exec(url)[11];
+}
+/**
+ * return a nested array of child objects
+ * @param {object} parent - the current "folder"
+ */
+function recurseChrome(parent) {
+	var myChildren = [];
+	if ( Array.isArray( parent.children ) ) {
+		for (var i in parent.children) {
+			var child = parent.children[i];
+			if ( child.type==="folder" && Array.isArray(child.children) && child.children.length > 0) {
+				var grandchildren = recurseChrome(child);
+				var folder = {type: 'folder', text: child.name, children: grandchildren};
+				myChildren.push(folder);
+			} else if (child.type==="url") {
+				var bookmark = {type: 'url', text: child.name, id: child.id, icon: getIconUrl( child.url ),a_attr: {href: child.url}};
+				myChildren.push(bookmark);
+			}
+		}
+	}
+	return myChildren;
+}
+
+/**
+ * return a nested array of child objects
+ * @param {object} parent - the current "container"
+ */
+function recurseMozilla (parent) {
+	var myChildren = [];
+	if ( Array.isArray( parent.children ) ) {
+		for (var i in parent.children) {
+			var child = parent.children[i];
+			if ( child.type==="text/x-moz-place-container" && Array.isArray(child.children) && child.children.length > 0) {
+				var grandchildren = recurseMozilla(child);
+				var folder = {type: 'folder', text: child.title, children: grandchildren};
+				myChildren.push(folder);
+			} else if (child.type==="text/x-moz-place") {
+				var bookmark = {type: 'url', text: child.title, id: child.id, icon: getIconUrl(child.uri), a_attr: {href: child.uri} };
+				myChildren.push(bookmark);
+			}
+		}
+	}
+	return myChildren;
+}
+
+</script>
+</body>
+
+</html>
